@@ -6,6 +6,11 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
+### Frontend ###
+
+### Database ###
+.env
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
