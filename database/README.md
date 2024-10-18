@@ -13,7 +13,7 @@ POSTGRES_PORT=<port>
 POSTGRES_DB=<database>
 ```
 ```bash
-docker-compose up -d 
+docker compose up -d 
 ```
 Vérifier que le conteneur est bien démarré :
 ```bash
