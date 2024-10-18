@@ -133,25 +133,15 @@ Contient les informations des auteurs d'articles.
 
 ---
 
-### **Table : `author_bio`**
-Contient les biographies des auteurs.
-
-| **Champs** | **Type de Données**                         | **Description**                                     |
-|------------|---------------------------------------------|-----------------------------------------------------|
-| id         | SERIAL PRIMARY KEY                          | Identifiant unique de la biographie.                |
-| author_id  | INT REFERENCES author(id) ON DELETE CASCADE | Référence à l'auteur (clé étrangère vers `author`). |
-
----
-
-### **Table : `author_bio_translation`**
+### **Table : `author_translation`**
 Contient les traductions des biographies des auteurs.
 
-| **Champs**    | **Type de Données**                             | **Description**                                                                  |
-|---------------|-------------------------------------------------|----------------------------------------------------------------------------------|
-| id            | SERIAL PRIMARY KEY                              | Identifiant unique de la traduction de biographie.                               |
-| author_bio_id | INT REFERENCES author_bio(id) ON DELETE CASCADE | Référence à la biographie de l'auteur (clé étrangère vers `author_bio`).         |
-| language_id   | INT REFERENCES language(id)                     | Référence à la langue de la biographie traduite (clé étrangère vers `language`). |
-| bio           | TEXT                                            | Texte de la biographie traduite.                                                 |
+| **Champs**  | **Type de Données**                             | **Description**                                                                  |
+|-------------|-------------------------------------------------|----------------------------------------------------------------------------------|
+| id          | SERIAL PRIMARY KEY                              | Identifiant unique de la traduction de biographie.                               |
+| author_id   | INT REFERENCES author_bio(id) ON DELETE CASCADE | Référence à la biographie de l'auteur (clé étrangère vers `author_bio`).         |
+| language_id | INT REFERENCES language(id)                     | Référence à la langue de la biographie traduite (clé étrangère vers `language`). |
+| bio         | TEXT                                            | Texte de la biographie traduite.                                                 |
 
 ---
 
@@ -180,6 +170,14 @@ Contient les articles publiés.
 | category_id | INT REFERENCES category(id)                                      | Référence à la catégorie de l'article (clé étrangère vers `category`). |
 
 ---
+### **Table : `category_article`**
+Contient les relations entre les articles et les catégories.
+
+| **Champs**  | **Type de Données**                           | **Description**                                           |
+|-------------|-----------------------------------------------|-----------------------------------------------------------|
+| id          | SERIAL PRIMARY KEY                            | Identifiant unique de la relation.                        |
+| article_id  | INT REFERENCES article(id) ON DELETE CASCADE  | Référence à l'article (clé étrangère vers `article`).     |
+| category_id | INT REFERENCES category(id) ON DELETE CASCADE | Référence à la catégorie (clé étrangère vers `category`). |
 
 ### **Table : `article_translation`**
 Contient les traductions des articles.
@@ -219,24 +217,6 @@ Contient les traductions des blocs de contenu.
 
 ---
 
-### **Table : `article_stats`**
-Statistiques sur les articles.
-
-| **Champs**               | **Type de Données**                          | **Description**                                       |
-|--------------------------|----------------------------------------------|-------------------------------------------------------|
-| id                       | SERIAL PRIMARY KEY                           | Identifiant unique des statistiques.                  |
-| article_id               | INT REFERENCES article(id) ON DELETE CASCADE | Référence à l'article (clé étrangère vers `article`). |
-| views_count              | INT DEFAULT 0                                | Nombre de vues de l'article.                          |
-| comments_count           | INT DEFAULT 0                                | Nombre de commentaires sur l'article.                 |
-| recommendations_positive | INT DEFAULT 0                                | Nombre de recommandations positives.                  |
-| recommendations_negative | INT DEFAULT 0                                | Nombre de recommandations négatives.                  |
-| shares_count             | INT DEFAULT 0                                | Nombre de partages de l'article.                      |
-| average_reading_time     | FLOAT DEFAULT 0                              | Temps de lecture moyen.                               |
-| bounce_rate              | FLOAT DEFAULT 0                              | Taux de rebond.                                       |
-| time_spent               | INT DEFAULT 0                                | Temps passé sur l'article (en secondes).              |
-
----
-
 ### **Table : `comment`**
 Contient les commentaires sur les articles.
 
@@ -247,15 +227,3 @@ Contient les commentaires sur les articles.
 | content     | TEXT NOT NULL                                | Contenu du commentaire.                                        |
 | author_name | VARCHAR(255) NOT NULL                        | Nom de l'auteur du commentaire.                                |
 | timestamp   | TIMESTAMP DEFAULT CURRENT_TIMESTAMP          | Date et heure de création du commentaire.                      |
-
----
-
-### **Table : `promotion`**
-Contient les promotions pour les articles.
-
-| **Champs** | **Type de Données**                          | **Description**                                             |
-|------------|----------------------------------------------|-------------------------------------------------------------|
-| id         | SERIAL PRIMARY KEY                           | Identifiant unique de la promotion.                         |
-| article_id | INT REFERENCES article(id) ON DELETE CASCADE | Référence à l'article promu (clé étrangère vers `article`). |
-| start_date | DATE                                         | Date de début de la promotion.                              |
-| end_date   | DATE                                         | Date de fin de la promotion.                                |

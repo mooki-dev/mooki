@@ -49,27 +49,17 @@ INSERT INTO mooki_articles.author (name, profile_picture) VALUES ('John Doe', 'h
 INSERT INTO mooki_articles.author (name, profile_picture) VALUES ('Jane Doe', 'https://example.com/jane-doe.jpg');
 ------------------------------------------------------------------------------------------------------------------------
 
--- Author Bio ----------------------------------------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS mooki_articles.author_bio (
+-- Author Translation ----------------------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS mooki_articles.author_translation (
     id SERIAL PRIMARY KEY,
-    author_id INT REFERENCES mooki_articles.author(id) ON DELETE CASCADE
-);
-
-INSERT INTO mooki_articles.author_bio (author_id) VALUES (1);
-INSERT INTO mooki_articles.author_bio (author_id) VALUES (2);
-------------------------------------------------------------------------------------------------------------------------
-
--- Author Bio Translation ----------------------------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS mooki_articles.author_bio_translation (
-    id SERIAL PRIMARY KEY,
-    author_bio_id INT REFERENCES mooki_articles.author_bio(id) ON DELETE CASCADE,
+    author_id INT REFERENCES mooki_articles.author(id) ON DELETE CASCADE,
     language_id INT REFERENCES mooki_articles.language(id),
     bio TEXT
 );
-INSERT INTO mooki_articles.author_bio_translation (author_bio_id, language_id, bio) VALUES (1, 1, 'John Doe is a web developer.');
-INSERT INTO mooki_articles.author_bio_translation (author_bio_id, language_id, bio) VALUES (1, 2, 'John Doe est un développeur web.');
-INSERT INTO mooki_articles.author_bio_translation (author_bio_id, language_id, bio) VALUES (2, 1, 'Jane Doe is a web developer.');
-INSERT INTO mooki_articles.author_bio_translation (author_bio_id, language_id, bio) VALUES (2, 2, 'Jane Doe est une développeuse web.');
+INSERT INTO mooki_articles.author_translation (author_id, language_id, bio) VALUES (1, 1, 'John Doe is a web developer.');
+INSERT INTO mooki_articles.author_translation (author_id, language_id, bio) VALUES (1, 2, 'John Doe est un développeur web.');
+INSERT INTO mooki_articles.author_translation (author_id, language_id, bio) VALUES (2, 1, 'Jane Doe is a web developer.');
+INSERT INTO mooki_articles.author_translation (author_id, language_id, bio) VALUES (2, 2, 'Jane Doe est une développeuse web.');
 ------------------------------------------------------------------------------------------------------------------------
 
 -- Author Social -------------------------------------------------------------------------------------------------------
@@ -97,6 +87,16 @@ CREATE TABLE IF NOT EXISTS mooki_articles.article (
 );
 
 INSERT INTO mooki_articles.article (status, author_id, category_id) VALUES ('published', 1, 1);
+------------------------------------------------------------------------------------------------------------------------
+
+-- Category Article ----------------------------------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS mooki_articles.category_article (
+    id SERIAL PRIMARY KEY,
+    category_id INT REFERENCES mooki_articles.category(id) ON DELETE CASCADE,
+    article_id INT REFERENCES mooki_articles.article(id) ON DELETE CASCADE
+);
+
+INSERT INTO mooki_articles.category_article (category_id, article_id) VALUES (1, 1);
 ------------------------------------------------------------------------------------------------------------------------
 
 -- Article Translation -------------------------------------------------------------------------------------------------
@@ -149,23 +149,6 @@ INSERT INTO mooki_articles.content_block_translation (content_block_id, language
 INSERT INTO mooki_articles.content_block_translation (content_block_id, language_id, value) VALUES (8, 2, 'https://example.com');
 ------------------------------------------------------------------------------------------------------------------------
 
--- Article Stats -------------------------------------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS mooki_articles.article_stats (
-    id SERIAL PRIMARY KEY,
-    article_id INT REFERENCES mooki_articles.article(id) ON DELETE CASCADE,
-    views_count INT DEFAULT 0,
-    comments_count INT DEFAULT 0,
-    recommendations_positive INT DEFAULT 0,
-    recommendations_negative INT DEFAULT 0,
-    shares_count INT DEFAULT 0,
-    average_reading_time FLOAT DEFAULT 0,
-    bounce_rate FLOAT DEFAULT 0,
-    time_spent INT DEFAULT 0
-);
-
-INSERT INTO mooki_articles.article_stats (article_id) VALUES (1);
-------------------------------------------------------------------------------------------------------------------------
-
 -- Comment -------------------------------------------------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS mooki_articles.comment (
     id SERIAL PRIMARY KEY,
@@ -177,16 +160,4 @@ CREATE TABLE IF NOT EXISTS mooki_articles.comment (
 
 INSERT INTO mooki_articles.comment (article_id, content, author_name) VALUES (1, 'This is a comment.', 'John Doe');
 INSERT INTO mooki_articles.comment (article_id, content, author_name) VALUES (1, 'Ceci est un commentaire.', 'Jane Doe');
-------------------------------------------------------------------------------------------------------------------------
-
--- Promotion -----------------------------------------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS mooki_articles.promotion (
-    id SERIAL PRIMARY KEY,
-    article_id INT REFERENCES mooki_articles.article(id) ON DELETE CASCADE,
-    start_date TIMESTAMP NOT NULL,
-    end_date TIMESTAMP NOT NULL,
-    CHECK ( start_date < end_date )
-);
-
-INSERT INTO mooki_articles.promotion (article_id, start_date, end_date) VALUES (1, '2021-01-01', '2021-01-31');
 ------------------------------------------------------------------------------------------------------------------------
