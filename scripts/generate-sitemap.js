@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { generateSitemap } from 'sitemap-ts'
+// import { generateSitemap } from 'sitemap-ts' - Remplacé par génération manuelle
 import fs from 'fs/promises'
 import path from 'path'
 import matter from 'gray-matter'
@@ -78,25 +78,23 @@ async function generateSitemapXML() {
     })
   }
 
-  // Générer le sitemap
-  const sitemap = generateSitemap({
-    hostname: SITE_URL,
-    urls: urls.map(({ url, ...rest }) => ({
-      url: `${SITE_URL}${url}`,
-      ...rest
-    })),
-    options: {
-      changefreq: 'weekly',
-      priority: 0.5
-    }
-  })
-
   // Créer le dossier de sortie s'il n'existe pas
   const outputDir = path.resolve(process.cwd(), 'docs/.vitepress/dist')
   await fs.mkdir(outputDir, { recursive: true })
 
+  // Générer le sitemap XML manuellement pour éviter les erreurs
+  const sitemapXML = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map(({ url, changefreq = 'weekly', priority = 0.5, lastmod }) => `  <url>
+    <loc>${SITE_URL}${url}</loc>
+    ${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`).join('\n')}
+</urlset>`
+
   // Sauvegarder le sitemap
-  await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemap)
+  await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemapXML)
 
   console.log(`✅ Sitemap généré avec ${urls.length} URLs`)
   console.log(`   Sitemap: /sitemap.xml`)
