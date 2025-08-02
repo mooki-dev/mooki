@@ -172,7 +172,7 @@ pids
 
 # Lock files (garder un seul)
 # Si tu utilises npm, décommente la ligne suivante :
-package-lock.json
+# package-lock.json
 # Si tu utilises yarn, décommente celle-ci :
 # yarn.lock
 # Si tu utilises pnpm, décommente celle-ci :
