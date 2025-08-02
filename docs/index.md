@@ -94,7 +94,13 @@ const navigateToCategory = (category) => {
     <h3>Projets</h3>
     <p>Starters, templates, auto-hébergement...</p>
   </div>
+
+  <div class="category-card" @click="navigateToCategory('productivite')">
+    <h3>Productivité</h3>
+    <p>Focus, gestion du temps, outils de productivité...</p>
+  </div>
 </div>
+
 
 ## Tags Populaires
 

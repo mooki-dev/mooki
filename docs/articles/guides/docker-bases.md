@@ -401,7 +401,7 @@ RUN apt-get update && apt-get install -y \
 ```
 
 **Utiliser .dockerignore**
-```dockerignore
+```txt
 # Fichier .dockerignore
 node_modules
 npm-debug.log

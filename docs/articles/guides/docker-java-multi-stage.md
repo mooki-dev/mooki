@@ -226,7 +226,7 @@ spring.boot.build.layers.enabled=true
 ```
 
 **build.gradle**
-```gradle
+```groovy
 bootJar {
     layered {
         enabled = true

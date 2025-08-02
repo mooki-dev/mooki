@@ -88,6 +88,25 @@
     "author": "mooki"
   },
   {
+    "title": "Template de projet FastAPI moderne",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour créer un template de projet FastAPI moderne avec les meilleures pratiques 2025 : architecture, sécurité, tests, déploiement et observabilité.",
+    "tags": [
+      "fastapi",
+      "python",
+      "backend",
+      "api",
+      "template",
+      "architecture",
+      "microservices"
+    ],
+    "cover": null,
+    "readingTime": 24,
+    "url": "/articles/guides/fastapi-modern-template",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
     "title": "Pipeline CI/CD moderne avec GitHub Actions",
     "date": "2025-08-02",
     "excerpt": "Créez des pipelines CI/CD modernes et robustes avec GitHub Actions : tests automatisés, déploiements multi-environnements, sécurité et monitoring",
@@ -179,6 +198,24 @@
     "author": "mooki"
   },
   {
+    "title": "Auto-hébergement : reprendre le contrôle de ses données",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour débuter l'auto-hébergement en 2025 : alternatives aux services cloud, configuration sécurisée et gestion de votre infrastructure personnelle.",
+    "tags": [
+      "self-hosting",
+      "privacy",
+      "data-sovereignty",
+      "homelab",
+      "server",
+      "security"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/guides/self-hosting-data-control",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
     "title": "Optimisation des performances Spring Boot",
     "date": "2025-08-02",
     "excerpt": "Guide complet pour optimiser les performances de vos applications Spring Boot : profiling, tuning JVM, cache, base de données et monitoring",
@@ -250,6 +287,78 @@
     "readingTime": 17,
     "url": "/articles/outils/tui-tools-selection",
     "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "La technique Pomodoro adaptée pour les sessions de code en télétravail",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour adapter la technique Pomodoro aux sessions de développement en télétravail : stratégies, outils et bonnes pratiques pour optimiser focus et productivité.",
+    "tags": [
+      "productivity",
+      "pomodoro",
+      "remote-work",
+      "coding",
+      "focus",
+      "time-management"
+    ],
+    "cover": null,
+    "readingTime": 16,
+    "url": "/articles/productivite/pomodoro-technique-remote-coding",
+    "category": "productivite",
+    "author": "mooki"
+  },
+  {
+    "title": "Comprendre et surmonter le syndrome de l'imposteur",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour identifier, comprendre et surmonter le syndrome de l'imposteur en tant que développeur : stratégies pratiques pour retrouver confiance et sérénité.",
+    "tags": [
+      "syndrome-imposteur",
+      "psychologie",
+      "confiance",
+      "developpement-personnel",
+      "carriere",
+      "mindset"
+    ],
+    "cover": null,
+    "readingTime": 23,
+    "url": "/articles/reflexions/impostor-syndrome-overcome",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "Apprendre à dire \"je ne sais pas, mais je vais chercher\"",
+    "date": "2025-08-02",
+    "excerpt": "L'art de reconnaître ses limites et de transformer l'ignorance en opportunité d'apprentissage : guide pratique pour développeurs et professionnels de la tech.",
+    "tags": [
+      "soft-skills",
+      "learning",
+      "communication",
+      "professional-growth",
+      "honesty",
+      "career"
+    ],
+    "cover": null,
+    "readingTime": 16,
+    "url": "/articles/reflexions/learning-to-say-i-dont-know",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "La solution la plus simple est souvent la meilleure",
+    "date": "2025-08-02",
+    "excerpt": "Exploration du principe KISS et de la philosophie de la simplicité en développement : pourquoi choisir le simple sur le complexe et comment cultiver cette approche.",
+    "tags": [
+      "kiss-principle",
+      "simplicity",
+      "software-design",
+      "architecture",
+      "maintainability",
+      "philosophy"
+    ],
+    "cover": null,
+    "readingTime": 19,
+    "url": "/articles/reflexions/simplicity-is-often-best",
+    "category": "reflexions",
     "author": "mooki"
   },
   {

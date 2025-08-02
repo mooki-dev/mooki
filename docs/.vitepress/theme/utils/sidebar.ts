@@ -21,12 +21,14 @@ export function generateSidebar(): SidebarConfig {
 
 function generateArticlesSidebar(): DefaultTheme.SidebarItem[] {
   const categories = [
-    { id: 'guides', label: 'Guides' },
     { id: 'configurations', label: 'Configurations' },
-    { id: 'outils', label: 'Outils' },
+    { id: 'guides', label: 'Guides' },
     { id: 'methodes', label: 'Méthodes' },
-    { id: 'reflexions', label: 'Réflexions' },
-    { id: 'projets', label: 'Projets' }
+    { id: 'outils', label: 'Outils' },
+    { id: 'productivite', label: 'Productivité' },
+    { id: 'projets', label: 'Projets' },
+    { id: 'reflexions', label: 'Réflexions' }
+
   ]
 
   const sidebarItems: DefaultTheme.SidebarItem[] = [
@@ -132,12 +134,14 @@ function generateTagsSidebar(): DefaultTheme.SidebarItem[] {
     {
       text: 'Catégories',
       items: [
-        { text: 'Guides', link: '/articles/guides/' },
         { text: 'Configurations', link: '/articles/configurations/' },
-        { text: 'Outils', link: '/articles/outils/' },
+        { text: 'Guides', link: '/articles/guides/' },
         { text: 'Méthodes', link: '/articles/methodes/' },
-        { text: 'Réflexions', link: '/articles/reflexions/' },
-        { text: 'Projets', link: '/articles/projets/' }
+        { text: 'Outils', link: '/articles/outils/' },
+        { text: 'Productivité', link: '/articles/productivite/' },
+        { text: 'Projets', link: '/articles/projets/' },
+        { text: 'Réflexions', link: '/articles/reflexions/' }
+
       ]
     }
   ]
@@ -157,12 +161,13 @@ function generateAboutSidebar(): DefaultTheme.SidebarItem[] {
     {
       text: 'Contenu',
       items: [
-        { text: 'Guides', link: '/articles/guides/' },
         { text: 'Configurations', link: '/articles/configurations/' },
-        { text: 'Outils', link: '/articles/outils/' },
+        { text: 'Guides', link: '/articles/guides/' },
         { text: 'Méthodes', link: '/articles/methodes/' },
-        { text: 'Réflexions', link: '/articles/reflexions/' },
-        { text: 'Projets', link: '/articles/projets/' }
+        { text: 'Outils', link: '/articles/outils/' },
+        { text: 'Productivité', link: '/articles/productivite/' },
+        { text: 'Projets', link: '/articles/projets/' },
+        { text: 'Réflexions', link: '/articles/reflexions/' }
       ]
     }
   ]

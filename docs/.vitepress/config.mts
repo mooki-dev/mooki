@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from './theme/utils/sidebar'
+import { mermaidPlugin } from './theme/plugins/mermaid-plugin'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -27,6 +28,10 @@ export default defineConfig({
       dangerLabel: 'Danger',
       infoLabel: 'Info',
       detailsLabel: 'Détails'
+    },
+    config: (md) => {
+      // Configuration du plugin Mermaid
+      md.use(mermaidPlugin)
     }
   },
 
@@ -40,12 +45,14 @@ export default defineConfig({
       {
         text: 'Catégories',
         items: [
-          { text: 'Guides', link: '/articles/guides/' },
           { text: 'Configurations', link: '/articles/configurations/' },
-          { text: 'Outils', link: '/articles/outils/' },
+          { text: 'Guides', link: '/articles/guides/' },
           { text: 'Méthodes', link: '/articles/methodes/' },
-          { text: 'Réflexions', link: '/articles/reflexions/' },
-          { text: 'Projets', link: '/articles/projets/' }
+          { text: 'Outils', link: '/articles/outils/' },
+          { text: 'Productivité', link: '/articles/productivite/' },
+          { text: 'Projets', link: '/articles/projets/' },
+          { text: 'Réflexions', link: '/articles/reflexions/' }
+
         ]
       },
       { text: 'Tags', link: '/tags/' },

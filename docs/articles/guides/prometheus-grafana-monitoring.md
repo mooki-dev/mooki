@@ -635,7 +635,7 @@ modules:
 ### Spring Boot avec Micrometer
 
 **build.gradle**
-```gradle
+```groovy
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'io.micrometer:micrometer-registry-prometheus'

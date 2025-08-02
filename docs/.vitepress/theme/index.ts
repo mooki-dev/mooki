@@ -11,6 +11,7 @@ import TagCloud from './components/TagCloud.vue'
 import RecentPosts from './components/RecentPosts.vue'
 import RelatedPosts from './components/RelatedPosts.vue'
 import TaggedArticles from './components/TaggedArticles.vue'
+import MermaidDiagram from './components/MermaidDiagram.vue'
 
 export default {
   extends: DefaultTheme,
@@ -27,5 +28,6 @@ export default {
     app.component('RecentPosts', RecentPosts)
     app.component('RelatedPosts', RelatedPosts)
     app.component('TaggedArticles', TaggedArticles)
+    app.component('MermaidDiagram', MermaidDiagram)
   }
 } satisfies Theme
