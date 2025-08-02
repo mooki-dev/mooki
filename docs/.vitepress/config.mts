@@ -6,7 +6,7 @@ export default defineConfig({
   title: "mooki",
   description: "Base de connaissances technique - Développement, outils, méthodes et réflexions",
   lang: 'fr-FR',
-  base: process.env.NODE_ENV === 'production' ? '/mooki/' : '/',
+  base: '/mooki/',
   
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
