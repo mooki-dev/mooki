@@ -11,6 +11,8 @@ interface SidebarConfig {
 export function generateSidebar(): SidebarConfig {
   const sidebar: SidebarConfig = {
     '/articles/': generateArticlesSidebar(),
+    '/tags/': generateTagsSidebar(),
+    '/about': generateAboutSidebar(),
     '/': generateDefaultSidebar()
   }
 
@@ -117,20 +119,72 @@ function getUncategorizedArticles(): DefaultTheme.SidebarItem[] {
     .sort((a, b) => a.text.localeCompare(b.text, 'fr'))
 }
 
-function generateDefaultSidebar(): DefaultTheme.SidebarItem[] {
+function generateTagsSidebar(): DefaultTheme.SidebarItem[] {
   return [
     {
-      text: 'Guide',
+      text: 'Navigation',
       items: [
-        { text: 'Introduction', link: '/introduction' },
-        { text: 'Démarrage rapide', link: '/getting-started' }
+        { text: 'Accueil', link: '/' },
+        { text: 'Tous les articles', link: '/articles/' },
+        { text: 'Tags', link: '/tags/' }
       ]
     },
     {
-      text: 'Référence',
+      text: 'Catégories',
       items: [
-        { text: 'Configuration', link: '/config' },
-        { text: 'API', link: '/api' }
+        { text: 'Guides', link: '/articles/guides/' },
+        { text: 'Configurations', link: '/articles/configurations/' },
+        { text: 'Outils', link: '/articles/outils/' },
+        { text: 'Méthodes', link: '/articles/methodes/' },
+        { text: 'Réflexions', link: '/articles/reflexions/' },
+        { text: 'Projets', link: '/articles/projets/' }
+      ]
+    }
+  ]
+}
+
+function generateAboutSidebar(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Navigation',
+      items: [
+        { text: 'Accueil', link: '/' },
+        { text: 'Articles', link: '/articles/' },
+        { text: 'Tags', link: '/tags/' },
+        { text: 'À propos', link: '/about' }
+      ]
+    },
+    {
+      text: 'Contenu',
+      items: [
+        { text: 'Guides', link: '/articles/guides/' },
+        { text: 'Configurations', link: '/articles/configurations/' },
+        { text: 'Outils', link: '/articles/outils/' },
+        { text: 'Méthodes', link: '/articles/methodes/' },
+        { text: 'Réflexions', link: '/articles/reflexions/' },
+        { text: 'Projets', link: '/articles/projets/' }
+      ]
+    }
+  ]
+}
+
+function generateDefaultSidebar(): DefaultTheme.SidebarItem[] {
+  return [
+    {
+      text: 'Navigation',
+      items: [
+        { text: 'Accueil', link: '/' },
+        { text: 'Articles', link: '/articles/' },
+        { text: 'Tags', link: '/tags/' },
+        { text: 'À propos', link: '/about' }
+      ]
+    },
+    {
+      text: 'Démarrage',
+      items: [
+        { text: 'Articles récents', link: '/#articles-recents' },
+        { text: 'Catégories', link: '/#categories' },
+        { text: 'Tags populaires', link: '/tags/' }
       ]
     }
   ]

@@ -6,10 +6,10 @@ import path from 'path'
 import matter from 'gray-matter'
 import { globby } from 'globby'
 
-const SITE_URL = 'https://votre-domaine.com'
+const SITE_URL = process.env.SITE_URL || 'https://mooki-dev.github.io/mooki'
 const AUTHOR = {
   name: 'mooki',
-  email: 'contact@votre-domaine.com',
+  email: 'contact@mooki-dev.github.io',
   link: SITE_URL
 }
 

@@ -6,7 +6,7 @@ import path from 'path'
 import matter from 'gray-matter'
 import { globby } from 'globby'
 
-const SITE_URL = 'https://votre-domaine.com'
+const SITE_URL = process.env.SITE_URL || 'https://mooki-dev.github.io/mooki'
 
 async function generateSitemapXML() {
   const urls = []
