@@ -1,5 +1,5 @@
 <template>
-  <div class="article-list-container">
+  <div class="article-list-container" ref="articleListContainer">
     <div class="filters" v-if="showFilters">
       <div class="filter-group">
         <label for="sort-select">Trier par :</label>
@@ -28,6 +28,13 @@
         :article="article"
         @tag-click="handleTagClick"
       />
+    </div>
+
+    <div class="articles-info" v-if="filteredArticles.length > 0">
+      <p class="articles-count">
+        {{ filteredArticles.length }} article{{ filteredArticles.length > 1 ? 's' : '' }}
+        <span v-if="totalPages > 1"> - Page {{ currentPage }} sur {{ totalPages }}</span>
+      </p>
     </div>
 
     <div class="pagination" v-if="totalPages > 1">
@@ -65,6 +72,9 @@
 <script setup lang="ts">
 import { ref, computed, watch } from 'vue'
 import ArticleCard from './ArticleCard.vue'
+
+// Référence vers le container principal
+const articleListContainer = ref<HTMLElement>()
 
 interface Article {
   title: string
@@ -184,7 +194,18 @@ const formatCategoryName = (category: string) => {
 const goToPage = (page: number) => {
   if (page >= 1 && page <= totalPages.value) {
     currentPage.value = page
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    // Scroll vers le début de la liste d'articles après le re-render
+    setTimeout(() => {
+      if (articleListContainer.value) {
+        articleListContainer.value.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'start' 
+        })
+      } else {
+        // Fallback vers le haut de la page
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }
+    }, 100)
   }
 }
 
@@ -258,7 +279,18 @@ watch(() => props.articles, () => {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+
+.articles-info {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.articles-count {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+  margin: 0;
 }
 
 .pagination {

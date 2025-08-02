@@ -68,9 +68,9 @@ const sortedTagEntries = computed(() => {
     @tag-click="handleTagClick"
   />
 
-  ## Liste complète des tags
-
-  <div class="tags-list">
+  <div class="tags-list-section">
+    <h2>Liste complète des tags</h2>
+    <div class="tags-list">
     <div 
       v-for="[tag, count] in sortedTagEntries" 
       :key="tag" 
@@ -86,6 +86,7 @@ const sortedTagEntries = computed(() => {
       </p>
     </div>
   </div>
+</div>
 </div>
 
 <div id="tagged-articles-section" v-show="showTaggedArticles">
@@ -110,8 +111,15 @@ const sortedTagEntries = computed(() => {
   padding: 0 1rem;
 }
 
-.tags-list {
+.tags-list-section h2 {
   margin-top: 3rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.tags-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
