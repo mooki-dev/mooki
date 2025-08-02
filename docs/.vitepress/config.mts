@@ -11,7 +11,9 @@ export default defineConfig({
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['meta', { name: 'author', content: 'mooki' }],
-    ['link', { rel: 'icon', type: 'image/x-icon', href: '/mooki/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/mooki/logo.svg' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/mooki/favicon.png' }],
+    ['link', { rel: 'alternate icon', href: '/mooki/favicon.ico' }],
   ],
 
   lastUpdated: true,

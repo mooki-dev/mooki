@@ -6,7 +6,7 @@ hero:
   text: "Base de connaissances technique"
   tagline: "Articles, guides, configurations et réflexions sur le développement, l'infrastructure et les méthodes de travail"
   image:
-    src: /hero-image.svg
+    src: /hero-image.png
     alt: mooki
   actions:
     - theme: brand
