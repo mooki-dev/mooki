@@ -8,16 +8,18 @@ description: Liste complète des articles du blog mooki
 <script setup>
 import { onMounted } from 'vue'
 import { useArticles } from '../.vitepress/theme/composables/useArticles'
+import { useRouter, withBase } from 'vitepress'
 
 const { articles, loadArticles } = useArticles()
+const router = useRouter()
 
 onMounted(async () => {
   await loadArticles()
 })
 
 const handleTagClick = (tag) => {
-  // Navigation vers la page tags avec le tag préchargé
-  window.location.href = `/tags/?tag=${tag}`
+  // Navigation SPA vers la page tags avec le tag préchargé
+  router.go(withBase(`/tags/?tag=${tag}`))
 }
 
 const handleCategoryChange = (category) => {

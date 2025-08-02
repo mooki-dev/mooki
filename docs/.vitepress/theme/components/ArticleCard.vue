@@ -54,7 +54,9 @@ const formatDate = (dateString: string) => {
 }
 
 const navigateToArticle = () => {
-  router.go(withBase(props.article.url))
+  const articleUrl = props.article.url.startsWith('/') ? props.article.url : '/' + props.article.url
+  const fullUrl = withBase(articleUrl)
+  router.go(fullUrl)
 }
 </script>
 

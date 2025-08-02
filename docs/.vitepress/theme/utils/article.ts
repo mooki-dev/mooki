@@ -44,7 +44,7 @@ export function extractTableOfContents(content: string): TableOfContentsItem[] {
   const headingRegex = /^(#{1,6})\s+(.+)$/gm
   const toc: TableOfContentsItem[] = []
   const stack: TableOfContentsItem[] = []
-  
+
   let match
   while ((match = headingRegex.exec(content)) !== null) {
     const level = match[1].length
@@ -53,14 +53,14 @@ export function extractTableOfContents(content: string): TableOfContentsItem[] {
       .toLowerCase()
       .replace(/[^\w\s-]/g, '')
       .replace(/\s+/g, '-')
-    
+
     const item: TableOfContentsItem = { level, title, id }
-    
+
     // Trouve le parent approprié
     while (stack.length > 0 && stack[stack.length - 1].level >= level) {
       stack.pop()
     }
-    
+
     if (stack.length === 0) {
       toc.push(item)
     } else {
@@ -70,10 +70,10 @@ export function extractTableOfContents(content: string): TableOfContentsItem[] {
       }
       parent.children.push(item)
     }
-    
+
     stack.push(item)
   }
-  
+
   return toc
 }
 
@@ -85,19 +85,19 @@ export async function getAllArticles(articlesPath: string): Promise<Article[]> {
     cwd: articlesPath,
     ignore: ['**/index.md', '**/README.md']
   })
-  
+
   const articles: Article[] = []
-  
+
   for (const file of articleFiles) {
     const filePath = path.join(articlesPath, file)
     const content = await fs.readFile(filePath, 'utf-8')
     const { data, content: markdownContent } = matter(content)
-    
+
     // Calcule le temps de lecture si non défini
     if (!data.readingTime) {
       data.readingTime = calculateReadingTime(markdownContent)
     }
-    
+
     // Extrait la catégorie du chemin si non définie
     if (!data.category) {
       const pathParts = file.split('/')
@@ -105,17 +105,16 @@ export async function getAllArticles(articlesPath: string): Promise<Article[]> {
         data.category = pathParts[0]
       }
     }
-    
-    // Génère l'URL
+
     const url = `/articles/${file.replace(/\.md$/, '')}`
-    
+
     articles.push({
       ...data as ArticleFrontmatter,
       url,
       content: markdownContent
     })
   }
-  
+
   return articles
 }
 
@@ -124,7 +123,7 @@ export async function getAllArticles(articlesPath: string): Promise<Article[]> {
  */
 export function groupArticlesByCategory(articles: Article[]): Record<string, Article[]> {
   const grouped: Record<string, Article[]> = {}
-  
+
   for (const article of articles) {
     const category = article.category || 'non-categorise'
     if (!grouped[category]) {
@@ -132,14 +131,14 @@ export function groupArticlesByCategory(articles: Article[]): Record<string, Art
     }
     grouped[category].push(article)
   }
-  
+
   // Trie les articles dans chaque catégorie par date
   for (const category in grouped) {
-    grouped[category].sort((a, b) => 
+    grouped[category].sort((a, b) =>
       new Date(b.date).getTime() - new Date(a.date).getTime()
     )
   }
-  
+
   return grouped
 }
 
@@ -148,7 +147,7 @@ export function groupArticlesByCategory(articles: Article[]): Record<string, Art
  */
 export function extractAllTags(articles: Article[]): Record<string, number> {
   const tagCounts: Record<string, number> = {}
-  
+
   for (const article of articles) {
     if (article.tags) {
       for (const tag of article.tags) {
@@ -156,7 +155,7 @@ export function extractAllTags(articles: Article[]): Record<string, number> {
       }
     }
   }
-  
+
   return tagCounts
 }
 
@@ -193,10 +192,10 @@ export function generateExcerpt(content: string, length: number = 160): string {
     .replace(/!\[([^\]]*)\]\([^)]+\)/g, '') // Images
     .replace(/\n+/g, ' ') // Newlines
     .trim()
-  
+
   if (cleanContent.length <= length) {
     return cleanContent
   }
-  
+
   return cleanContent.substring(0, length).trim() + '...'
 }

@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRouter } from 'vitepress'
+import { useRouter, withBase } from 'vitepress'
 
 interface Post {
   title: string
@@ -110,7 +110,7 @@ const formatDate = (dateString: string) => {
 }
 
 const navigateToPost = (url: string) => {
-  router.go(url)
+  router.go(withBase(url))
 }
 </script>
 

@@ -34,8 +34,10 @@ features:
 <script setup>
 import { onMounted } from 'vue'
 import { useArticles } from './.vitepress/theme/composables/useArticles'
+import { useRouter, withBase } from 'vitepress'
 
 const { loadArticles, getRecentArticles, getAllTags, getCategoryStats } = useArticles()
+const router = useRouter()
 
 const recentArticles = getRecentArticles(5)
 const popularTags = getAllTags()
@@ -46,8 +48,13 @@ onMounted(async () => {
 })
 
 const handleTagClick = (tag) => {
-  // Navigation vers la page tags avec le tag préchargé
-  window.location.href = `/tags/?tag=${tag}`
+  // Navigation SPA vers la page tags avec le tag préchargé
+  router.go(withBase(`/tags/?tag=${tag}`))
+}
+
+const navigateToCategory = (category) => {
+  // Navigation SPA vers la catégorie
+  router.go(withBase(`/articles/${category}/`))
 }
 </script>
 
@@ -58,35 +65,35 @@ const handleTagClick = (tag) => {
 ## Catégories {#categories}
 
 <div class="categories-grid">
-  <a href="/articles/guides/" class="category-card">
+  <div class="category-card" @click="navigateToCategory('guides')">
     <h3>Guides</h3>
     <p>Tutorials Spring, Docker, Kubernetes, Linux...</p>
-  </a>
+  </div>
   
-  <a href="/articles/configurations/" class="category-card">
+  <div class="category-card" @click="navigateToCategory('configurations')">
     <h3>Configurations</h3>
     <p>Hyprland, Neovim, Arch, Docker Compose...</p>
-  </a>
+  </div>
   
-  <a href="/articles/outils/" class="category-card">
+  <div class="category-card" @click="navigateToCategory('outils')">
     <h3>Outils</h3>
     <p>Claude Code, MCP, TUI tools, bookmarks...</p>
-  </a>
+  </div>
   
-  <a href="/articles/methodes/" class="category-card">
+  <div class="category-card" @click="navigateToCategory('methodes')">
     <h3>Méthodes</h3>
     <p>Agile, Scrum, estimation, spécifications...</p>
-  </a>
+  </div>
   
-  <a href="/articles/reflexions/" class="category-card">
+  <div class="category-card" @click="navigateToCategory('reflexions')">
     <h3>Réflexions</h3>
     <p>Clean Code, SOLID, performance vs fonctionnel...</p>
-  </a>
+  </div>
   
-  <a href="/articles/projets/" class="category-card">
+  <div class="category-card" @click="navigateToCategory('projets')">
     <h3>Projets</h3>
     <p>Starters, templates, auto-hébergement...</p>
-  </a>
+  </div>
 </div>
 
 ## Tags Populaires
@@ -109,6 +116,7 @@ const handleTagClick = (tag) => {
   transition: all 0.3s ease;
   border: 1px solid var(--vp-c-divider);
   display: block;
+  cursor: pointer;
 }
 
 .category-card:hover {
