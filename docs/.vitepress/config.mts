@@ -7,7 +7,7 @@ export default defineConfig({
   description: "Base de connaissances technique - Développement, outils, méthodes et réflexions",
   lang: 'fr-FR',
   base: '/mooki/',
-  
+
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['meta', { name: 'author', content: 'mooki' }],
@@ -33,7 +33,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.svg',
-    
+
     nav: [
       { text: 'Accueil', link: '/' },
       { text: 'Articles', link: '/articles/' },
@@ -55,9 +55,7 @@ export default defineConfig({
     sidebar: generateSidebar(),
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/yourusername' },
-      { icon: 'twitter', link: 'https://twitter.com/yourusername' },
-      { icon: 'linkedin', link: 'https://linkedin.com/in/yourusername' }
+      { icon: 'github', link: 'https://github.com/mooki-dev/mooki' }
     ],
 
     footer: {
@@ -97,17 +95,17 @@ export default defineConfig({
     },
 
     lastUpdatedText: 'Dernière mise à jour',
-    
+
     returnToTopLabel: 'Retour en haut',
-    
+
     langMenuLabel: 'Changer de langue',
-    
+
     sidebarMenuLabel: 'Menu',
-    
+
     darkModeSwitchLabel: 'Apparence',
-    
+
     lightModeSwitchTitle: 'Passer en mode clair',
-    
+
     darkModeSwitchTitle: 'Passer en mode sombre'
   },
 
