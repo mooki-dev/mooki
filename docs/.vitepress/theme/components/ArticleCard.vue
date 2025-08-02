@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRouter } from 'vitepress'
+import { useRouter, withBase } from 'vitepress'
 
 interface Article {
   title: string
@@ -54,7 +54,7 @@ const formatDate = (dateString: string) => {
 }
 
 const navigateToArticle = () => {
-  router.go(props.article.url)
+  router.go(withBase(props.article.url))
 }
 </script>
 
