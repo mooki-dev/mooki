@@ -4,7 +4,7 @@ date: 2025-08-02
 tags: [fastapi, python, backend, api, template, architecture, microservices]
 author: mooki
 excerpt: "Guide complet pour créer un template de projet FastAPI moderne avec les meilleures pratiques 2025 : architecture, sécurité, tests, déploiement et observabilité."
-category: guides
+category: tutoriels
 ---
 
 # Template de projet FastAPI moderne

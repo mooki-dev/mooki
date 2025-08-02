@@ -1,9 +1,9 @@
 ---
-title: Réflexions
-description: Opinions et analyses sur le développement et les pratiques techniques
+title: Tutoriels
+description: Apprentissage technique step-by-step pour maîtriser les technologies modernes
 ---
 
-# Réflexions
+# Tutoriels
 
 <script setup>
 import { onMounted } from 'vue'
@@ -13,7 +13,7 @@ import { useRouter, withBase } from 'vitepress'
 const { loadArticles, getArticlesByCategory } = useArticles()
 const router = useRouter()
 
-const articles = getArticlesByCategory('reflexions')
+const articles = getArticlesByCategory('tutoriels')
 
 onMounted(async () => {
   await loadArticles()
@@ -28,7 +28,7 @@ const handleCategoryChange = (category) => {
 }
 </script>
 
-Opinions et analyses sur le développement et les pratiques techniques : Clean Code, SOLID, performance vs fonctionnel.
+Guides d'apprentissage technique step-by-step : Docker, Kubernetes, Spring Boot, React, FastAPI et architectures modernes.
 
 <ArticleList 
   :articles="articles" 

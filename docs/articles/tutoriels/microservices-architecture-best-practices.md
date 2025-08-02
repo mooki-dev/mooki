@@ -4,7 +4,7 @@ date: 2025-08-02
 tags: [microservices, architecture, distributed-systems, api-design, scalability, devops]
 author: mooki
 excerpt: "Guide complet des bonnes pratiques pour concevoir, développer et maintenir une architecture microservices moderne : patterns, communication, sécurité et observabilité."
-category: guides
+category: tutoriels
 ---
 
 # Architecture microservices : bonnes pratiques

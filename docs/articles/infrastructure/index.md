@@ -1,9 +1,9 @@
 ---
-title: Réflexions
-description: Opinions et analyses sur le développement et les pratiques techniques
+title: Infrastructure
+description: Mise en production, déploiement et exploitation de systèmes en environnement professionnel
 ---
 
-# Réflexions
+# Infrastructure
 
 <script setup>
 import { onMounted } from 'vue'
@@ -13,7 +13,7 @@ import { useRouter, withBase } from 'vitepress'
 const { loadArticles, getArticlesByCategory } = useArticles()
 const router = useRouter()
 
-const articles = getArticlesByCategory('reflexions')
+const articles = getArticlesByCategory('infrastructure')
 
 onMounted(async () => {
   await loadArticles()
@@ -28,7 +28,7 @@ const handleCategoryChange = (category) => {
 }
 </script>
 
-Opinions et analyses sur le développement et les pratiques techniques : Clean Code, SOLID, performance vs fonctionnel.
+Mise en production et exploitation : CI/CD, monitoring, performance et déploiement d'applications en environnement professionnel.
 
 <ArticleList 
   :articles="articles" 

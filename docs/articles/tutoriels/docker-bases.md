@@ -4,7 +4,7 @@ date: 2025-08-02
 tags: [docker, containers, devops, infrastructure]
 author: mooki
 excerpt: "Guide complet pour comprendre et maîtriser les concepts fondamentaux de Docker : conteneurs, images, volumes et réseaux"
-category: guides
+category: tutoriels
 ---
 
 # Les bases de Docker

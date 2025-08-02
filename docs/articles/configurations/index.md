@@ -8,8 +8,10 @@ description: Setups, configs et personnalisations d'outils et environnements
 <script setup>
 import { onMounted } from 'vue'
 import { useArticles } from '../../.vitepress/theme/composables/useArticles'
+import { useRouter, withBase } from 'vitepress'
 
 const { loadArticles, getArticlesByCategory } = useArticles()
+const router = useRouter()
 
 const articles = getArticlesByCategory('configurations')
 
@@ -18,7 +20,7 @@ onMounted(async () => {
 })
 
 const handleTagClick = (tag) => {
-  window.location.href = `/tags/${tag}`
+  router.go(withBase(`/tags/?tag=${tag}`))
 }
 
 const handleCategoryChange = (category) => {

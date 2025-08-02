@@ -4,7 +4,7 @@ date: 2025-08-02
 tags: [docker, java, spring-boot, optimization, maven, gradle]
 author: mooki
 excerpt: "Optimisez vos images Docker Java avec les builds multi-stages : réduisez la taille, améliorez la sécurité et accélérez vos déploiements"
-category: guides
+category: tutoriels
 ---
 
 # Construire une image Docker Java minimale avec les builds multi-stages

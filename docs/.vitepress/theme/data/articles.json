@@ -36,164 +36,22 @@
     "author": "mooki"
   },
   {
-    "title": "Les bases de Docker",
+    "title": "Utiliser une IA pour challenger son propre code et suggérer des refactorings",
     "date": "2025-08-02",
-    "excerpt": "Guide complet pour comprendre et maîtriser les concepts fondamentaux de Docker : conteneurs, images, volumes et réseaux",
+    "excerpt": "Guide pratique pour tirer parti de l'intelligence artificielle comme partenaire de code review et mentor en refactoring : techniques, bonnes pratiques et exemples concrets.",
     "tags": [
-      "docker",
-      "containers",
-      "devops",
-      "infrastructure"
+      "ai",
+      "code-review",
+      "refactoring",
+      "productivite",
+      "qualite-code",
+      "claude",
+      "chatgpt",
+      "copilot"
     ],
     "cover": null,
-    "readingTime": 8,
-    "url": "/articles/guides/docker-bases",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Guide complet Docker Compose moderne",
-    "date": "2025-08-02",
-    "excerpt": "Maîtrisez Docker Compose V2 pour orchestrer vos applications multi-conteneurs : de compose.yaml aux dernières fonctionnalités 2025",
-    "tags": [
-      "docker",
-      "compose",
-      "orchestration",
-      "containers",
-      "devops",
-      "v2"
-    ],
-    "cover": null,
-    "readingTime": 14,
-    "url": "/articles/guides/docker-compose",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Construire une image Docker Java minimale avec les builds multi-stages",
-    "date": "2025-08-02",
-    "excerpt": "Optimisez vos images Docker Java avec les builds multi-stages : réduisez la taille, améliorez la sécurité et accélérez vos déploiements",
-    "tags": [
-      "docker",
-      "java",
-      "spring-boot",
-      "optimization",
-      "maven",
-      "gradle"
-    ],
-    "cover": null,
-    "readingTime": 7,
-    "url": "/articles/guides/docker-java-multi-stage",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Template de projet FastAPI moderne",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour créer un template de projet FastAPI moderne avec les meilleures pratiques 2025 : architecture, sécurité, tests, déploiement et observabilité.",
-    "tags": [
-      "fastapi",
-      "python",
-      "backend",
-      "api",
-      "template",
-      "architecture",
-      "microservices"
-    ],
-    "cover": null,
-    "readingTime": 24,
-    "url": "/articles/guides/fastapi-modern-template",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Pipeline CI/CD moderne avec GitHub Actions",
-    "date": "2025-08-02",
-    "excerpt": "Créez des pipelines CI/CD modernes et robustes avec GitHub Actions : tests automatisés, déploiements multi-environnements, sécurité et monitoring",
-    "tags": [
-      "github-actions",
-      "cicd",
-      "devops",
-      "automation",
-      "deployment",
-      "testing"
-    ],
-    "cover": null,
-    "readingTime": 16,
-    "url": "/articles/guides/github-actions-cicd-pipeline",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Tests unitaires efficaces avec JUnit 5",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour maîtriser JUnit 5 : annotations modernes, assertions avancées, tests paramétrés et bonnes pratiques 2025",
-    "tags": [
-      "junit5",
-      "testing",
-      "java",
-      "tdd",
-      "spring-boot",
-      "mockito",
-      "testcontainers"
-    ],
-    "cover": null,
-    "readingTime": 17,
-    "url": "/articles/guides/junit5-testing",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Orchestration Kubernetes pour débutants",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour débuter avec Kubernetes : concepts fondamentaux, installation, déploiements et bonnes pratiques d'orchestration 2025",
-    "tags": [
-      "kubernetes",
-      "orchestration",
-      "containers",
-      "devops",
-      "microservices",
-      "k8s"
-    ],
-    "cover": null,
-    "readingTime": 20,
-    "url": "/articles/guides/kubernetes-orchestration-beginners",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Architecture microservices : bonnes pratiques",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet des bonnes pratiques pour concevoir, développer et maintenir une architecture microservices moderne : patterns, communication, sécurité et observabilité.",
-    "tags": [
-      "microservices",
-      "architecture",
-      "distributed-systems",
-      "api-design",
-      "scalability",
-      "devops"
-    ],
-    "cover": null,
-    "readingTime": 27,
-    "url": "/articles/guides/microservices-architecture-best-practices",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Mettre en place un monitoring avec Prometheus et Grafana",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour déployer une stack de monitoring moderne avec Prometheus et Grafana : collecte de métriques, alerting et dashboards",
-    "tags": [
-      "monitoring",
-      "prometheus",
-      "grafana",
-      "observability",
-      "devops",
-      "metrics"
-    ],
-    "cover": null,
-    "readingTime": 11,
-    "url": "/articles/guides/prometheus-grafana-monitoring",
+    "readingTime": 12,
+    "url": "/articles/guides/ai-code-review-refactoring",
     "category": "guides",
     "author": "mooki"
   },
@@ -216,6 +74,60 @@
     "author": "mooki"
   },
   {
+    "title": "Comment présenter un problème technique à une audience non-technique",
+    "date": "2025-08-02",
+    "excerpt": "Maîtrisez l'art de la communication technique cross-fonctionnelle : métaphores efficaces, storytelling adapté et stratégies pour transformer la complexité technique en insights business actionables.",
+    "tags": [
+      "communication",
+      "presentation",
+      "soft-skills",
+      "technical-writing",
+      "stakeholder-management",
+      "storytelling"
+    ],
+    "cover": null,
+    "readingTime": 13,
+    "url": "/articles/guides/technical-communication-non-technical-audience",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Pipeline CI/CD moderne avec GitHub Actions",
+    "date": "2025-08-02",
+    "excerpt": "Créez des pipelines CI/CD modernes et robustes avec GitHub Actions : tests automatisés, déploiements multi-environnements, sécurité et monitoring",
+    "tags": [
+      "github-actions",
+      "cicd",
+      "devops",
+      "automation",
+      "deployment",
+      "testing"
+    ],
+    "cover": null,
+    "readingTime": 16,
+    "url": "/articles/infrastructure/github-actions-cicd-pipeline",
+    "category": "infrastructure",
+    "author": "mooki"
+  },
+  {
+    "title": "Mettre en place un monitoring avec Prometheus et Grafana",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour déployer une stack de monitoring moderne avec Prometheus et Grafana : collecte de métriques, alerting et dashboards",
+    "tags": [
+      "monitoring",
+      "prometheus",
+      "grafana",
+      "observability",
+      "devops",
+      "metrics"
+    ],
+    "cover": null,
+    "readingTime": 11,
+    "url": "/articles/infrastructure/prometheus-grafana-monitoring",
+    "category": "infrastructure",
+    "author": "mooki"
+  },
+  {
     "title": "Optimisation des performances Spring Boot",
     "date": "2025-08-02",
     "excerpt": "Guide complet pour optimiser les performances de vos applications Spring Boot : profiling, tuning JVM, cache, base de données et monitoring",
@@ -229,64 +141,8 @@
     ],
     "cover": null,
     "readingTime": 21,
-    "url": "/articles/guides/spring-boot-performance-optimization",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Gestion d'état moderne : Context vs Redux vs Zustand",
-    "date": "2025-08-02",
-    "excerpt": "Comparaison approfondie des solutions de gestion d'état modernes pour React : Context API, Redux Toolkit et Zustand. Guide pratique pour choisir la meilleure approche selon vos besoins.",
-    "tags": [
-      "react",
-      "state-management",
-      "context",
-      "redux",
-      "zustand",
-      "frontend",
-      "architecture"
-    ],
-    "cover": null,
-    "readingTime": 20,
-    "url": "/articles/guides/state-management-modern",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Introduction aux Model Context Protocol (MCP)",
-    "date": "2025-08-02",
-    "excerpt": "Découvrez MCP, le protocole ouvert qui connecte les LLM aux sources de données et outils externes : architecture, SDKs et mise en pratique",
-    "tags": [
-      "mcp",
-      "ai",
-      "llm",
-      "protocol",
-      "integration",
-      "anthropic",
-      "claude"
-    ],
-    "cover": null,
-    "readingTime": 12,
-    "url": "/articles/outils/mcp-introduction",
-    "category": "outils",
-    "author": "mooki"
-  },
-  {
-    "title": "Sélection d'outils TUI pour développeurs",
-    "date": "2025-08-02",
-    "excerpt": "Découvrez les meilleurs outils TUI (Terminal User Interface) de 2025 pour booster votre productivité en ligne de commande : monitoring, navigation et développement",
-    "tags": [
-      "tui",
-      "terminal",
-      "cli",
-      "productivity",
-      "development",
-      "tools"
-    ],
-    "cover": null,
-    "readingTime": 17,
-    "url": "/articles/outils/tui-tools-selection",
-    "category": "outils",
+    "url": "/articles/infrastructure/spring-boot-performance-optimization",
+    "category": "infrastructure",
     "author": "mooki"
   },
   {
@@ -302,7 +158,7 @@
       "time-management"
     ],
     "cover": null,
-    "readingTime": 16,
+    "readingTime": 17,
     "url": "/articles/productivite/pomodoro-technique-remote-coding",
     "category": "productivite",
     "author": "mooki"
@@ -380,6 +236,206 @@
     "author": "mooki"
   },
   {
+    "title": "Introduction aux Model Context Protocol (MCP)",
+    "date": "2025-08-02",
+    "excerpt": "Découvrez MCP, le protocole ouvert qui connecte les LLM aux sources de données et outils externes : architecture, SDKs et mise en pratique",
+    "tags": [
+      "mcp",
+      "ai",
+      "llm",
+      "protocol",
+      "integration",
+      "anthropic",
+      "claude"
+    ],
+    "cover": null,
+    "readingTime": 12,
+    "url": "/articles/outils/mcp-introduction",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Sélection d'outils TUI pour développeurs",
+    "date": "2025-08-02",
+    "excerpt": "Découvrez les meilleurs outils TUI (Terminal User Interface) de 2025 pour booster votre productivité en ligne de commande : monitoring, navigation et développement",
+    "tags": [
+      "tui",
+      "terminal",
+      "cli",
+      "productivity",
+      "development",
+      "tools"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/outils/tui-tools-selection",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Penser comme un attaquant : sécurité défensive",
+    "date": "2025-08-02",
+    "excerpt": "Adoptez une mentalité d'attaquant pour renforcer vos défenses : méthodologies, techniques d'analyse et stratégies pour anticiper et contrer les menaces modernes.",
+    "tags": [
+      "security",
+      "cybersecurity",
+      "defensive-security",
+      "threat-modeling",
+      "pentesting",
+      "vulnerability-assessment"
+    ],
+    "cover": null,
+    "readingTime": 15,
+    "url": "/articles/securite/defensive-security-mindset",
+    "category": "securite",
+    "author": "mooki"
+  },
+  {
+    "title": "Les bases de Docker",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour comprendre et maîtriser les concepts fondamentaux de Docker : conteneurs, images, volumes et réseaux",
+    "tags": [
+      "docker",
+      "containers",
+      "devops",
+      "infrastructure"
+    ],
+    "cover": null,
+    "readingTime": 8,
+    "url": "/articles/tutoriels/docker-bases",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Guide complet Docker Compose moderne",
+    "date": "2025-08-02",
+    "excerpt": "Maîtrisez Docker Compose V2 pour orchestrer vos applications multi-conteneurs : de compose.yaml aux dernières fonctionnalités 2025",
+    "tags": [
+      "docker",
+      "compose",
+      "orchestration",
+      "containers",
+      "devops",
+      "v2"
+    ],
+    "cover": null,
+    "readingTime": 14,
+    "url": "/articles/tutoriels/docker-compose",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Construire une image Docker Java minimale avec les builds multi-stages",
+    "date": "2025-08-02",
+    "excerpt": "Optimisez vos images Docker Java avec les builds multi-stages : réduisez la taille, améliorez la sécurité et accélérez vos déploiements",
+    "tags": [
+      "docker",
+      "java",
+      "spring-boot",
+      "optimization",
+      "maven",
+      "gradle"
+    ],
+    "cover": null,
+    "readingTime": 7,
+    "url": "/articles/tutoriels/docker-java-multi-stage",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Template de projet FastAPI moderne",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour créer un template de projet FastAPI moderne avec les meilleures pratiques 2025 : architecture, sécurité, tests, déploiement et observabilité.",
+    "tags": [
+      "fastapi",
+      "python",
+      "backend",
+      "api",
+      "template",
+      "architecture",
+      "microservices"
+    ],
+    "cover": null,
+    "readingTime": 24,
+    "url": "/articles/tutoriels/fastapi-modern-template",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Tests unitaires efficaces avec JUnit 5",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour maîtriser JUnit 5 : annotations modernes, assertions avancées, tests paramétrés et bonnes pratiques 2025",
+    "tags": [
+      "junit5",
+      "testing",
+      "java",
+      "tdd",
+      "spring-boot",
+      "mockito",
+      "testcontainers"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/tutoriels/junit5-testing",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Orchestration Kubernetes pour débutants",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour débuter avec Kubernetes : concepts fondamentaux, installation, déploiements et bonnes pratiques d'orchestration 2025",
+    "tags": [
+      "kubernetes",
+      "orchestration",
+      "containers",
+      "devops",
+      "microservices",
+      "k8s"
+    ],
+    "cover": null,
+    "readingTime": 20,
+    "url": "/articles/tutoriels/kubernetes-orchestration-beginners",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Architecture microservices : bonnes pratiques",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet des bonnes pratiques pour concevoir, développer et maintenir une architecture microservices moderne : patterns, communication, sécurité et observabilité.",
+    "tags": [
+      "microservices",
+      "architecture",
+      "distributed-systems",
+      "api-design",
+      "scalability",
+      "devops"
+    ],
+    "cover": null,
+    "readingTime": 27,
+    "url": "/articles/tutoriels/microservices-architecture-best-practices",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Gestion d'état moderne : Context vs Redux vs Zustand",
+    "date": "2025-08-02",
+    "excerpt": "Comparaison approfondie des solutions de gestion d'état modernes pour React : Context API, Redux Toolkit et Zustand. Guide pratique pour choisir la meilleure approche selon vos besoins.",
+    "tags": [
+      "react",
+      "state-management",
+      "context",
+      "redux",
+      "zustand",
+      "frontend",
+      "architecture"
+    ],
+    "cover": null,
+    "readingTime": 20,
+    "url": "/articles/tutoriels/state-management-modern",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
     "title": "Claude Code dans le workflow de développement",
     "date": "2025-01-22",
     "excerpt": "Comment intégrer Claude Code efficacement dans votre processus de développement quotidien",
@@ -406,8 +462,8 @@
     ],
     "cover": null,
     "readingTime": 15,
-    "url": "/articles/guides/spring-boot-bases",
-    "category": "guides",
+    "url": "/articles/tutoriels/spring-boot-bases",
+    "category": "tutoriels",
     "author": "mooki"
   },
   {

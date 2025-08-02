@@ -23,11 +23,17 @@ function generateArticlesSidebar(): DefaultTheme.SidebarItem[] {
   const categories = [
     { id: 'configurations', label: 'Configurations' },
     { id: 'guides', label: 'Guides' },
+    { id: 'infrastructure', label: 'Infrastructure' },
     { id: 'methodes', label: 'Méthodes' },
     { id: 'outils', label: 'Outils' },
     { id: 'productivite', label: 'Productivité' },
     { id: 'projets', label: 'Projets' },
-    { id: 'reflexions', label: 'Réflexions' }
+    { id: 'reflexions', label: 'Réflexions' },
+    { id: 'securite', label: 'Sécurité' },
+    { id: 'tutoriels', label: 'Tutoriels' }
+
+
+
 
   ]
 
@@ -136,11 +142,17 @@ function generateTagsSidebar(): DefaultTheme.SidebarItem[] {
       items: [
         { text: 'Configurations', link: '/articles/configurations/' },
         { text: 'Guides', link: '/articles/guides/' },
+        { text: 'Infrastructure', link: '/articles/infrastructure/' },
         { text: 'Méthodes', link: '/articles/methodes/' },
         { text: 'Outils', link: '/articles/outils/' },
         { text: 'Productivité', link: '/articles/productivite/' },
         { text: 'Projets', link: '/articles/projets/' },
-        { text: 'Réflexions', link: '/articles/reflexions/' }
+        { text: 'Réflexions', link: '/articles/reflexions/' },
+        { text: 'Sécurité', link: '/articles/securite/' },
+        { text: 'Tutoriels', link: '/articles/tutoriels/' }
+
+
+
 
       ]
     }

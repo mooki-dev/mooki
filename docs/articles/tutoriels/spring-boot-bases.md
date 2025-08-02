@@ -4,7 +4,7 @@ date: 2025-01-20
 tags: [spring, java, tutorial]
 author: mooki
 excerpt: "Guide complet pour débuter avec Spring Boot : configuration, annotations et premiers pas"
-category: guides
+category: tutoriels
 readingTime: 15
 ---
 

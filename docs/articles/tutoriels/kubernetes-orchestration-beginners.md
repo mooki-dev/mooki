@@ -4,7 +4,7 @@ date: 2025-08-02
 tags: [kubernetes, orchestration, containers, devops, microservices, k8s]
 author: mooki
 excerpt: "Guide complet pour débuter avec Kubernetes : concepts fondamentaux, installation, déploiements et bonnes pratiques d'orchestration 2025"
-category: guides
+category: tutoriels
 ---
 
 # Orchestration Kubernetes pour débutants

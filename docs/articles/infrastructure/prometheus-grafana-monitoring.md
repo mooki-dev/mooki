@@ -4,7 +4,7 @@ date: 2025-08-02
 tags: [monitoring, prometheus, grafana, observability, devops, metrics]
 author: mooki
 excerpt: "Guide complet pour déployer une stack de monitoring moderne avec Prometheus et Grafana : collecte de métriques, alerting et dashboards"
-category: guides
+category: infrastructure
 ---
 
 # Mettre en place un monitoring avec Prometheus et Grafana

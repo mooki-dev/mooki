@@ -1,9 +1,9 @@
 ---
-title: Réflexions
-description: Opinions et analyses sur le développement et les pratiques techniques
+title: Sécurité
+description: Sécurité informatique, cybersécurité et protection des systèmes d'information
 ---
 
-# Réflexions
+# Sécurité
 
 <script setup>
 import { onMounted } from 'vue'
@@ -13,7 +13,7 @@ import { useRouter, withBase } from 'vitepress'
 const { loadArticles, getArticlesByCategory } = useArticles()
 const router = useRouter()
 
-const articles = getArticlesByCategory('reflexions')
+const articles = getArticlesByCategory('securite')
 
 onMounted(async () => {
   await loadArticles()
@@ -28,7 +28,7 @@ const handleCategoryChange = (category) => {
 }
 </script>
 
-Opinions et analyses sur le développement et les pratiques techniques : Clean Code, SOLID, performance vs fonctionnel.
+Sécurité informatique et cybersécurité : sécurité défensive, threat modeling et protection des systèmes d'information.
 
 <ArticleList 
   :articles="articles" 

@@ -4,7 +4,7 @@ date: 2025-08-02
 tags: [github-actions, cicd, devops, automation, deployment, testing]
 author: mooki
 excerpt: "Créez des pipelines CI/CD modernes et robustes avec GitHub Actions : tests automatisés, déploiements multi-environnements, sécurité et monitoring"
-category: guides
+category: infrastructure
 ---
 
 # Pipeline CI/CD moderne avec GitHub Actions

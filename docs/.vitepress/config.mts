@@ -47,11 +47,17 @@ export default defineConfig({
         items: [
           { text: 'Configurations', link: '/articles/configurations/' },
           { text: 'Guides', link: '/articles/guides/' },
+          { text: 'Infrastructure', link: '/articles/infrastructure/' },
           { text: 'Méthodes', link: '/articles/methodes/' },
           { text: 'Outils', link: '/articles/outils/' },
           { text: 'Productivité', link: '/articles/productivite/' },
           { text: 'Projets', link: '/articles/projets/' },
-          { text: 'Réflexions', link: '/articles/reflexions/' }
+          { text: 'Réflexions', link: '/articles/reflexions/' },
+          { text: 'Sécurité', link: '/articles/securite/' },
+          { text: 'Tutoriels', link: '/articles/tutoriels/' }
+
+
+
 
         ]
       },
