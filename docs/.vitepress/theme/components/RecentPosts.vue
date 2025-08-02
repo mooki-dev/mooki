@@ -29,9 +29,9 @@
       </article>
     </div>
     <div class="view-all" v-if="showViewAll">
-      <a :href="viewAllLink" class="view-all-link">
+      <span @click="navigateToViewAll" class="view-all-link">
         Voir tous les articles →
-      </a>
+      </span>
     </div>
   </div>
 </template>
@@ -98,6 +98,10 @@ const formatDate = (dateString: string) => {
 
 const navigateToPost = (url: string) => {
   router.go(withBase(url))
+}
+
+const navigateToViewAll = () => {
+  router.go(withBase(props.viewAllLink))
 }
 </script>
 
@@ -199,6 +203,7 @@ const navigateToPost = (url: string) => {
   font-weight: 500;
   font-size: 0.9375rem;
   text-decoration: none;
+  cursor: pointer;
   transition: gap 0.2s ease;
 }
 
