@@ -1,5 +1,185 @@
 [
   {
+    "title": "Configuration Arch Linux optimisée pour développeur",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour configurer Arch Linux pour le développement : installation optimisée, outils modernes, sécurité et performance",
+    "tags": [
+      "arch-linux",
+      "development",
+      "configuration",
+      "linux",
+      "performance",
+      "security"
+    ],
+    "cover": null,
+    "readingTime": 11,
+    "url": "/articles/configurations/arch-linux-dev",
+    "category": "configurations",
+    "author": "mooki"
+  },
+  {
+    "title": "Configuration Hyprland complète",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour configurer Hyprland : gestionnaire de fenêtres tiling moderne sous Wayland avec animations fluides et configuration avancée",
+    "tags": [
+      "hyprland",
+      "wayland",
+      "tiling",
+      "linux",
+      "arch",
+      "config"
+    ],
+    "cover": null,
+    "readingTime": 13,
+    "url": "/articles/configurations/hyprland-setup",
+    "category": "configurations",
+    "author": "mooki"
+  },
+  {
+    "title": "Les bases de Docker",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour comprendre et maîtriser les concepts fondamentaux de Docker : conteneurs, images, volumes et réseaux",
+    "tags": [
+      "docker",
+      "containers",
+      "devops",
+      "infrastructure"
+    ],
+    "cover": null,
+    "readingTime": 8,
+    "url": "/articles/guides/docker-bases",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Guide complet Docker Compose moderne",
+    "date": "2025-08-02",
+    "excerpt": "Maîtrisez Docker Compose V2 pour orchestrer vos applications multi-conteneurs : de compose.yaml aux dernières fonctionnalités 2025",
+    "tags": [
+      "docker",
+      "compose",
+      "orchestration",
+      "containers",
+      "devops",
+      "v2"
+    ],
+    "cover": null,
+    "readingTime": 14,
+    "url": "/articles/guides/docker-compose",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Construire une image Docker Java minimale avec les builds multi-stages",
+    "date": "2025-08-02",
+    "excerpt": "Optimisez vos images Docker Java avec les builds multi-stages : réduisez la taille, améliorez la sécurité et accélérez vos déploiements",
+    "tags": [
+      "docker",
+      "java",
+      "spring-boot",
+      "optimization",
+      "maven",
+      "gradle"
+    ],
+    "cover": null,
+    "readingTime": 7,
+    "url": "/articles/guides/docker-java-multi-stage",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Tests unitaires efficaces avec JUnit 5",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour maîtriser JUnit 5 : annotations modernes, assertions avancées, tests paramétrés et bonnes pratiques 2025",
+    "tags": [
+      "junit5",
+      "testing",
+      "java",
+      "tdd",
+      "spring-boot",
+      "mockito",
+      "testcontainers"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/guides/junit5-testing",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Mettre en place un monitoring avec Prometheus et Grafana",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour déployer une stack de monitoring moderne avec Prometheus et Grafana : collecte de métriques, alerting et dashboards",
+    "tags": [
+      "monitoring",
+      "prometheus",
+      "grafana",
+      "observability",
+      "devops",
+      "metrics"
+    ],
+    "cover": null,
+    "readingTime": 11,
+    "url": "/articles/guides/prometheus-grafana-monitoring",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Introduction aux Model Context Protocol (MCP)",
+    "date": "2025-08-02",
+    "excerpt": "Découvrez MCP, le protocole ouvert qui connecte les LLM aux sources de données et outils externes : architecture, SDKs et mise en pratique",
+    "tags": [
+      "mcp",
+      "ai",
+      "llm",
+      "protocol",
+      "integration",
+      "anthropic",
+      "claude"
+    ],
+    "cover": null,
+    "readingTime": 12,
+    "url": "/articles/outils/mcp-introduction",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Sélection d'outils TUI pour développeurs",
+    "date": "2025-08-02",
+    "excerpt": "Découvrez les meilleurs outils TUI (Terminal User Interface) de 2025 pour booster votre productivité en ligne de commande : monitoring, navigation et développement",
+    "tags": [
+      "tui",
+      "terminal",
+      "cli",
+      "productivity",
+      "development",
+      "tools"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/outils/tui-tools-selection",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Les patterns SOLID expliqués simplement",
+    "date": "2025-08-02",
+    "excerpt": "Découvrez les principes SOLID avec des exemples concrets : comment écrire du code maintenable, extensible et robuste en programmation orientée objet",
+    "tags": [
+      "solid",
+      "design-patterns",
+      "oop",
+      "clean-code",
+      "architecture",
+      "best-practices"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/reflexions/solid-patterns",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
     "title": "Claude Code dans le workflow de développement",
     "date": "2025-01-22",
     "excerpt": "Comment intégrer Claude Code efficacement dans votre processus de développement quotidien",
