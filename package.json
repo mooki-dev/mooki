@@ -1,10 +1,21 @@
 {
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "docs:build": "vitepress build docs && npm run build:rss && npm run build:sitemap",
+    "docs:preview": "vitepress preview docs",
+    "build:rss": "node scripts/generate-rss.js",
+    "build:sitemap": "node scripts/generate-sitemap.js",
+    "new:article": "node scripts/new-article.js"
   },
   "devDependencies": {
+    "@vueuse/core": "^13.6.0",
+    "fast-glob": "^3.3.3",
+    "feed": "^5.1.0",
+    "globby": "^14.1.0",
+    "gray-matter": "^4.0.3",
+    "reading-time": "^1.5.0",
+    "sitemap-ts": "^1.10.1",
+    "vitepress": "^1.6.3",
     "vue": "^3.5.18"
   }
 }
