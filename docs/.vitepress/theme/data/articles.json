@@ -1,0 +1,96 @@
+[
+  {
+    "title": "Claude Code dans le workflow de développement",
+    "date": "2025-01-22",
+    "excerpt": "Comment intégrer Claude Code efficacement dans votre processus de développement quotidien",
+    "tags": [
+      "claude",
+      "ai",
+      "productivity",
+      "workflow"
+    ],
+    "cover": null,
+    "readingTime": 12,
+    "url": "/articles/outils/claude-code-workflow",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Les bases de Spring Boot",
+    "date": "2025-01-20",
+    "excerpt": "Guide complet pour débuter avec Spring Boot : configuration, annotations et premiers pas",
+    "tags": [
+      "spring",
+      "java",
+      "tutorial"
+    ],
+    "cover": null,
+    "readingTime": 15,
+    "url": "/articles/guides/spring-boot-bases",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Configuration Neovim complète",
+    "date": "2025-01-18",
+    "excerpt": "Configuration complète de Neovim avec plugins, LSP et interface moderne",
+    "tags": [
+      "neovim",
+      "vim",
+      "editor",
+      "config"
+    ],
+    "cover": null,
+    "readingTime": 25,
+    "url": "/articles/configurations/neovim-setup",
+    "category": "configurations",
+    "author": "mooki"
+  },
+  {
+    "title": "Clean Code en pratique : au-delà des règles",
+    "date": "2025-01-15",
+    "excerpt": "Clean Code ne se résume pas à suivre des règles. Réflexion sur l'application pragmatique des principes",
+    "tags": [
+      "clean-code",
+      "best-practices",
+      "quality"
+    ],
+    "cover": null,
+    "readingTime": 18,
+    "url": "/articles/reflexions/clean-code-pratique",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "Créer son propre starter Spring Boot minimal",
+    "date": "2025-01-12",
+    "excerpt": "Guide pour créer un starter Spring Boot personnalisé avec les dépendances et configurations essentielles",
+    "tags": [
+      "spring",
+      "java",
+      "starter",
+      "template"
+    ],
+    "cover": null,
+    "readingTime": 22,
+    "url": "/articles/projets/spring-starter-minimal",
+    "category": "projets",
+    "author": "mooki"
+  },
+  {
+    "title": "Agile en pratique : au-delà des cérémonies",
+    "date": "2025-01-10",
+    "excerpt": "L'agilité ne se résume pas aux standups et sprints. Focus sur l'état d'esprit et les pratiques qui comptent vraiment",
+    "tags": [
+      "agile",
+      "scrum",
+      "management",
+      "methode"
+    ],
+    "cover": null,
+    "readingTime": 20,
+    "url": "/articles/methodes/agile-pratique",
+    "category": "methodes",
+    "author": "mooki"
+  }
+]

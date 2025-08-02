@@ -28,6 +28,22 @@ npm run new:article
 
 Ce script interactif vous guidera pour créer un nouvel article avec la structure appropriée.
 
+### Génération automatique des articles
+
+Les articles sont automatiquement détectés et chargés depuis les fichiers Markdown. Plus besoin de maintenir une liste manuelle !
+
+```bash
+# Génère automatiquement la liste des articles depuis les fichiers .md
+npm run build:articles
+```
+
+**Workflow simplifié :**
+1. Créez un fichier `.md` dans le bon dossier de catégorie
+2. Ajoutez le frontmatter YAML
+3. L'article apparaît automatiquement sur le site
+
+Les métadonnées (temps de lecture, URL, catégorie) sont calculées automatiquement depuis le contenu et la structure de fichiers.
+
 ### Structure des dossiers
 
 ```
@@ -91,6 +107,12 @@ Articles similaires basés sur les tags et catégories.
 
 ## Scripts utilitaires
 
+### Génération automatique des articles
+```bash
+npm run build:articles
+```
+Scan automatiquement tous les fichiers `.md` dans `/docs/articles/` et génère les métadonnées. Exécuté automatiquement avant chaque build.
+
 ### Génération RSS
 ```bash
 npm run build:rss
@@ -102,6 +124,15 @@ Génère les flux RSS, Atom et JSON Feed dans `/dist/`.
 npm run build:sitemap
 ```
 Génère le sitemap XML avec tous les articles et pages.
+
+### Commandes combinées
+```bash
+# Build complet (articles + site + RSS + sitemap)
+npm run docs:build
+
+# Build local (sans optimisations de production)
+npm run docs:build:local
+```
 
 ## Template d'article
 
@@ -116,54 +147,95 @@ author: mooki
 excerpt: "Description courte de l'article"
 cover: /images/article-cover.jpg
 category: nom-de-la-categorie
+readingTime: 15  # Optionnel - calculé automatiquement si absent
 ---
 ```
 
+**Champs automatiques :**
+- `readingTime` : Calculé automatiquement si non spécifié
+- `url` : Généré depuis le chemin du fichier
+- `category` : Extrait du dossier parent si non spécifié
+
+**Placement du fichier :**
+- `docs/articles/guides/mon-article.md` → `/articles/guides/mon-article`
+- `docs/articles/outils/super-tool.md` → `/articles/outils/super-tool`
+
 ## Fonctionnalités
 
+- **Génération automatique** : Articles détectés automatiquement depuis les fichiers .md
 - **Navigation intelligente** : Sidebar générée automatiquement
 - **Recherche locale** : Recherche dans tout le contenu
-- **Pagination** : Gestion efficace de nombreux articles
+- **Pagination complète** : Pages d'articles, catégories et tags avec navigation
 - **Tags et catégories** : Organisation flexible du contenu
-- **Articles similaires** : Algorithme de recommandation
-- **Temps de lecture** : Calcul automatique
-- **RSS/Atom** : Flux de syndication
-- **Sitemap** : SEO optimisé
-- **Responsive** : Design adaptatif
+- **Articles similaires** : Algorithme de recommandation basé sur les tags
+- **Temps de lecture** : Calcul automatique (200 mots/min en français)
+- **RSS/Atom** : Flux de syndication multi-format
+- **Sitemap** : SEO optimisé avec priorités
+- **Responsive** : Design adaptatif mobile-first
 - **Mode sombre** : Support natif VitePress
+- **Performance** : Build statique optimisé avec lazy loading
+- **Logos personnalisés** : Favicon SVG/ICO et hero image
+- **CI/CD** : Déploiement automatique sur GitHub Pages
 
 ## Configuration
 
 ### Site web
 
 Modifiez `docs/.vitepress/config.mts` pour :
-- URL du site
+- URL du site et base path
 - Métadonnées SEO
-- Navigation
-- Réseaux sociaux
+- Navigation et liens sociaux
+- Configuration des favicons
 
-### Theme
+### Theme et composants
 
-Personnalisez `docs/.vitepress/theme/style.css` pour :
-- Couleurs
-- Typographie
-- Espacement
+Personnalisez `docs/.vitepress/theme/` pour :
+- `style.css` : Couleurs, typographie, espacement
+- `components/` : Composants Vue personnalisés
+- `data/` : Sources de données (généré automatiquement)
+- `utils/` : Fonctions utilitaires
+
+### Logos et assets
+
+- `docs/public/logo.svg` : Logo de la navbar
+- `docs/public/hero-image.png` : Image de la page d'accueil
+- `docs/public/favicon.svg` : Favicon moderne (navigateurs récents)
+- `docs/public/favicon.ico` : Favicon de compatibilité
+
+## Déploiement
+
+### GitHub Pages (automatique)
+
+Le site se déploie automatiquement sur GitHub Pages à chaque push sur `main` :
+
+1. **Génération articles** → Scan des fichiers .md
+2. **Build VitePress** → Site statique optimisé  
+3. **Génération RSS/Sitemap** → Flux et référencement
+4. **Déploiement** → GitHub Pages
+
+URL de production : `https://mooki-dev.github.io/mooki`
+
+### Local
+
+```bash
+# Développement avec hot reload
+npm run docs:dev
+
+# Build et aperçu local
+npm run docs:build:local
+npm run docs:preview
+```
 
 ## Performance
 
-Le blog est optimisé pour :
-- **Build rapide** : Génération statique efficace
-- **Chargement rapide** : Lazy loading et optimisations
-- **SEO** : Structure sémantique et métadonnées
-- **Accessibilité** : Standards WCAG
+Le site est optimisé pour :
+- **Build rapide** : Génération statique avec cache intelligent
+- **Chargement rapide** : Lazy loading et code splitting
+- **SEO** : Structure sémantique et métadonnées complètes
+- **Accessibilité** : Standards WCAG avec navigation clavier
+- **Mobile** : Design responsive avec touch-friendly UI
+- **Maintenance** : Génération automatique sans intervention manuelle
 
-## Contribution
-
-1. Fork le projet
-2. Créer une branche feature
-3. Commit vos changements
-4. Push vers la branche
-5. Ouvrir une Pull Request
 
 ## Licence
 

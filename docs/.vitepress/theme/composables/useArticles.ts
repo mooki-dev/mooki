@@ -1,5 +1,5 @@
 import { ref, computed } from 'vue'
-import articlesData from '../data/articles.js'
+import articlesData from '../data/articles.json'
 
 export interface Article {
   title: string

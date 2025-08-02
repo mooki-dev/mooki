@@ -2,9 +2,10 @@
   "type": "module",
   "scripts": {
     "docs:dev": "vitepress dev docs",
-    "docs:build": "NODE_ENV=production vitepress build docs && npm run build:rss && npm run build:sitemap",
-    "docs:build:local": "vitepress build docs && npm run build:rss && npm run build:sitemap",
+    "docs:build": "npm run build:articles && NODE_ENV=production vitepress build docs && npm run build:rss && npm run build:sitemap",
+    "docs:build:local": "npm run build:articles && vitepress build docs && npm run build:rss && npm run build:sitemap",
     "docs:preview": "vitepress preview docs",
+    "build:articles": "node scripts/generate-articles.js",
     "build:rss": "node scripts/generate-rss.js",
     "build:sitemap": "node scripts/generate-sitemap.js",
     "new:article": "node scripts/new-article.js"
