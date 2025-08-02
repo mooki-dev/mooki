@@ -8,7 +8,7 @@ export default [
     readingTime: 15,
     author: "mooki",
     category: "guides",
-    url: "/articles/guides/spring-boot-bases"
+    url: "articles/guides/spring-boot-bases"
   },
   {
     title: "Configuration Neovim complète",
@@ -18,7 +18,7 @@ export default [
     readingTime: 25,
     author: "mooki",
     category: "configurations",
-    url: "/articles/configurations/neovim-setup"
+    url: "articles/configurations/neovim-setup"
   },
   {
     title: "Claude Code dans le workflow de développement",
@@ -28,7 +28,7 @@ export default [
     readingTime: 12,
     author: "mooki",
     category: "outils",
-    url: "/articles/outils/claude-code-workflow"
+    url: "articles/outils/claude-code-workflow"
   },
   {
     title: "Clean Code en pratique : au-delà des règles",
@@ -38,7 +38,7 @@ export default [
     readingTime: 18,
     author: "mooki",
     category: "reflexions",
-    url: "/articles/reflexions/clean-code-pratique"
+    url: "articles/reflexions/clean-code-pratique"
   },
   {
     title: "Créer son propre starter Spring Boot minimal",
@@ -48,7 +48,7 @@ export default [
     readingTime: 22,
     author: "mooki",
     category: "projets",
-    url: "/articles/projets/spring-starter-minimal"
+    url: "articles/projets/spring-starter-minimal"
   },
   {
     title: "Agile en pratique : au-delà des cérémonies",
@@ -58,6 +58,6 @@ export default [
     readingTime: 20,
     author: "mooki",
     category: "methodes",
-    url: "/articles/methodes/agile-pratique"
+    url: "articles/methodes/agile-pratique"
   }
 ]
