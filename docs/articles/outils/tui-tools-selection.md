@@ -23,6 +23,10 @@ Les outils TUI sont des applications en ligne de commande avec des interfaces in
 - **Flexibilité** : Scriptables et automatisables
 - **Universalité** : Compatibles avec tous les systèmes
 
+::: info
+Les outils TUI consomment généralement 10 à 100 fois moins de RAM que leurs équivalents graphiques, tout en offrant des fonctionnalités similaires.
+:::
+
 ### TUI vs CLI vs GUI
 
 ```
@@ -36,6 +40,10 @@ CLI (Command Line)     TUI (Terminal UI)      GUI (Graphical UI)
 ## Monitoring et observabilité
 
 ### btop++ - Moniteur système moderne
+
+::: tip
+btop++ est la nouvelle génération de htop, écrit en C++ avec des graphiques modernes et support GPU. Il remplace avantageusement htop pour la plupart des cas d'usage.
+:::
 
 **Installation :**
 ```bash
@@ -235,11 +243,19 @@ alias l='eza -F --icons --git'
 
 # Utilisation avancée
 eza -alF --git --icons --tree --level=3 --group-directories-first
+
+::: warning
+Le projet `exa` est en maintenance limitée. Privilégiez `eza` qui est un fork actif avec de nouvelles fonctionnalités et corrections de bugs régulières.
+:::
 ```
 
 ## Développement et Git
 
 ### lazygit - Interface Git intuitive
+
+::: tip
+lazygit est devenu l'outil TUI Git le plus populaire. Son interface intuitive permet de gérer des workflows Git complexes avec une courbe d'apprentissage minimale.
+:::
 
 ```bash
 # Installation
@@ -858,6 +874,10 @@ set -g status-right '#(btop --cpu-only --no-color | head -1) | %H:%M %d-%b-%y'
 ## Scripts d'automatisation
 
 ### Script d'installation complète
+
+::: details Script d'installation automatisé
+Ce script installe tous les outils TUI essentiels selon votre système d'exploitation.
+:::
 
 **install-tui-suite.sh**
 ```bash

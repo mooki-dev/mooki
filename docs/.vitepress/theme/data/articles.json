@@ -88,6 +88,24 @@
     "author": "mooki"
   },
   {
+    "title": "Pipeline CI/CD moderne avec GitHub Actions",
+    "date": "2025-08-02",
+    "excerpt": "Créez des pipelines CI/CD modernes et robustes avec GitHub Actions : tests automatisés, déploiements multi-environnements, sécurité et monitoring",
+    "tags": [
+      "github-actions",
+      "cicd",
+      "devops",
+      "automation",
+      "deployment",
+      "testing"
+    ],
+    "cover": null,
+    "readingTime": 16,
+    "url": "/articles/guides/github-actions-cicd-pipeline",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
     "title": "Tests unitaires efficaces avec JUnit 5",
     "date": "2025-08-02",
     "excerpt": "Guide complet pour maîtriser JUnit 5 : annotations modernes, assertions avancées, tests paramétrés et bonnes pratiques 2025",
@@ -107,6 +125,24 @@
     "author": "mooki"
   },
   {
+    "title": "Orchestration Kubernetes pour débutants",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour débuter avec Kubernetes : concepts fondamentaux, installation, déploiements et bonnes pratiques d'orchestration 2025",
+    "tags": [
+      "kubernetes",
+      "orchestration",
+      "containers",
+      "devops",
+      "microservices",
+      "k8s"
+    ],
+    "cover": null,
+    "readingTime": 20,
+    "url": "/articles/guides/kubernetes-orchestration-beginners",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
     "title": "Mettre en place un monitoring avec Prometheus et Grafana",
     "date": "2025-08-02",
     "excerpt": "Guide complet pour déployer une stack de monitoring moderne avec Prometheus et Grafana : collecte de métriques, alerting et dashboards",
@@ -121,6 +157,43 @@
     "cover": null,
     "readingTime": 11,
     "url": "/articles/guides/prometheus-grafana-monitoring",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Optimisation des performances Spring Boot",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet pour optimiser les performances de vos applications Spring Boot : profiling, tuning JVM, cache, base de données et monitoring",
+    "tags": [
+      "spring-boot",
+      "performance",
+      "optimization",
+      "java",
+      "microservices",
+      "monitoring"
+    ],
+    "cover": null,
+    "readingTime": 21,
+    "url": "/articles/guides/spring-boot-performance-optimization",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Gestion d'état moderne : Context vs Redux vs Zustand",
+    "date": "2025-08-02",
+    "excerpt": "Comparaison approfondie des solutions de gestion d'état modernes pour React : Context API, Redux Toolkit et Zustand. Guide pratique pour choisir la meilleure approche selon vos besoins.",
+    "tags": [
+      "react",
+      "state-management",
+      "context",
+      "redux",
+      "zustand",
+      "frontend",
+      "architecture"
+    ],
+    "cover": null,
+    "readingTime": 20,
+    "url": "/articles/guides/state-management-modern",
     "category": "guides",
     "author": "mooki"
   },
