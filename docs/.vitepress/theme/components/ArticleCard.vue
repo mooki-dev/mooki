@@ -12,7 +12,7 @@
       <p class="article-excerpt">{{ article.excerpt }}</p>
       <div class="article-tags" v-if="article.tags && article.tags.length">
         <span 
-          v-for="tag in article.tags.slice(0, 3)" 
+          v-for="tag in article.tags.slice(0, 10)" 
           :key="tag"
           class="tag"
           @click.stop="$emit('tag-click', tag)"
