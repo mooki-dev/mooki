@@ -67,7 +67,12 @@ const navigateToCategory = (category) => {
 <div class="categories-grid">
   <div class="category-card" @click="navigateToCategory('guides')">
     <h3>Guides</h3>
-    <p>Tutorials Spring, Docker, Kubernetes, Linux...</p>
+    <p>Spring Boot, Docker, Kubernetes, Linux et bien plus.</p>
+  </div>
+
+  <div class="category-card" @click="navigateToCategory('infrastructure')">
+    <h3>Infrastructure</h3>
+    <p>Cloud, Kubernetes, Docker, CI/CD...</p>
   </div>
   
   <div class="category-card" @click="navigateToCategory('configurations')">
@@ -98,6 +103,16 @@ const navigateToCategory = (category) => {
   <div class="category-card" @click="navigateToCategory('productivite')">
     <h3>Productivité</h3>
     <p>Focus, gestion du temps, outils de productivité...</p>
+  </div>
+
+  <div class="category-card" @click="navigateToCategory('securite')">
+    <h3>Sécurité</h3>
+    <p>Meilleures pratiques, audits, tests d'intrusion...</p>
+  </div>
+
+  <div class="category-card" @click="navigateToCategory('tutoriels')">
+    <h3>Tutoriels</h3>
+    <p>Guides pratiques sur des sujets variés.</p>
   </div>
 </div>
 
