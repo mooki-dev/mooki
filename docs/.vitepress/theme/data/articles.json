@@ -143,6 +143,24 @@
     "author": "mooki"
   },
   {
+    "title": "Architecture microservices : bonnes pratiques",
+    "date": "2025-08-02",
+    "excerpt": "Guide complet des bonnes pratiques pour concevoir, développer et maintenir une architecture microservices moderne : patterns, communication, sécurité et observabilité.",
+    "tags": [
+      "microservices",
+      "architecture",
+      "distributed-systems",
+      "api-design",
+      "scalability",
+      "devops"
+    ],
+    "cover": null,
+    "readingTime": 27,
+    "url": "/articles/guides/microservices-architecture-best-practices",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
     "title": "Mettre en place un monitoring avec Prometheus et Grafana",
     "date": "2025-08-02",
     "excerpt": "Guide complet pour déployer une stack de monitoring moderne avec Prometheus et Grafana : collecte de métriques, alerting et dashboards",
