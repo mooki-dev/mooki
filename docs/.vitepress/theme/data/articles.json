@@ -56,6 +56,24 @@
     "author": "mooki"
   },
   {
+    "title": "Mon client veut un site carbon-neutral : du cahier des charges à la mise en prod",
+    "date": "2025-08-02",
+    "excerpt": "Retour d'expérience complet sur le développement d'un site web carbon-neutral : choix techniques, hébergement vert, optimisations et mesures d'impact réel.",
+    "tags": [
+      "carbon-neutral",
+      "développement-durable",
+      "performance",
+      "écologie",
+      "web-vert",
+      "sustainability"
+    ],
+    "cover": "/images/client-site-carbon-neutral-cahier-charges-prod.jpg",
+    "readingTime": 13,
+    "url": "/articles/guides/client-site-carbon-neutral-cahier-charges-prod",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
     "title": "Auto-hébergement : reprendre le contrôle de ses données",
     "date": "2025-08-02",
     "excerpt": "Guide complet pour débuter l'auto-hébergement en 2025 : alternatives aux services cloud, configuration sécurisée et gestion de votre infrastructure personnelle.",
@@ -146,6 +164,61 @@
     "author": "mooki"
   },
   {
+    "title": "DevContainers vs \"ça marche sur ma machine\" : la fin d'une époque",
+    "date": "2025-08-02",
+    "excerpt": "Comment les DevContainers et les environnements de développement cloud révolutionnent notre quotidien de développeur et mettent fin au célèbre \"ça marche sur ma machine\".",
+    "tags": [
+      "devcontainers",
+      "docker",
+      "developpement",
+      "environnement",
+      "vscode",
+      "productivite"
+    ],
+    "cover": "/images/devcontainers-fin-ca-marche-sur-ma-machine.jpg",
+    "readingTime": 10,
+    "url": "/articles/outils/devcontainers-fin-ca-marche-sur-ma-machine",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Introduction aux Model Context Protocol (MCP)",
+    "date": "2025-08-02",
+    "excerpt": "Découvrez MCP, le protocole ouvert qui connecte les LLM aux sources de données et outils externes : architecture, SDKs et mise en pratique",
+    "tags": [
+      "mcp",
+      "ai",
+      "llm",
+      "protocol",
+      "integration",
+      "anthropic",
+      "claude"
+    ],
+    "cover": null,
+    "readingTime": 12,
+    "url": "/articles/outils/mcp-introduction",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Sélection d'outils TUI pour développeurs",
+    "date": "2025-08-02",
+    "excerpt": "Découvrez les meilleurs outils TUI (Terminal User Interface) de 2025 pour booster votre productivité en ligne de commande : monitoring, navigation et développement",
+    "tags": [
+      "tui",
+      "terminal",
+      "cli",
+      "productivity",
+      "development",
+      "tools"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/outils/tui-tools-selection",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
     "title": "La technique Pomodoro adaptée pour les sessions de code en télétravail",
     "date": "2025-08-02",
     "excerpt": "Guide complet pour adapter la technique Pomodoro aux sessions de développement en télétravail : stratégies, outils et bonnes pratiques pour optimiser focus et productivité.",
@@ -161,6 +234,42 @@
     "readingTime": 17,
     "url": "/articles/productivite/pomodoro-technique-remote-coding",
     "category": "productivite",
+    "author": "mooki"
+  },
+  {
+    "title": "Le site web à 1KB qui fait tout : défi minimaliste",
+    "date": "2025-08-02",
+    "excerpt": "Construire un site web fonctionnel en moins de 1024 octets : mission impossible ou retour aux fondamentaux ? Exploration d'un défi technique fascinant qui repense notre approche du développement web.",
+    "tags": [
+      "minimalisme",
+      "performance",
+      "web",
+      "optimisation",
+      "vanilla-js",
+      "css",
+      "defi"
+    ],
+    "cover": "/images/site-web-1kb-defi-minimaliste.jpg",
+    "readingTime": 9,
+    "url": "/articles/projets/site-web-1kb-defi-minimaliste",
+    "category": "projets",
+    "author": "mooki"
+  },
+  {
+    "title": "Les design patterns sont-ils encore pertinents en 2025 ?",
+    "date": "2025-08-02",
+    "excerpt": "Entre l'essor des frameworks modernes, la programmation fonctionnelle et l'architecture cloud-native, les design patterns traditionnels gardent-ils leur utilité ? Retour d'expérience sur leur évolution et leur pertinence aujourd'hui.",
+    "tags": [
+      "design-patterns",
+      "architecture",
+      "software-engineering",
+      "gof",
+      "modern-development"
+    ],
+    "cover": "/images/design-patterns-pertinents-2025.jpg",
+    "readingTime": 6,
+    "url": "/articles/reflexions/design-patterns-pertinents-2025",
+    "category": "reflexions",
     "author": "mooki"
   },
   {
@@ -200,6 +309,58 @@
     "author": "mooki"
   },
   {
+    "title": "Les bases de données vectorielles : pourquoi c'est le futur",
+    "date": "2025-08-02",
+    "excerpt": "Depuis que ChatGPT a prouvé que l'ajout de contexte privé surpasse le fine-tuning pour la plupart des cas d'usage réels, les entreprises se sont ruées vers les pipelines RAG. Découvrez pourquoi les bases de données vectorielles sont devenues indispensables.",
+    "tags": [
+      "bases-de-données",
+      "vectoriel",
+      "IA",
+      "RAG",
+      "machine-learning",
+      "semantic-search"
+    ],
+    "cover": "/images/les-bases-de-donnees-vectorielles-pourquoi-cest-le-futur.jpg",
+    "readingTime": 7,
+    "url": "/articles/reflexions/les-bases-de-donnees-vectorielles-pourquoi-cest-le-futur",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "Les commentaires dans le code, toujours utiles ?",
+    "date": "2025-08-02",
+    "excerpt": "Entre code auto-documenté et commentaires nécessaires, trouvons l'équilibre pragmatique",
+    "tags": [
+      "clean-code",
+      "documentation",
+      "best-practices",
+      "productivity"
+    ],
+    "cover": "/images/les-commentaires-dans-le-code-toujours-utiles.jpg",
+    "readingTime": 22,
+    "url": "/articles/reflexions/les-commentaires-dans-le-code-toujours-utiles",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "L'over-engineering : quand le mieux devient l'ennemi du bien",
+    "date": "2025-08-02",
+    "excerpt": "L'over-engineering peut transformer une solution simple en cauchemar de maintenance. Découvrez comment l'éviter grâce à des principes éprouvés et des retours d'expérience concrets.",
+    "tags": [
+      "développement",
+      "over-engineering",
+      "bonnes-pratiques",
+      "YAGNI",
+      "KISS",
+      "architecture"
+    ],
+    "cover": "/images/over-engineering-quand-le-mieux-devient-lennemi-du-bien.jpg",
+    "readingTime": 9,
+    "url": "/articles/reflexions/over-engineering-quand-le-mieux-devient-lennemi-du-bien",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
     "title": "La solution la plus simple est souvent la meilleure",
     "date": "2025-08-02",
     "excerpt": "Exploration du principe KISS et de la philosophie de la simplicité en développement : pourquoi choisir le simple sur le complexe et comment cultiver cette approche.",
@@ -233,43 +394,6 @@
     "readingTime": 17,
     "url": "/articles/reflexions/solid-patterns",
     "category": "reflexions",
-    "author": "mooki"
-  },
-  {
-    "title": "Introduction aux Model Context Protocol (MCP)",
-    "date": "2025-08-02",
-    "excerpt": "Découvrez MCP, le protocole ouvert qui connecte les LLM aux sources de données et outils externes : architecture, SDKs et mise en pratique",
-    "tags": [
-      "mcp",
-      "ai",
-      "llm",
-      "protocol",
-      "integration",
-      "anthropic",
-      "claude"
-    ],
-    "cover": null,
-    "readingTime": 12,
-    "url": "/articles/outils/mcp-introduction",
-    "category": "outils",
-    "author": "mooki"
-  },
-  {
-    "title": "Sélection d'outils TUI pour développeurs",
-    "date": "2025-08-02",
-    "excerpt": "Découvrez les meilleurs outils TUI (Terminal User Interface) de 2025 pour booster votre productivité en ligne de commande : monitoring, navigation et développement",
-    "tags": [
-      "tui",
-      "terminal",
-      "cli",
-      "productivity",
-      "development",
-      "tools"
-    ],
-    "cover": null,
-    "readingTime": 17,
-    "url": "/articles/outils/tui-tools-selection",
-    "category": "outils",
     "author": "mooki"
   },
   {
