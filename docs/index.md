@@ -14,7 +14,7 @@ hero:
       link: /articles/
     - theme: alt
       text: Catégories
-      link: #categories
+      link: /#categories
 
 features:
   - title: Guides
@@ -60,7 +60,7 @@ const navigateToCategory = (category) => {
 
 ## Articles Récents
 
-<RecentPosts :posts="recentArticles" :limit="5" />
+<RecentPosts :posts="recentArticles" :limit="5" title="" />
 
 ## Catégories {#categories}
 
