@@ -4,7 +4,6 @@ date: 2025-08-02
 tags: ["devcontainers", "docker", "developpement", "environnement", "vscode", "productivite"]
 author: mooki
 excerpt: "Comment les DevContainers et les environnements de développement cloud révolutionnent notre quotidien de développeur et mettent fin au célèbre \"ça marche sur ma machine\"."
-cover: /images/devcontainers-fin-ca-marche-sur-ma-machine.jpg
 category: outils
 ---
 
@@ -209,7 +208,38 @@ Les dernières optimisations de Docker Desktop et VS Code ont considérablement 
 
 La grande amélioration de 2024-2025, c'est la gestion des volumes. Avec les volumes locaux et le cache intelligent, les performances sont presque identiques au développement local, même sur macOS.
 
-[IMAGE: Comparaison des temps de démarrage DevContainer 2023 vs 2025]
+```mermaid
+graph TB
+    subgraph "Temps de démarrage DevContainer : 2023 vs 2025"
+        subgraph "2023"
+            A1["Démarrage initial<br/>⏱️ 150s"]
+            A2["Avec cache<br/>⏱️ 120s"]
+            A3["Rebuild<br/>⏱️ 90s"]
+            A4["Extension sync<br/>⏱️ 45s"]
+        end
+        
+        subgraph "2025"
+            B1["Démarrage initial<br/>⚡ 30s"]
+            B2["Avec cache<br/>⚡ 15s"]
+            B3["Rebuild<br/>⚡ 25s"]
+            B4["Extension sync<br/>⚡ 12s"]
+        end
+        
+        A1 -.->|"Amélioration<br/>80% plus rapide"| B1
+        A2 -.->|"Amélioration<br/>87% plus rapide"| B2
+        A3 -.->|"Amélioration<br/>72% plus rapide"| B3
+        A4 -.->|"Amélioration<br/>73% plus rapide"| B4
+    end
+    
+    style A1 fill:#ffebee
+    style A2 fill:#ffebee
+    style A3 fill:#ffebee
+    style A4 fill:#ffebee
+    style B1 fill:#e8f5e8
+    style B2 fill:#e8f5e8
+    style B3 fill:#e8f5e8
+    style B4 fill:#e8f5e8
+```
 
 ## Les alternatives cloud-native
 
@@ -404,7 +434,40 @@ Un exemple marquant : avant DevContainers, seulement 20% de nos PRs étaient tes
 
 Les nouvelles générations de développeurs grandiront avec des environnements cloud-native, et "ça marche sur ma machine" deviendra une expression du passé, comme "rembobiner la cassette".
 
-[IMAGE: Évolution des environnements de développement de 2020 à 2025]
+```mermaid
+timeline
+    title Évolution des environnements de développement
+    
+    2020 : Local setup
+         : "Ça marche sur ma machine"
+         : Documentation manuelle
+         : Dépendances système
+    
+    2021 : Docker adoption
+         : Premiers Dockerfiles
+         : Isolation partielle
+         : Complexité configuration
+    
+    2022 : DevContainers émergent
+         : VS Code integration
+         : Configuration standardisée
+         : Adoption timide
+    
+    2023 : Maturité outils
+         : Performance améliorée
+         : Cloud alternatives
+         : GitHub Codespaces
+    
+    2024 : Optimisations majeures
+         : Cache intelligent
+         : Volumes locaux
+         : Temps démarrage < 30s
+    
+    2025 : Standard industrie
+         : Remote development
+         : AI-assisted setup
+         : Environments as Code
+```
 
 ## Par où commencer ?
 

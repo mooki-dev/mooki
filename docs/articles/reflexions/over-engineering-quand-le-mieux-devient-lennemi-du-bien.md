@@ -4,7 +4,6 @@ date: 2025-08-02
 tags: ["développement", "over-engineering", "bonnes-pratiques", "YAGNI", "KISS", "architecture"]
 author: mooki
 excerpt: "L'over-engineering peut transformer une solution simple en cauchemar de maintenance. Découvrez comment l'éviter grâce à des principes éprouvés et des retours d'expérience concrets."
-cover: /images/over-engineering-quand-le-mieux-devient-lennemi-du-bien.jpg
 category: reflexions
 ---
 

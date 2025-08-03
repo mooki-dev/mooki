@@ -4,7 +4,6 @@ date: 2025-08-02
 tags: ["carbon-neutral", "développement-durable", "performance", "écologie", "web-vert", "sustainability"]
 author: mooki
 excerpt: "Retour d'expérience complet sur le développement d'un site web carbon-neutral : choix techniques, hébergement vert, optimisations et mesures d'impact réel."
-cover: /images/client-site-carbon-neutral-cahier-charges-prod.jpg
 category: guides
 ---
 
@@ -98,8 +97,6 @@ L'analyse révélait des problèmes typiques mais catastrophiques :
 3. **Hébergement polluant** : Serveur alimenté au charbon en Pologne
 4. **Absence de cache** : Chaque visite rechargait tout
 5. **CSS bloat** : Framework CSS de 234 KB pour 12% d'utilisation
-
-[IMAGE: Capture d'écran de l'audit initial avec les scores alarmants]
 
 ## Phase 2 : Stratégie et architecture green
 
@@ -516,7 +513,7 @@ jobs:
           const comment = `## 🌱 Carbon Footprint Report
           
           | Page | CO2/visit | Rating | Improvement |
-          |------|-----------|--------|-------------|
+          | ---- | --------- | ------ | ----------- |
           ${results.map(r => 
             `| ${r.url} | ${r.co2Grams}g | ${r.rating} | ${r.improvement || 'N/A'} |`
           ).join('\n')}
@@ -542,8 +539,6 @@ jobs:
 - **First Contentful Paint** : 3,2s → **0,8s** (-75%)
 - **Note Website Carbon** : F → **A+**
 :::
-
-[IMAGE: Comparaison avant/après des métriques de performance et carbone]
 
 ## Phase 5 : Au-delà de l'optimisation technique
 
@@ -766,8 +761,6 @@ const advancedMetrics = {
 Ce projet m'a appris que développement durable et excellence technique ne s'opposent pas : ils se renforcent. Chaque optimisation carbone améliore l'expérience utilisateur et les performances business.
 
 L'avenir du web sera green, pas par contrainte, mais parce que c'est plus performant, plus rapide, et plus rentable. Les développeurs qui maîtrisent ces enjeux aujourd'hui seront ceux qui façonneront le web de demain.
-
-[IMAGE: Dashboard final montrant toutes les métriques vertes]
 
 ## Ressources pour aller plus loin
 

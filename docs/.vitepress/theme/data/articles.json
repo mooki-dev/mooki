@@ -67,7 +67,7 @@
       "web-vert",
       "sustainability"
     ],
-    "cover": "/images/client-site-carbon-neutral-cahier-charges-prod.jpg",
+    "cover": null,
     "readingTime": 13,
     "url": "/articles/guides/client-site-carbon-neutral-cahier-charges-prod",
     "category": "guides",
@@ -175,8 +175,8 @@
       "vscode",
       "productivite"
     ],
-    "cover": "/images/devcontainers-fin-ca-marche-sur-ma-machine.jpg",
-    "readingTime": 10,
+    "cover": null,
+    "readingTime": 11,
     "url": "/articles/outils/devcontainers-fin-ca-marche-sur-ma-machine",
     "category": "outils",
     "author": "mooki"
@@ -249,7 +249,7 @@
       "css",
       "defi"
     ],
-    "cover": "/images/site-web-1kb-defi-minimaliste.jpg",
+    "cover": null,
     "readingTime": 9,
     "url": "/articles/projets/site-web-1kb-defi-minimaliste",
     "category": "projets",
@@ -266,8 +266,8 @@
       "gof",
       "modern-development"
     ],
-    "cover": "/images/design-patterns-pertinents-2025.jpg",
-    "readingTime": 6,
+    "cover": null,
+    "readingTime": 7,
     "url": "/articles/reflexions/design-patterns-pertinents-2025",
     "category": "reflexions",
     "author": "mooki"
@@ -320,8 +320,8 @@
       "machine-learning",
       "semantic-search"
     ],
-    "cover": "/images/les-bases-de-donnees-vectorielles-pourquoi-cest-le-futur.jpg",
-    "readingTime": 7,
+    "cover": null,
+    "readingTime": 8,
     "url": "/articles/reflexions/les-bases-de-donnees-vectorielles-pourquoi-cest-le-futur",
     "category": "reflexions",
     "author": "mooki"
@@ -336,7 +336,7 @@
       "best-practices",
       "productivity"
     ],
-    "cover": "/images/les-commentaires-dans-le-code-toujours-utiles.jpg",
+    "cover": null,
     "readingTime": 22,
     "url": "/articles/reflexions/les-commentaires-dans-le-code-toujours-utiles",
     "category": "reflexions",
@@ -354,7 +354,7 @@
       "KISS",
       "architecture"
     ],
-    "cover": "/images/over-engineering-quand-le-mieux-devient-lennemi-du-bien.jpg",
+    "cover": null,
     "readingTime": 9,
     "url": "/articles/reflexions/over-engineering-quand-le-mieux-devient-lennemi-du-bien",
     "category": "reflexions",
@@ -650,6 +650,40 @@
     "cover": null,
     "readingTime": 20,
     "url": "/articles/methodes/agile-pratique",
+    "category": "methodes",
+    "author": "mooki"
+  },
+  {
+    "title": "Dark theme vs Light theme : la guerre des deux mondes",
+    "date": "2025-01-03",
+    "excerpt": "78% des utilisateurs préfèrent le dark mode... mais est-ce vraiment mieux ? Exploration basée sur des données récentes entre productivité, santé visuelle et préférences personnelles",
+    "tags": [
+      "ui-ux",
+      "dark-mode",
+      "accessibility",
+      "developer-experience",
+      "css"
+    ],
+    "cover": null,
+    "readingTime": 9,
+    "url": "/articles/reflexions/dark-theme-vs-light-theme-la-guerre-des-deux-mondes",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "Conventional Commits : des messages qui ont du sens",
+    "date": "2025-01-03",
+    "excerpt": "Découvrez comment les Conventional Commits transforment vos messages de commit en véritable documentation et automatisent vos processus de versioning",
+    "tags": [
+      "git",
+      "conventional-commits",
+      "best-practices",
+      "développement",
+      "méthodologie"
+    ],
+    "cover": null,
+    "readingTime": 9,
+    "url": "/articles/methodes/conventional-commits-des-messages-qui-ont-du-sens",
     "category": "methodes",
     "author": "mooki"
   }

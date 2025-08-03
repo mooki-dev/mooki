@@ -4,7 +4,6 @@ date: 2025-08-02
 tags: ["clean-code", "documentation", "best-practices", "productivity"]
 author: mooki
 excerpt: "Entre code auto-documenté et commentaires nécessaires, trouvons l'équilibre pragmatique"
-cover: /images/les-commentaires-dans-le-code-toujours-utiles.jpg
 category: reflexions
 readingTime: 22
 ---
@@ -19,7 +18,35 @@ L'histoire des commentaires dans le code ressemble à un pendule qui oscille ent
 
 En 2025, nous avons enfin compris que la réalité est plus nuancée. Les dernières études montrent que 58% des développeurs considèrent le manque de contexte dans le code comme leur principale source de frustration lors des code reviews. Paradoxalement, 42% se plaignent aussi des commentaires obsolètes qui induisent en erreur.
 
-[IMAGE: Graphique montrant l'évolution des pratiques de documentation du code de 1990 à 2025]
+```mermaid
+timeline
+    title Évolution des pratiques de documentation (1990-2025)
+    
+    1990 : Commentaires exhaustifs dominants
+         : 85% commentaires exhaustifs
+         : 10% code auto-documenté
+         : 5% documentation contextuelle
+    
+    2000 : Transition vers l'auto-documentation
+         : 75% commentaires exhaustifs
+         : 25% code auto-documenté
+         : 10% documentation contextuelle
+    
+    2010 : Ère Clean Code
+         : 40% commentaires exhaustifs
+         : 70% code auto-documenté
+         : 20% documentation contextuelle
+    
+    2020 : Équilibre moderne
+         : 15% commentaires exhaustifs
+         : 75% code auto-documenté
+         : 40% documentation contextuelle
+    
+    2025 : Approche pragmatique
+         : 20% commentaires exhaustifs
+         : 60% code auto-documenté
+         : 65% documentation contextuelle
+```
 
 ## Quand un commentaire vaut mille lignes
 
@@ -145,7 +172,27 @@ public class UserService {
 }
 ```
 
-[IMAGE: Comic strip montrant un développeur découvrant un TODO de 2015 dans le code]
+```mermaid
+sequenceDiagram
+    participant Dev as 👨‍💻 Développeur 2025
+    participant Code as 📄 Ancien Code
+    participant TODO as 💭 TODO Comment
+    
+    Dev->>Code: Ouvre le fichier legacy
+    Code-->>Dev: Affiche le code
+    Dev->>TODO: Découvre commentaire
+    
+    Note over TODO: // TODO: Refactor this mess<br/>// Created: 2015-03-12<br/>// Priority: HIGH
+    
+    Dev->>Dev: 😱 "Ça fait 10 ans ?!"
+    Dev->>Code: Vérifie git blame
+    Code-->>Dev: Last modified: 2015-03-15
+    
+    Note over Dev: Moment de réalisation existentielle
+    
+    Dev->>TODO: Delete comment
+    Dev->>Code: Refactor finally! 🎉
+```
 
 ## L'approche pragmatique pour 2025
 
@@ -340,7 +387,26 @@ Le débat "commentaires vs code auto-documenté" est un faux dilemme. En 2025, n
 
 La prochaine fois qu'un collègue vous dit "le code devrait se documenter lui-même", rappelez-lui que même le code le plus clair ne peut pas expliquer les décisions business, les contraintes externes ou les raisons historiques. Et si quelqu'un insiste pour commenter chaque ligne, proposez-lui plutôt d'améliorer les noms et la structure.
 
-[IMAGE: Développeur satisfait devant un code bien équilibré entre clarté et documentation utile]
+```mermaid
+mindmap
+  root((Code Parfait 2025))
+    Lisibilité
+      Noms explicites
+      Structure claire
+      Fonctions courtes
+    Documentation contextuelle
+      Pourquoi business
+      Contraintes techniques
+      Décisions importantes
+    Équilibre
+      Code auto-documenté pour le QUOI
+      Commentaires pour le POURQUOI
+      Tests pour le COMMENT
+    Maintenance
+      Comments à jour
+      TODOs datés
+      Revue régulière
+```
 
 ## Ressources
 

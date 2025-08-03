@@ -4,7 +4,6 @@ date: 2025-08-02
 tags: ["bases-de-données", "vectoriel", "IA", "RAG", "machine-learning", "semantic-search"]
 author: mooki
 excerpt: "Depuis que ChatGPT a prouvé que l'ajout de contexte privé surpasse le fine-tuning pour la plupart des cas d'usage réels, les entreprises se sont ruées vers les pipelines RAG. Découvrez pourquoi les bases de données vectorielles sont devenues indispensables."
-cover: /images/les-bases-de-donnees-vectorielles-pourquoi-cest-le-futur.jpg
 category: reflexions
 ---
 
@@ -105,7 +104,35 @@ def semantic_search(query_text, limit=5):
 results = semantic_search("baskets sport")
 ```
 
-[IMAGE: Diagramme montrant la projection de concepts similaires dans l'espace vectoriel 3D]
+```mermaid
+graph TB
+    subgraph "Espace Vectoriel Sémantique"
+        A[("🏃 running<br/>[0.8, 0.6, 0.9]")]
+        B[("👟 sneakers<br/>[0.7, 0.8, 0.7]")]
+        C[("⚽ baskets<br/>[0.6, 0.9, 0.8]")]
+        D[("🚗 voiture<br/>[0.1, 0.2, 0.1]")]
+        E[("📱 smartphone<br/>[0.2, 0.1, 0.3]")]
+        
+        A -.->|distance: 0.2| B
+        B -.->|distance: 0.15| C
+        A -.->|distance: 0.25| C
+        
+        D -.->|distance: 0.9| A
+        E -.->|distance: 0.8| B
+    end
+    
+    F["Query: 'baskets sport'<br/>[0.65, 0.85, 0.75]"] --> G{Recherche<br/>par similarité}
+    G --> C
+    G --> B
+    G --> A
+    
+    style A fill:#e3f2fd
+    style B fill:#e8f5e8
+    style C fill:#fff3e0
+    style D fill:#fce4ec
+    style E fill:#fce4ec
+    style F fill:#f3e5f5
+```
 
 ## Le paysage technologique en 2025
 

@@ -4,7 +4,6 @@ date: 2025-08-02
 tags: ["minimalisme", "performance", "web", "optimisation", "vanilla-js", "css", "defi"]
 author: mooki
 excerpt: "Construire un site web fonctionnel en moins de 1024 octets : mission impossible ou retour aux fondamentaux ? Exploration d'un défi technique fascinant qui repense notre approche du développement web."
-cover: /images/site-web-1kb-defi-minimaliste.jpg
 category: projets
 ---
 
@@ -51,7 +50,7 @@ c.style.display=c.style.display==='none'?'block':'none'
 </body></html>
 ```
 
-[IMAGE: Capture d'écran du site 1KB en action]
+![Capture d'écran du site 1KB en action](images/site_1kb.png)
 
 Ce site inclut :
 - Structure HTML sémantique
@@ -288,7 +287,27 @@ Un site à 1KB, c'est :
 - **Accessibilité universelle** même sur des appareils très anciens
 - **Bande passante négligeable** pour l'hébergeur
 
-[IMAGE: Graphique comparatif de l'empreinte carbone]
+```mermaid
+graph TB
+    subgraph "Empreinte carbone par visite"
+        A["🌿 Site 1KB<br/>0.0001g CO2"]
+        B["📄 Site statique<br/>0.5g CO2"]
+        C["⚛️ Site React<br/>2.3g CO2"]
+        D["🔧 Site WordPress<br/>4.6g CO2"]
+        E["🛒 Site e-commerce<br/>7.8g CO2"]
+        
+        A -.->|"5000x moins"| B
+        B -.->|"4.6x moins"| C
+        C -.->|"2x moins"| D
+        D -.->|"1.7x moins"| E
+    end
+    
+    style A fill:#2e7d32,color:#fff
+    style B fill:#66bb6a,color:#fff
+    style C fill:#ffa726,color:#fff
+    style D fill:#ff7043,color:#fff
+    style E fill:#e53935,color:#fff
+```
 
 ## Cas d'usage réalistes
 

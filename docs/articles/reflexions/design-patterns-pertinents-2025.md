@@ -4,7 +4,6 @@ date: 2025-08-02
 tags: ["design-patterns", "architecture", "software-engineering", "gof", "modern-development"]
 author: mooki
 excerpt: "Entre l'essor des frameworks modernes, la programmation fonctionnelle et l'architecture cloud-native, les design patterns traditionnels gardent-ils leur utilité ? Retour d'expérience sur leur évolution et leur pertinence aujourd'hui."
-cover: /images/design-patterns-pertinents-2025.jpg
 category: reflexions
 ---
 
@@ -241,7 +240,43 @@ Mon conseil ? Maîtrisez les concepts fondamentaux mais restez pragmatique. Un b
 
 La vraie question n'est pas "les patterns sont-ils morts ?" mais plutôt "comment évoluent-ils avec nos outils ?". Et la réponse, c'est qu'ils s'adaptent, se simplifient, et continuent de structurer notre façon de penser le code.
 
-[IMAGE: Diagramme montrant l'évolution des patterns classiques vers les patterns cloud-native]
+```mermaid
+flowchart TD
+    A[Patterns Classiques 1990-2010] --> B[Era OOP/Desktop]
+    B --> C[Singleton]
+    B --> D[Factory]
+    B --> E[Observer]
+    B --> F[Strategy]
+    
+    G[Patterns Web 2010-2020] --> H[Era MVC/Frontend]
+    H --> I[MVC/MVP]
+    H --> J[Repository]
+    H --> K[Dependency Injection]
+    H --> L[Middleware]
+    
+    M[Patterns Cloud-Native 2020+] --> N[Era Microservices/Serverless]
+    N --> O[Circuit Breaker]
+    N --> P[Saga Pattern]
+    N --> Q[Event Sourcing]
+    N --> R[CQRS]
+    N --> S[Bulkhead]
+    
+    A --> G
+    G --> M
+    
+    T[Patterns 2025] --> U[Era AI/Edge]
+    U --> V[Reactive Streams]
+    U --> W[Event-Driven Architecture]
+    U --> X[Serverless Patterns]
+    U --> Y[Edge Computing Patterns]
+    
+    M --> T
+    
+    style A fill:#e1f5fe
+    style G fill:#f3e5f5
+    style M fill:#e8f5e8
+    style T fill:#fff3e0
+```
 
 ## Ressources pour aller plus loin
 
