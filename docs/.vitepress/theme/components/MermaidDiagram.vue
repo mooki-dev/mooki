@@ -3,13 +3,46 @@
     <div v-if="loading" class="mermaid-loading">
       <span>Chargement du diagramme...</span>
     </div>
-    <div v-else ref="mermaidRef" class="mermaid-diagram">
+    <div v-else class="mermaid-wrapper">
+      <div class="mermaid-controls">
+        <button @click="zoomIn" class="zoom-btn" title="Zoom avant">🔍+</button>
+        <button @click="zoomOut" class="zoom-btn" title="Zoom arrière">🔍-</button>
+        <button @click="resetZoom" class="zoom-btn" title="Taille originale">↺</button>
+        <button @click="toggleFullscreen" class="zoom-btn" title="Plein écran">⛶</button>
+      </div>
+      <div 
+        ref="mermaidRef" 
+        class="mermaid-diagram"
+        :class="{ 'fullscreen': isFullscreen }"
+        :style="{ 
+          transform: `scale(${zoomLevel})`, 
+          transformOrigin: isFullscreen ? 'center center' : 'top left' 
+        }"
+        @wheel="handleWheel"
+      >
+      </div>
+      <!-- Contrôles pour le mode plein écran -->
+      <div v-if="isFullscreen" class="fullscreen-controls">
+        <div class="fullscreen-zoom-controls">
+          <button @click="zoomIn" class="zoom-btn fullscreen-btn" title="Zoom avant">🔍+</button>
+          <span class="zoom-indicator">{{ Math.round(zoomLevel * 100) }}%</span>
+          <button @click="zoomOut" class="zoom-btn fullscreen-btn" title="Zoom arrière">🔍-</button>
+          <button @click="resetZoom" class="zoom-btn fullscreen-btn" title="Taille originale">↺</button>
+        </div>
+        <button 
+          @click="toggleFullscreen" 
+          class="fullscreen-close"
+          title="Fermer le plein écran (Échap)"
+        >
+          ✕
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watchEffect } from 'vue'
+import { ref, onMounted, onUnmounted, watchEffect } from 'vue'
 
 interface Props {
   code: string
@@ -22,7 +55,10 @@ const props = withDefaults(defineProps<Props>(), {
 
 const mermaidRef = ref<HTMLElement>()
 const loading = ref(true)
+const zoomLevel = ref(1)
+const isFullscreen = ref(false)
 let mermaidInstance: any = null
+let savedScrollPosition = 0
 
 // Fonction pour charger Mermaid de façon asynchrone
 async function loadMermaid() {
@@ -37,7 +73,12 @@ async function loadMermaid() {
         theme: 'default',
         securityLevel: 'loose',
         fontFamily: 'inherit',
-        fontSize: 14,
+        fontSize: 16, // Augmenté pour meilleure lisibilité
+        // Configuration globale pour tous les diagrammes
+        themeCSS: `
+          .node rect, .node circle, .node ellipse, .node polygon, .node path { font-size: 16px; }
+          .edgeLabel { font-size: 14px; }
+        `,
         // Support pour tous les types de diagrammes
         flowchart: {
           useMaxWidth: true,
@@ -88,6 +129,20 @@ onMounted(async () => {
   await loadMermaid()
   loading.value = false
   await renderDiagram()
+  
+  // Ajouter l'écoute des événements clavier
+  document.addEventListener('keydown', handleKeydown)
+})
+
+// Nettoyer les événements au démontage
+onUnmounted(() => {
+  document.removeEventListener('keydown', handleKeydown)
+  // Restaurer le scroll si le composant est démonté en mode plein écran
+  if (isFullscreen.value) {
+    document.body.style.overflow = ''
+    // Restaurer aussi la position de scroll (sans animation car composant démonté)
+    window.scrollTo(0, savedScrollPosition)
+  }
 })
 
 watchEffect(async () => {
@@ -156,6 +211,59 @@ async function renderDiagram() {
     `
   }
 }
+
+// Fonctions de zoom et plein écran
+function zoomIn() {
+  zoomLevel.value = Math.min(zoomLevel.value + 0.2, 3)
+}
+
+function zoomOut() {
+  zoomLevel.value = Math.max(zoomLevel.value - 0.2, 0.5)
+}
+
+function resetZoom() {
+  zoomLevel.value = 1
+}
+
+function toggleFullscreen() {
+  if (!isFullscreen.value) {
+    // Entrer en mode plein écran : sauvegarder la position actuelle
+    savedScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+    isFullscreen.value = true
+    document.body.style.overflow = 'hidden'
+  } else {
+    // Quitter le mode plein écran : restaurer la position
+    isFullscreen.value = false
+    document.body.style.overflow = ''
+    
+    // Restaurer la position avec un petit délai pour laisser le DOM se mettre à jour
+    setTimeout(() => {
+      window.scrollTo({
+        top: savedScrollPosition,
+        behavior: 'smooth'
+      })
+    }, 50)
+  }
+}
+
+function handleWheel(event: WheelEvent) {
+  if (event.ctrlKey || event.metaKey) {
+    event.preventDefault()
+    if (event.deltaY < 0) {
+      zoomIn()
+    } else {
+      zoomOut()
+    }
+  }
+}
+
+function handleKeydown(event: KeyboardEvent) {
+  // Fermer le mode plein écran avec la touche Échap
+  if (event.key === 'Escape' && isFullscreen.value) {
+    event.preventDefault()
+    toggleFullscreen()
+  }
+}
 </script>
 
 <style scoped>
@@ -166,6 +274,46 @@ async function renderDiagram() {
   border-radius: 8px;
   background: var(--vp-c-bg-soft);
   overflow-x: auto;
+  position: relative;
+}
+
+.mermaid-wrapper {
+  position: relative;
+}
+
+.mermaid-controls {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  display: flex;
+  gap: 0.25rem;
+  background: var(--vp-c-bg);
+  padding: 0.25rem;
+  border-radius: 6px;
+  border: 1px solid var(--vp-c-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-btn {
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  color: var(--vp-c-text-1);
+}
+
+.zoom-btn:hover {
+  background: var(--vp-c-bg-soft);
+  border-color: var(--vp-c-brand);
+  transform: translateY(-1px);
+}
+
+.zoom-btn:active {
+  transform: translateY(0);
 }
 
 .mermaid-loading {
@@ -178,11 +326,124 @@ async function renderDiagram() {
 .mermaid-diagram {
   text-align: center;
   line-height: 1.4;
+  transition: transform 0.3s ease;
+  cursor: grab;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mermaid-diagram:active {
+  cursor: grabbing;
+}
+
+.mermaid-diagram.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--vp-c-bg);
+  z-index: 1000;
+  padding: 2rem;
+  overflow: auto;
+  /* Pas de transform: none pour permettre le zoom */
+}
+
+.fullscreen-controls {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.fullscreen-zoom-controls {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--vp-c-bg);
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.fullscreen-btn {
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  color: var(--vp-c-text-1);
+}
+
+.fullscreen-btn:hover {
+  background: var(--vp-c-bg-soft);
+  border-color: var(--vp-c-brand);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-indicator {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
+  border-radius: 6px;
+  min-width: 3rem;
+  justify-content: center;
+}
+
+.fullscreen-close {
+  background: var(--vp-c-bg);
+  border: 2px solid var(--vp-c-border);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--vp-c-text-1);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.fullscreen-close:hover {
+  background: var(--vp-c-bg-soft);
+  border-color: var(--vp-c-brand);
+  transform: scale(1.1);
+  color: var(--vp-c-brand);
+}
+
+.fullscreen-close:active {
+  transform: scale(0.95);
 }
 
 .mermaid-diagram :deep(svg) {
   max-width: 100%;
   height: auto;
+  min-width: 400px; /* Taille minimale pour éviter les diagrammes trop petits */
+}
+
+/* Instructions d'utilisation */
+.mermaid-container::after {
+  content: "💡 Ctrl+molette pour zoomer • Boutons en haut à droite • Échap pour quitter le plein écran";
+  display: block;
+  font-size: 0.75rem;
+  color: var(--vp-c-text-3);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
 }
 
 .mermaid-error {
