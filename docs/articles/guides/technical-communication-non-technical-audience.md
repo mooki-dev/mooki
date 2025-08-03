@@ -1,9 +1,18 @@
 ---
-title: "Comment présenter un problème technique à une audience non-technique"
-date: 2025-08-02
-tags: [communication, presentation, soft-skills, technical-writing, stakeholder-management, storytelling]
+title: Comment présenter un problème technique à une audience non-technique
+date: '2025-05-07T07:58:00.000Z'
+tags:
+  - communication
+  - presentation
+  - soft-skills
+  - technical-writing
+  - stakeholder-management
+  - storytelling
 author: mooki
-excerpt: "Maîtrisez l'art de la communication technique cross-fonctionnelle : métaphores efficaces, storytelling adapté et stratégies pour transformer la complexité technique en insights business actionables."
+excerpt: >-
+  Maîtrisez l'art de la communication technique cross-fonctionnelle : métaphores
+  efficaces, storytelling adapté et stratégies pour transformer la complexité
+  technique en insights business actionables.
 category: guides
 ---
 

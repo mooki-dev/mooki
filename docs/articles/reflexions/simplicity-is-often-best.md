@@ -1,9 +1,18 @@
 ---
-title: "La solution la plus simple est souvent la meilleure"
-date: 2025-08-02
-tags: [kiss-principle, simplicity, software-design, architecture, maintainability, philosophy]
+title: La solution la plus simple est souvent la meilleure
+date: '2025-04-03T10:06:00.000Z'
+tags:
+  - kiss-principle
+  - simplicity
+  - software-design
+  - architecture
+  - maintainability
+  - philosophy
 author: mooki
-excerpt: "Exploration du principe KISS et de la philosophie de la simplicité en développement : pourquoi choisir le simple sur le complexe et comment cultiver cette approche."
+excerpt: >-
+  Exploration du principe KISS et de la philosophie de la simplicité en
+  développement : pourquoi choisir le simple sur le complexe et comment cultiver
+  cette approche.
 category: reflexions
 ---
 

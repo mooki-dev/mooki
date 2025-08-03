@@ -1,9 +1,17 @@
 ---
-title: "Configuration Hyprland complète"
-date: 2025-08-02
-tags: [hyprland, wayland, tiling, linux, arch, config]
+title: Configuration Hyprland complète
+date: '2025-07-18T08:52:00.000Z'
+tags:
+  - hyprland
+  - wayland
+  - tiling
+  - linux
+  - arch
+  - config
 author: mooki
-excerpt: "Guide complet pour configurer Hyprland : gestionnaire de fenêtres tiling moderne sous Wayland avec animations fluides et configuration avancée"
+excerpt: >-
+  Guide complet pour configurer Hyprland : gestionnaire de fenêtres tiling
+  moderne sous Wayland avec animations fluides et configuration avancée
 category: configurations
 ---
 

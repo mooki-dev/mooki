@@ -1,9 +1,18 @@
 ---
-title: "Comprendre et surmonter le syndrome de l'imposteur"
-date: 2025-08-02
-tags: [syndrome-imposteur, psychologie, confiance, developpement-personnel, carriere, mindset]
+title: Comprendre et surmonter le syndrome de l'imposteur
+date: '2025-03-27T11:08:00.000Z'
+tags:
+  - syndrome-imposteur
+  - psychologie
+  - confiance
+  - developpement-personnel
+  - carriere
+  - mindset
 author: mooki
-excerpt: "Guide complet pour identifier, comprendre et surmonter le syndrome de l'imposteur en tant que développeur : stratégies pratiques pour retrouver confiance et sérénité."
+excerpt: >-
+  Guide complet pour identifier, comprendre et surmonter le syndrome de
+  l'imposteur en tant que développeur : stratégies pratiques pour retrouver
+  confiance et sérénité.
 category: reflexions
 ---
 

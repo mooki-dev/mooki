@@ -1,9 +1,18 @@
 ---
-title: "Tests unitaires efficaces avec JUnit 5"
-date: 2025-08-02
-tags: [junit5, testing, java, tdd, spring-boot, mockito, testcontainers]
+title: Tests unitaires efficaces avec JUnit 5
+date: '2025-06-28T08:16:00.000Z'
+tags:
+  - junit5
+  - testing
+  - java
+  - tdd
+  - spring-boot
+  - mockito
+  - testcontainers
 author: mooki
-excerpt: "Guide complet pour maîtriser JUnit 5 : annotations modernes, assertions avancées, tests paramétrés et bonnes pratiques 2025"
+excerpt: >-
+  Guide complet pour maîtriser JUnit 5 : annotations modernes, assertions
+  avancées, tests paramétrés et bonnes pratiques 2025
 category: tutoriels
 ---
 

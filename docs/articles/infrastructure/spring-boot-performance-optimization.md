@@ -1,9 +1,17 @@
 ---
-title: "Optimisation des performances Spring Boot"
-date: 2025-08-02
-tags: [spring-boot, performance, optimization, java, microservices, monitoring]
+title: Optimisation des performances Spring Boot
+date: '2025-07-30T10:17:00.000Z'
+tags:
+  - spring-boot
+  - performance
+  - optimization
+  - java
+  - microservices
+  - monitoring
 author: mooki
-excerpt: "Guide complet pour optimiser les performances de vos applications Spring Boot : profiling, tuning JVM, cache, base de données et monitoring"
+excerpt: >-
+  Guide complet pour optimiser les performances de vos applications Spring Boot
+  : profiling, tuning JVM, cache, base de données et monitoring
 category: infrastructure
 ---
 

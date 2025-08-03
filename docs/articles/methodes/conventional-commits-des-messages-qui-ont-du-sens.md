@@ -1,9 +1,16 @@
 ---
-title: "Conventional Commits : des messages qui ont du sens"
-date: 2025-01-03
-tags: ["git", "conventional-commits", "best-practices", "développement", "méthodologie"]
+title: 'Conventional Commits : des messages qui ont du sens'
+date: '2025-03-22T19:09:00.000Z'
+tags:
+  - git
+  - conventional-commits
+  - best-practices
+  - développement
+  - méthodologie
 author: mooki
-excerpt: "Découvrez comment les Conventional Commits transforment vos messages de commit en véritable documentation et automatisent vos processus de versioning"
+excerpt: >-
+  Découvrez comment les Conventional Commits transforment vos messages de commit
+  en véritable documentation et automatisent vos processus de versioning
 category: methodes
 ---
 

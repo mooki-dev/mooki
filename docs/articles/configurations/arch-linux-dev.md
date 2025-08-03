@@ -1,9 +1,17 @@
 ---
-title: "Configuration Arch Linux optimisée pour développeur"
-date: 2025-08-02
-tags: [arch-linux, development, configuration, linux, performance, security]
+title: Configuration Arch Linux optimisée pour développeur
+date: '2025-07-14T08:42:00.000Z'
+tags:
+  - arch-linux
+  - development
+  - configuration
+  - linux
+  - performance
+  - security
 author: mooki
-excerpt: "Guide complet pour configurer Arch Linux pour le développement : installation optimisée, outils modernes, sécurité et performance"
+excerpt: >-
+  Guide complet pour configurer Arch Linux pour le développement : installation
+  optimisée, outils modernes, sécurité et performance
 category: configurations
 ---
 

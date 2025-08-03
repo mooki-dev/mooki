@@ -1,9 +1,17 @@
 ---
-title: "Orchestration Kubernetes pour débutants"
-date: 2025-08-02
-tags: [kubernetes, orchestration, containers, devops, microservices, k8s]
+title: Orchestration Kubernetes pour débutants
+date: '2025-05-26T07:59:00.000Z'
+tags:
+  - kubernetes
+  - orchestration
+  - containers
+  - devops
+  - microservices
+  - k8s
 author: mooki
-excerpt: "Guide complet pour débuter avec Kubernetes : concepts fondamentaux, installation, déploiements et bonnes pratiques d'orchestration 2025"
+excerpt: >-
+  Guide complet pour débuter avec Kubernetes : concepts fondamentaux,
+  installation, déploiements et bonnes pratiques d'orchestration 2025
 category: tutoriels
 ---
 

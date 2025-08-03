@@ -1,9 +1,18 @@
 ---
-title: "Penser comme un attaquant : sécurité défensive"
-date: 2025-08-02
-tags: [security, cybersecurity, defensive-security, threat-modeling, pentesting, vulnerability-assessment]
+title: 'Penser comme un attaquant : sécurité défensive'
+date: '2025-06-28T15:54:00.000Z'
+tags:
+  - security
+  - cybersecurity
+  - defensive-security
+  - threat-modeling
+  - pentesting
+  - vulnerability-assessment
 author: mooki
-excerpt: "Adoptez une mentalité d'attaquant pour renforcer vos défenses : méthodologies, techniques d'analyse et stratégies pour anticiper et contrer les menaces modernes."
+excerpt: >-
+  Adoptez une mentalité d'attaquant pour renforcer vos défenses : méthodologies,
+  techniques d'analyse et stratégies pour anticiper et contrer les menaces
+  modernes.
 category: securite
 ---
 

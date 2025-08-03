@@ -1,9 +1,18 @@
 ---
-title: "Introduction aux Model Context Protocol (MCP)"
-date: 2025-08-02
-tags: [mcp, ai, llm, protocol, integration, anthropic, claude]
+title: Introduction aux Model Context Protocol (MCP)
+date: '2025-07-28T10:40:00.000Z'
+tags:
+  - mcp
+  - ai
+  - llm
+  - protocol
+  - integration
+  - anthropic
+  - claude
 author: mooki
-excerpt: "Découvrez MCP, le protocole ouvert qui connecte les LLM aux sources de données et outils externes : architecture, SDKs et mise en pratique"
+excerpt: >-
+  Découvrez MCP, le protocole ouvert qui connecte les LLM aux sources de données
+  et outils externes : architecture, SDKs et mise en pratique
 category: outils
 ---
 

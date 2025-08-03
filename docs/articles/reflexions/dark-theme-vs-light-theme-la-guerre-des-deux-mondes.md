@@ -1,9 +1,17 @@
 ---
-title: "Dark theme vs Light theme : la guerre des deux mondes"
-date: 2025-01-03
-tags: ["ui-ux", "dark-mode", "accessibility", "developer-experience", "css"]
+title: 'Dark theme vs Light theme : la guerre des deux mondes'
+date: '2025-08-01T18:27:00.000Z'
+tags:
+  - ui-ux
+  - dark-mode
+  - accessibility
+  - developer-experience
+  - css
 author: mooki
-excerpt: "78% des utilisateurs préfèrent le dark mode... mais est-ce vraiment mieux ? Exploration basée sur des données récentes entre productivité, santé visuelle et préférences personnelles"
+excerpt: >-
+  78% des utilisateurs préfèrent le dark mode... mais est-ce vraiment mieux ?
+  Exploration basée sur des données récentes entre productivité, santé visuelle
+  et préférences personnelles
 category: reflexions
 ---
 

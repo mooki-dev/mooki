@@ -1,9 +1,19 @@
 ---
-title: "Le site web à 1KB qui fait tout : défi minimaliste"
-date: 2025-08-02
-tags: ["minimalisme", "performance", "web", "optimisation", "vanilla-js", "css", "defi"]
+title: 'Le site web à 1KB qui fait tout : défi minimaliste'
+date: '2025-07-19T10:54:00.000Z'
+tags:
+  - minimalisme
+  - performance
+  - web
+  - optimisation
+  - vanilla-js
+  - css
+  - defi
 author: mooki
-excerpt: "Construire un site web fonctionnel en moins de 1024 octets : mission impossible ou retour aux fondamentaux ? Exploration d'un défi technique fascinant qui repense notre approche du développement web."
+excerpt: >-
+  Construire un site web fonctionnel en moins de 1024 octets : mission
+  impossible ou retour aux fondamentaux ? Exploration d'un défi technique
+  fascinant qui repense notre approche du développement web.
 category: projets
 ---
 

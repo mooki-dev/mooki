@@ -1,9 +1,17 @@
 ---
-title: "Mettre en place un monitoring avec Prometheus et Grafana"
-date: 2025-08-02
-tags: [monitoring, prometheus, grafana, observability, devops, metrics]
+title: Mettre en place un monitoring avec Prometheus et Grafana
+date: '2025-07-29T12:08:00.000Z'
+tags:
+  - monitoring
+  - prometheus
+  - grafana
+  - observability
+  - devops
+  - metrics
 author: mooki
-excerpt: "Guide complet pour déployer une stack de monitoring moderne avec Prometheus et Grafana : collecte de métriques, alerting et dashboards"
+excerpt: >-
+  Guide complet pour déployer une stack de monitoring moderne avec Prometheus et
+  Grafana : collecte de métriques, alerting et dashboards
 category: infrastructure
 ---
 

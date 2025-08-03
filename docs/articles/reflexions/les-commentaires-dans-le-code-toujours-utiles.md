@@ -1,9 +1,15 @@
 ---
-title: "Les commentaires dans le code, toujours utiles ?"
-date: 2025-08-02
-tags: ["clean-code", "documentation", "best-practices", "productivity"]
+title: 'Les commentaires dans le code, toujours utiles ?'
+date: '2025-06-11T09:02:00.000Z'
+tags:
+  - clean-code
+  - documentation
+  - best-practices
+  - productivity
 author: mooki
-excerpt: "Entre code auto-documenté et commentaires nécessaires, trouvons l'équilibre pragmatique"
+excerpt: >-
+  Entre code auto-documenté et commentaires nécessaires, trouvons l'équilibre
+  pragmatique
 category: reflexions
 readingTime: 22
 ---

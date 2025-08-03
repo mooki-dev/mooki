@@ -1,9 +1,18 @@
 ---
-title: "Apprendre à dire \"je ne sais pas, mais je vais chercher\""
-date: 2025-08-02
-tags: [soft-skills, learning, communication, professional-growth, honesty, career]
+title: 'Apprendre à dire "je ne sais pas, mais je vais chercher"'
+date: '2025-06-13T17:20:00.000Z'
+tags:
+  - soft-skills
+  - learning
+  - communication
+  - professional-growth
+  - honesty
+  - career
 author: mooki
-excerpt: "L'art de reconnaître ses limites et de transformer l'ignorance en opportunité d'apprentissage : guide pratique pour développeurs et professionnels de la tech."
+excerpt: >-
+  L'art de reconnaître ses limites et de transformer l'ignorance en opportunité
+  d'apprentissage : guide pratique pour développeurs et professionnels de la
+  tech.
 category: reflexions
 ---
 

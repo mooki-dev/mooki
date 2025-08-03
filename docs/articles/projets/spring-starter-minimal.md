@@ -1,9 +1,15 @@
 ---
-title: "Créer son propre starter Spring Boot minimal"
-date: 2025-01-12
-tags: [spring, java, starter, template]
+title: Créer son propre starter Spring Boot minimal
+date: '2025-05-13T12:46:00.000Z'
+tags:
+  - spring
+  - java
+  - starter
+  - template
 author: mooki
-excerpt: "Guide pour créer un starter Spring Boot personnalisé avec les dépendances et configurations essentielles"
+excerpt: >-
+  Guide pour créer un starter Spring Boot personnalisé avec les dépendances et
+  configurations essentielles
 category: projets
 readingTime: 22
 ---

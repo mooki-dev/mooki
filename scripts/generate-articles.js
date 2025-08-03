@@ -90,7 +90,7 @@ async function processArticleFile(filePath) {
     // Construire l'objet article
     const article = {
       title: frontmatter.title,
-      date: frontmatter.date.toISOString ? frontmatter.date.toISOString().split('T')[0] : frontmatter.date,
+      date: frontmatter.date.toISOString ? frontmatter.date.toISOString() : frontmatter.date,
       excerpt: frontmatter.excerpt || generateExcerpt(markdownContent),
       tags: frontmatter.tags || [],
       cover: frontmatter.cover || null,

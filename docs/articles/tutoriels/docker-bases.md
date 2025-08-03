@@ -1,9 +1,15 @@
 ---
-title: "Les bases de Docker"
-date: 2025-08-02
-tags: [docker, containers, devops, infrastructure]
+title: Les bases de Docker
+date: '2025-07-27T09:50:00.000Z'
+tags:
+  - docker
+  - containers
+  - devops
+  - infrastructure
 author: mooki
-excerpt: "Guide complet pour comprendre et maîtriser les concepts fondamentaux de Docker : conteneurs, images, volumes et réseaux"
+excerpt: >-
+  Guide complet pour comprendre et maîtriser les concepts fondamentaux de Docker
+  : conteneurs, images, volumes et réseaux
 category: tutoriels
 ---
 

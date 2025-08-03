@@ -1,9 +1,15 @@
 ---
-title: "Agile en pratique : au-delà des cérémonies"
-date: 2025-01-10
-tags: [agile, scrum, management, methode]
+title: 'Agile en pratique : au-delà des cérémonies'
+date: '2025-07-31T17:23:00.000Z'
+tags:
+  - agile
+  - scrum
+  - management
+  - methode
 author: mooki
-excerpt: "L'agilité ne se résume pas aux standups et sprints. Focus sur l'état d'esprit et les pratiques qui comptent vraiment"
+excerpt: >-
+  L'agilité ne se résume pas aux standups et sprints. Focus sur l'état d'esprit
+  et les pratiques qui comptent vraiment
 category: methodes
 readingTime: 20
 ---

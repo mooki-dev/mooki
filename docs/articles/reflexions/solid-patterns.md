@@ -1,9 +1,17 @@
 ---
-title: "Les patterns SOLID expliqués simplement"
-date: 2025-08-02
-tags: [solid, design-patterns, oop, clean-code, architecture, best-practices]
+title: Les patterns SOLID expliqués simplement
+date: '2025-03-30T15:18:00.000Z'
+tags:
+  - solid
+  - design-patterns
+  - oop
+  - clean-code
+  - architecture
+  - best-practices
 author: mooki
-excerpt: "Découvrez les principes SOLID avec des exemples concrets : comment écrire du code maintenable, extensible et robuste en programmation orientée objet"
+excerpt: >-
+  Découvrez les principes SOLID avec des exemples concrets : comment écrire du
+  code maintenable, extensible et robuste en programmation orientée objet
 category: reflexions
 ---
 

@@ -1,9 +1,15 @@
 ---
-title: "Claude Code dans le workflow de développement"
-date: 2025-01-22
-tags: [claude, ai, productivity, workflow]
+title: Claude Code dans le workflow de développement
+date: '2025-03-30T10:32:00.000Z'
+tags:
+  - claude
+  - ai
+  - productivity
+  - workflow
 author: mooki
-excerpt: "Comment intégrer Claude Code efficacement dans votre processus de développement quotidien"
+excerpt: >-
+  Comment intégrer Claude Code efficacement dans votre processus de
+  développement quotidien
 category: outils
 readingTime: 12
 ---

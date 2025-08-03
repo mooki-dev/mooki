@@ -1,9 +1,18 @@
 ---
-title: "Sélection d'outils TUI pour développeurs"
-date: 2025-08-02
-tags: [tui, terminal, cli, productivity, development, tools]
+title: Sélection d'outils TUI pour développeurs
+date: '2025-07-17T09:40:00.000Z'
+tags:
+  - tui
+  - terminal
+  - cli
+  - productivity
+  - development
+  - tools
 author: mooki
-excerpt: "Découvrez les meilleurs outils TUI (Terminal User Interface) de 2025 pour booster votre productivité en ligne de commande : monitoring, navigation et développement"
+excerpt: >-
+  Découvrez les meilleurs outils TUI (Terminal User Interface) de 2025 pour
+  booster votre productivité en ligne de commande : monitoring, navigation et
+  développement
 category: outils
 ---
 

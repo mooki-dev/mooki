@@ -1,9 +1,17 @@
 ---
-title: "Guide complet Docker Compose moderne"
-date: 2025-08-02
-tags: [docker, compose, orchestration, containers, devops, v2]
+title: Guide complet Docker Compose moderne
+date: '2025-07-24T14:41:00.000Z'
+tags:
+  - docker
+  - compose
+  - orchestration
+  - containers
+  - devops
+  - v2
 author: mooki
-excerpt: "Maîtrisez Docker Compose V2 pour orchestrer vos applications multi-conteneurs : de compose.yaml aux dernières fonctionnalités 2025"
+excerpt: >-
+  Maîtrisez Docker Compose V2 pour orchestrer vos applications multi-conteneurs
+  : de compose.yaml aux dernières fonctionnalités 2025
 category: tutoriels
 ---
 

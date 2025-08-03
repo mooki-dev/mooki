@@ -1,9 +1,20 @@
 ---
-title: "Utiliser une IA pour challenger son propre code et suggérer des refactorings"
-date: 2025-08-02
-tags: [ai, code-review, refactoring, productivite, qualite-code, claude, chatgpt, copilot]
+title: Utiliser une IA pour challenger son propre code et suggérer des refactorings
+date: '2025-06-15T07:25:00.000Z'
+tags:
+  - ai
+  - code-review
+  - refactoring
+  - productivite
+  - qualite-code
+  - claude
+  - chatgpt
+  - copilot
 author: mooki
-excerpt: "Guide pratique pour tirer parti de l'intelligence artificielle comme partenaire de code review et mentor en refactoring : techniques, bonnes pratiques et exemples concrets."
+excerpt: >-
+  Guide pratique pour tirer parti de l'intelligence artificielle comme
+  partenaire de code review et mentor en refactoring : techniques, bonnes
+  pratiques et exemples concrets.
 category: guides
 ---
 

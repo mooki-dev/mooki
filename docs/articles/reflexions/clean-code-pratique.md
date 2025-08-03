@@ -1,9 +1,14 @@
 ---
-title: "Clean Code en pratique : au-delà des règles"
-date: 2025-01-15
-tags: [clean-code, best-practices, quality]
+title: 'Clean Code en pratique : au-delà des règles'
+date: '2025-06-22T18:04:00.000Z'
+tags:
+  - clean-code
+  - best-practices
+  - quality
 author: mooki
-excerpt: "Clean Code ne se résume pas à suivre des règles. Réflexion sur l'application pragmatique des principes"
+excerpt: >-
+  Clean Code ne se résume pas à suivre des règles. Réflexion sur l'application
+  pragmatique des principes
 category: reflexions
 readingTime: 18
 ---

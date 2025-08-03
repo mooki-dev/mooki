@@ -1,9 +1,13 @@
 ---
-title: "Configuration Neovim complète"
-date: 2025-01-18
-tags: [neovim, vim, editor, config]
+title: Configuration Neovim complète
+date: '2025-07-10T09:07:00.000Z'
+tags:
+  - neovim
+  - vim
+  - editor
+  - config
 author: mooki
-excerpt: "Configuration complète de Neovim avec plugins, LSP et interface moderne"
+excerpt: 'Configuration complète de Neovim avec plugins, LSP et interface moderne'
 category: configurations
 readingTime: 25
 ---

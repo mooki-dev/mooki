@@ -1,9 +1,18 @@
 ---
-title: "L'over-engineering : quand le mieux devient l'ennemi du bien"
-date: 2025-08-02
-tags: ["développement", "over-engineering", "bonnes-pratiques", "YAGNI", "KISS", "architecture"]
+title: 'L''over-engineering : quand le mieux devient l''ennemi du bien'
+date: '2025-08-02T08:54:00.000Z'
+tags:
+  - développement
+  - over-engineering
+  - bonnes-pratiques
+  - YAGNI
+  - KISS
+  - architecture
 author: mooki
-excerpt: "L'over-engineering peut transformer une solution simple en cauchemar de maintenance. Découvrez comment l'éviter grâce à des principes éprouvés et des retours d'expérience concrets."
+excerpt: >-
+  L'over-engineering peut transformer une solution simple en cauchemar de
+  maintenance. Découvrez comment l'éviter grâce à des principes éprouvés et des
+  retours d'expérience concrets.
 category: reflexions
 ---
 

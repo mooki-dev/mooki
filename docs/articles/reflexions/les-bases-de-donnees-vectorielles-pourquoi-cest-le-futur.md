@@ -1,9 +1,19 @@
 ---
-title: "Les bases de données vectorielles : pourquoi c'est le futur"
-date: 2025-08-02
-tags: ["bases-de-données", "vectoriel", "IA", "RAG", "machine-learning", "semantic-search"]
+title: 'Les bases de données vectorielles : pourquoi c''est le futur'
+date: '2025-03-10T09:16:00.000Z'
+tags:
+  - bases-de-données
+  - vectoriel
+  - IA
+  - RAG
+  - machine-learning
+  - semantic-search
 author: mooki
-excerpt: "Depuis que ChatGPT a prouvé que l'ajout de contexte privé surpasse le fine-tuning pour la plupart des cas d'usage réels, les entreprises se sont ruées vers les pipelines RAG. Découvrez pourquoi les bases de données vectorielles sont devenues indispensables."
+excerpt: >-
+  Depuis que ChatGPT a prouvé que l'ajout de contexte privé surpasse le
+  fine-tuning pour la plupart des cas d'usage réels, les entreprises se sont
+  ruées vers les pipelines RAG. Découvrez pourquoi les bases de données
+  vectorielles sont devenues indispensables.
 category: reflexions
 ---
 

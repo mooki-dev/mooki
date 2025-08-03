@@ -1,9 +1,18 @@
 ---
-title: "Les design patterns sont-ils encore pertinents en 2025 ?"
-date: 2025-08-02
-tags: ["design-patterns", "architecture", "software-engineering", "gof", "modern-development"]
+title: Les design patterns sont-ils encore pertinents en 2025 ?
+date: '2025-07-28T09:37:00.000Z'
+tags:
+  - design-patterns
+  - architecture
+  - software-engineering
+  - gof
+  - modern-development
 author: mooki
-excerpt: "Entre l'essor des frameworks modernes, la programmation fonctionnelle et l'architecture cloud-native, les design patterns traditionnels gardent-ils leur utilité ? Retour d'expérience sur leur évolution et leur pertinence aujourd'hui."
+excerpt: >-
+  Entre l'essor des frameworks modernes, la programmation fonctionnelle et
+  l'architecture cloud-native, les design patterns traditionnels gardent-ils
+  leur utilité ? Retour d'expérience sur leur évolution et leur pertinence
+  aujourd'hui.
 category: reflexions
 ---
 

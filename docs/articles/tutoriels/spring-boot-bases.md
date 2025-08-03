@@ -1,9 +1,14 @@
 ---
-title: "Les bases de Spring Boot"
-date: 2025-01-20
-tags: [spring, java, tutorial]
+title: Les bases de Spring Boot
+date: '2025-04-07T06:45:00.000Z'
+tags:
+  - spring
+  - java
+  - tutorial
 author: mooki
-excerpt: "Guide complet pour débuter avec Spring Boot : configuration, annotations et premiers pas"
+excerpt: >-
+  Guide complet pour débuter avec Spring Boot : configuration, annotations et
+  premiers pas
 category: tutoriels
 readingTime: 15
 ---

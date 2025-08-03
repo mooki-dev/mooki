@@ -1,9 +1,18 @@
 ---
-title: "DevContainers vs \"ça marche sur ma machine\" : la fin d'une époque"
-date: 2025-08-02
-tags: ["devcontainers", "docker", "developpement", "environnement", "vscode", "productivite"]
+title: 'DevContainers vs "ça marche sur ma machine" : la fin d''une époque'
+date: '2025-04-23T09:14:00.000Z'
+tags:
+  - devcontainers
+  - docker
+  - developpement
+  - environnement
+  - vscode
+  - productivite
 author: mooki
-excerpt: "Comment les DevContainers et les environnements de développement cloud révolutionnent notre quotidien de développeur et mettent fin au célèbre \"ça marche sur ma machine\"."
+excerpt: >-
+  Comment les DevContainers et les environnements de développement cloud
+  révolutionnent notre quotidien de développeur et mettent fin au célèbre "ça
+  marche sur ma machine".
 category: outils
 ---
 

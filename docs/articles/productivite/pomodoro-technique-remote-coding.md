@@ -1,9 +1,18 @@
 ---
-title: "La technique Pomodoro adaptée pour les sessions de code en télétravail"
-date: 2025-08-02
-tags: [productivity, pomodoro, remote-work, coding, focus, time-management]
+title: La technique Pomodoro adaptée pour les sessions de code en télétravail
+date: '2025-08-02T07:32:00.000Z'
+tags:
+  - productivity
+  - pomodoro
+  - remote-work
+  - coding
+  - focus
+  - time-management
 author: mooki
-excerpt: "Guide complet pour adapter la technique Pomodoro aux sessions de développement en télétravail : stratégies, outils et bonnes pratiques pour optimiser focus et productivité."
+excerpt: >-
+  Guide complet pour adapter la technique Pomodoro aux sessions de développement
+  en télétravail : stratégies, outils et bonnes pratiques pour optimiser focus
+  et productivité.
 category: productivite
 ---
 

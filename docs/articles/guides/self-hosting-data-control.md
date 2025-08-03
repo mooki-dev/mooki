@@ -1,9 +1,18 @@
 ---
-title: "Auto-hébergement : reprendre le contrôle de ses données"
-date: 2025-08-02
-tags: [self-hosting, privacy, data-sovereignty, homelab, server, security]
+title: 'Auto-hébergement : reprendre le contrôle de ses données'
+date: '2025-05-18T16:08:00.000Z'
+tags:
+  - self-hosting
+  - privacy
+  - data-sovereignty
+  - homelab
+  - server
+  - security
 author: mooki
-excerpt: "Guide complet pour débuter l'auto-hébergement en 2025 : alternatives aux services cloud, configuration sécurisée et gestion de votre infrastructure personnelle."
+excerpt: >-
+  Guide complet pour débuter l'auto-hébergement en 2025 : alternatives aux
+  services cloud, configuration sécurisée et gestion de votre infrastructure
+  personnelle.
 category: guides
 ---
 

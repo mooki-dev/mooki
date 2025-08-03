@@ -1,9 +1,19 @@
 ---
-title: "Gestion d'état moderne : Context vs Redux vs Zustand"
-date: 2025-08-02
-tags: [react, state-management, context, redux, zustand, frontend, architecture]
+title: 'Gestion d''état moderne : Context vs Redux vs Zustand'
+date: '2025-03-28T13:48:00.000Z'
+tags:
+  - react
+  - state-management
+  - context
+  - redux
+  - zustand
+  - frontend
+  - architecture
 author: mooki
-excerpt: "Comparaison approfondie des solutions de gestion d'état modernes pour React : Context API, Redux Toolkit et Zustand. Guide pratique pour choisir la meilleure approche selon vos besoins."
+excerpt: >-
+  Comparaison approfondie des solutions de gestion d'état modernes pour React :
+  Context API, Redux Toolkit et Zustand. Guide pratique pour choisir la
+  meilleure approche selon vos besoins.
 category: tutoriels
 ---
 

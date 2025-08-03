@@ -1,9 +1,19 @@
 ---
-title: "Mon client veut un site carbon-neutral : du cahier des charges à la mise en prod"
-date: 2025-08-02
-tags: ["carbon-neutral", "développement-durable", "performance", "écologie", "web-vert", "sustainability"]
+title: >-
+  Mon client veut un site carbon-neutral : du cahier des charges à la mise en
+  prod
+date: '2025-05-05T12:16:00.000Z'
+tags:
+  - carbon-neutral
+  - développement-durable
+  - performance
+  - écologie
+  - web-vert
+  - sustainability
 author: mooki
-excerpt: "Retour d'expérience complet sur le développement d'un site web carbon-neutral : choix techniques, hébergement vert, optimisations et mesures d'impact réel."
+excerpt: >-
+  Retour d'expérience complet sur le développement d'un site web carbon-neutral
+  : choix techniques, hébergement vert, optimisations et mesures d'impact réel.
 category: guides
 ---
 

@@ -1,9 +1,17 @@
 ---
-title: "Construire une image Docker Java minimale avec les builds multi-stages"
-date: 2025-08-02
-tags: [docker, java, spring-boot, optimization, maven, gradle]
+title: Construire une image Docker Java minimale avec les builds multi-stages
+date: '2025-06-30T15:32:00.000Z'
+tags:
+  - docker
+  - java
+  - spring-boot
+  - optimization
+  - maven
+  - gradle
 author: mooki
-excerpt: "Optimisez vos images Docker Java avec les builds multi-stages : réduisez la taille, améliorez la sécurité et accélérez vos déploiements"
+excerpt: >-
+  Optimisez vos images Docker Java avec les builds multi-stages : réduisez la
+  taille, améliorez la sécurité et accélérez vos déploiements
 category: tutoriels
 ---
 
