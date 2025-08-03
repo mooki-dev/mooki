@@ -142,7 +142,7 @@ Les articles utilisent ce format de frontmatter :
 ---
 title: "Titre de l'article"
 date: 2025-01-22
-tags: [tag1, tag2, tag3]
+tags: [tag1, tag2, tag3, ...]
 author: mooki
 excerpt: "Description courte de l'article"
 cover: /images/article-cover.jpg

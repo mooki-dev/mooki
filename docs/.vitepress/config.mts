@@ -4,6 +4,56 @@ import { mermaidPlugin } from './theme/plugins/mermaid-plugin'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 2000, // Ajusté pour Mermaid (~1.1MB) et gros articles
+      rollupOptions: {
+        output: {
+          manualChunks: (id) => {
+            // Mermaid - chunk séparé car gros et utilisé uniquement sur certaines pages
+            if (id.includes('mermaid')) {
+              return 'mermaid'
+            }
+            
+            // Vue core et VitePress - toujours nécessaire
+            if (id.includes('vue') || id.includes('@vueuse/core') || id.includes('vitepress')) {
+              return 'vue-vendor'
+            }
+            
+            // Utilitaires markdown et métadonnées
+            if (id.includes('gray-matter') || id.includes('reading-time') || id.includes('fast-glob')) {
+              return 'utils'
+            }
+            
+            // Plugins spécifiques VitePress 
+            if (id.includes('.vitepress/theme')) {
+              return 'theme'
+            }
+            
+            // Node modules restants
+            if (id.includes('node_modules')) {
+              return 'vendor'
+            }
+          }
+        }
+      },
+      // Optimisations supplémentaires avec esbuild (plus rapide)
+      minify: 'esbuild',
+      target: 'es2020'
+    },
+    optimizeDeps: {
+      include: ['mermaid', 'mark.js']
+    },
+    resolve: {
+      alias: {
+        // Fix pour mark.js ESM issue
+        'mark.js/src/lib/mark': 'mark.js/src/lib/mark.js'
+      }
+    },
+    ssr: {
+      noExternal: ['mark.js']
+    }
+  },
   title: "mooki",
   description: "Base de connaissances technique - Développement, outils, méthodes et réflexions",
   lang: 'fr-FR',
@@ -77,24 +127,7 @@ export default defineConfig({
     },
 
     search: {
-      provider: 'local',
-      options: {
-        translations: {
-          button: {
-            buttonText: 'Rechercher',
-            buttonAriaLabel: 'Rechercher'
-          },
-          modal: {
-            noResultsText: 'Aucun résultat pour',
-            resetButtonTitle: 'Réinitialiser la recherche',
-            footer: {
-              selectText: 'pour sélectionner',
-              navigateText: 'pour naviguer',
-              closeText: 'pour fermer'
-            }
-          }
-        }
-      }
+      provider: 'local'
     },
 
     outline: {
