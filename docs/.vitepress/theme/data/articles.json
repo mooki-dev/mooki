@@ -1,25 +1,219 @@
 [
   {
-    "title": "Configuration Arch Linux optimisée pour développeur",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour configurer Arch Linux pour le développement : installation optimisée, outils modernes, sécurité et performance",
+    "title": "L'over-engineering : quand le mieux devient l'ennemi du bien",
+    "date": "2025-08-02T08:54:00.000Z",
+    "excerpt": "L'over-engineering peut transformer une solution simple en cauchemar de maintenance. Découvrez comment l'éviter grâce à des principes éprouvés et des retours d'expérience concrets.",
     "tags": [
-      "arch-linux",
-      "development",
-      "configuration",
-      "linux",
+      "développement",
+      "over-engineering",
+      "bonnes-pratiques",
+      "YAGNI",
+      "KISS",
+      "architecture"
+    ],
+    "cover": null,
+    "readingTime": 9,
+    "url": "/articles/reflexions/over-engineering-quand-le-mieux-devient-lennemi-du-bien",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "La technique Pomodoro adaptée pour les sessions de code en télétravail",
+    "date": "2025-08-02T07:32:00.000Z",
+    "excerpt": "Guide complet pour adapter la technique Pomodoro aux sessions de développement en télétravail : stratégies, outils et bonnes pratiques pour optimiser focus et productivité.",
+    "tags": [
+      "productivity",
+      "pomodoro",
+      "remote-work",
+      "coding",
+      "focus",
+      "time-management"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/productivite/pomodoro-technique-remote-coding",
+    "category": "productivite",
+    "author": "mooki"
+  },
+  {
+    "title": "Dark theme vs Light theme : la guerre des deux mondes",
+    "date": "2025-08-01T18:27:00.000Z",
+    "excerpt": "78% des utilisateurs préfèrent le dark mode... mais est-ce vraiment mieux ? Exploration basée sur des données récentes entre productivité, santé visuelle et préférences personnelles",
+    "tags": [
+      "ui-ux",
+      "dark-mode",
+      "accessibility",
+      "developer-experience",
+      "css"
+    ],
+    "cover": null,
+    "readingTime": 9,
+    "url": "/articles/reflexions/dark-theme-vs-light-theme-la-guerre-des-deux-mondes",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "Agile en pratique : au-delà des cérémonies",
+    "date": "2025-07-31T17:23:00.000Z",
+    "excerpt": "L'agilité ne se résume pas aux standups et sprints. Focus sur l'état d'esprit et les pratiques qui comptent vraiment",
+    "tags": [
+      "agile",
+      "scrum",
+      "management",
+      "methode"
+    ],
+    "cover": null,
+    "readingTime": 20,
+    "url": "/articles/methodes/agile-pratique",
+    "category": "methodes",
+    "author": "mooki"
+  },
+  {
+    "title": "Optimisation des performances Spring Boot",
+    "date": "2025-07-30T10:17:00.000Z",
+    "excerpt": "Guide complet pour optimiser les performances de vos applications Spring Boot : profiling, tuning JVM, cache, base de données et monitoring",
+    "tags": [
+      "spring-boot",
       "performance",
-      "security"
+      "optimization",
+      "java",
+      "microservices",
+      "monitoring"
+    ],
+    "cover": null,
+    "readingTime": 21,
+    "url": "/articles/infrastructure/spring-boot-performance-optimization",
+    "category": "infrastructure",
+    "author": "mooki"
+  },
+  {
+    "title": "Mettre en place un monitoring avec Prometheus et Grafana",
+    "date": "2025-07-29T12:08:00.000Z",
+    "excerpt": "Guide complet pour déployer une stack de monitoring moderne avec Prometheus et Grafana : collecte de métriques, alerting et dashboards",
+    "tags": [
+      "monitoring",
+      "prometheus",
+      "grafana",
+      "observability",
+      "devops",
+      "metrics"
     ],
     "cover": null,
     "readingTime": 11,
-    "url": "/articles/configurations/arch-linux-dev",
-    "category": "configurations",
+    "url": "/articles/infrastructure/prometheus-grafana-monitoring",
+    "category": "infrastructure",
+    "author": "mooki"
+  },
+  {
+    "title": "Introduction aux Model Context Protocol (MCP)",
+    "date": "2025-07-28T10:40:00.000Z",
+    "excerpt": "Découvrez MCP, le protocole ouvert qui connecte les LLM aux sources de données et outils externes : architecture, SDKs et mise en pratique",
+    "tags": [
+      "mcp",
+      "ai",
+      "llm",
+      "protocol",
+      "integration",
+      "anthropic",
+      "claude"
+    ],
+    "cover": null,
+    "readingTime": 12,
+    "url": "/articles/outils/mcp-introduction",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Les design patterns sont-ils encore pertinents en 2025 ?",
+    "date": "2025-07-28T09:37:00.000Z",
+    "excerpt": "Entre l'essor des frameworks modernes, la programmation fonctionnelle et l'architecture cloud-native, les design patterns traditionnels gardent-ils leur utilité ? Retour d'expérience sur leur évolution et leur pertinence aujourd'hui.",
+    "tags": [
+      "design-patterns",
+      "architecture",
+      "software-engineering",
+      "gof",
+      "modern-development"
+    ],
+    "cover": null,
+    "readingTime": 7,
+    "url": "/articles/reflexions/design-patterns-pertinents-2025",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "Les bases de Docker",
+    "date": "2025-07-27T09:50:00.000Z",
+    "excerpt": "Guide complet pour comprendre et maîtriser les concepts fondamentaux de Docker : conteneurs, images, volumes et réseaux",
+    "tags": [
+      "docker",
+      "containers",
+      "devops",
+      "infrastructure"
+    ],
+    "cover": null,
+    "readingTime": 8,
+    "url": "/articles/tutoriels/docker-bases",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Pipeline CI/CD moderne avec GitHub Actions",
+    "date": "2025-07-25T11:04:00.000Z",
+    "excerpt": "Créez des pipelines CI/CD modernes et robustes avec GitHub Actions : tests automatisés, déploiements multi-environnements, sécurité et monitoring",
+    "tags": [
+      "github-actions",
+      "cicd",
+      "devops",
+      "automation",
+      "deployment",
+      "testing"
+    ],
+    "cover": null,
+    "readingTime": 16,
+    "url": "/articles/infrastructure/github-actions-cicd-pipeline",
+    "category": "infrastructure",
+    "author": "mooki"
+  },
+  {
+    "title": "Guide complet Docker Compose moderne",
+    "date": "2025-07-24T14:41:00.000Z",
+    "excerpt": "Maîtrisez Docker Compose V2 pour orchestrer vos applications multi-conteneurs : de compose.yaml aux dernières fonctionnalités 2025",
+    "tags": [
+      "docker",
+      "compose",
+      "orchestration",
+      "containers",
+      "devops",
+      "v2"
+    ],
+    "cover": null,
+    "readingTime": 14,
+    "url": "/articles/tutoriels/docker-compose",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Le site web à 1KB qui fait tout : défi minimaliste",
+    "date": "2025-07-19T10:54:00.000Z",
+    "excerpt": "Construire un site web fonctionnel en moins de 1024 octets : mission impossible ou retour aux fondamentaux ? Exploration d'un défi technique fascinant qui repense notre approche du développement web.",
+    "tags": [
+      "minimalisme",
+      "performance",
+      "web",
+      "optimisation",
+      "vanilla-js",
+      "css",
+      "defi"
+    ],
+    "cover": null,
+    "readingTime": 9,
+    "url": "/articles/projets/site-web-1kb-defi-minimaliste",
+    "category": "projets",
     "author": "mooki"
   },
   {
     "title": "Configuration Hyprland complète",
-    "date": "2025-08-02",
+    "date": "2025-07-18T08:52:00.000Z",
     "excerpt": "Guide complet pour configurer Hyprland : gestionnaire de fenêtres tiling moderne sous Wayland avec animations fluides et configuration avancée",
     "tags": [
       "hyprland",
@@ -36,8 +230,149 @@
     "author": "mooki"
   },
   {
+    "title": "Sélection d'outils TUI pour développeurs",
+    "date": "2025-07-17T09:40:00.000Z",
+    "excerpt": "Découvrez les meilleurs outils TUI (Terminal User Interface) de 2025 pour booster votre productivité en ligne de commande : monitoring, navigation et développement",
+    "tags": [
+      "tui",
+      "terminal",
+      "cli",
+      "productivity",
+      "development",
+      "tools"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/outils/tui-tools-selection",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Configuration Arch Linux optimisée pour développeur",
+    "date": "2025-07-14T08:42:00.000Z",
+    "excerpt": "Guide complet pour configurer Arch Linux pour le développement : installation optimisée, outils modernes, sécurité et performance",
+    "tags": [
+      "arch-linux",
+      "development",
+      "configuration",
+      "linux",
+      "performance",
+      "security"
+    ],
+    "cover": null,
+    "readingTime": 11,
+    "url": "/articles/configurations/arch-linux-dev",
+    "category": "configurations",
+    "author": "mooki"
+  },
+  {
+    "title": "Configuration Neovim complète",
+    "date": "2025-07-10T09:07:00.000Z",
+    "excerpt": "Configuration complète de Neovim avec plugins, LSP et interface moderne",
+    "tags": [
+      "neovim",
+      "vim",
+      "editor",
+      "config"
+    ],
+    "cover": null,
+    "readingTime": 25,
+    "url": "/articles/configurations/neovim-setup",
+    "category": "configurations",
+    "author": "mooki"
+  },
+  {
+    "title": "Construire une image Docker Java minimale avec les builds multi-stages",
+    "date": "2025-06-30T15:32:00.000Z",
+    "excerpt": "Optimisez vos images Docker Java avec les builds multi-stages : réduisez la taille, améliorez la sécurité et accélérez vos déploiements",
+    "tags": [
+      "docker",
+      "java",
+      "spring-boot",
+      "optimization",
+      "maven",
+      "gradle"
+    ],
+    "cover": null,
+    "readingTime": 7,
+    "url": "/articles/tutoriels/docker-java-multi-stage",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Penser comme un attaquant : sécurité défensive",
+    "date": "2025-06-28T15:54:00.000Z",
+    "excerpt": "Adoptez une mentalité d'attaquant pour renforcer vos défenses : méthodologies, techniques d'analyse et stratégies pour anticiper et contrer les menaces modernes.",
+    "tags": [
+      "security",
+      "cybersecurity",
+      "defensive-security",
+      "threat-modeling",
+      "pentesting",
+      "vulnerability-assessment"
+    ],
+    "cover": null,
+    "readingTime": 15,
+    "url": "/articles/securite/defensive-security-mindset",
+    "category": "securite",
+    "author": "mooki"
+  },
+  {
+    "title": "Tests unitaires efficaces avec JUnit 5",
+    "date": "2025-06-28T08:16:00.000Z",
+    "excerpt": "Guide complet pour maîtriser JUnit 5 : annotations modernes, assertions avancées, tests paramétrés et bonnes pratiques 2025",
+    "tags": [
+      "junit5",
+      "testing",
+      "java",
+      "tdd",
+      "spring-boot",
+      "mockito",
+      "testcontainers"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/tutoriels/junit5-testing",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Clean Code en pratique : au-delà des règles",
+    "date": "2025-06-22T18:04:00.000Z",
+    "excerpt": "Clean Code ne se résume pas à suivre des règles. Réflexion sur l'application pragmatique des principes",
+    "tags": [
+      "clean-code",
+      "best-practices",
+      "quality"
+    ],
+    "cover": null,
+    "readingTime": 18,
+    "url": "/articles/reflexions/clean-code-pratique",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
+    "title": "Template de projet FastAPI moderne",
+    "date": "2025-06-16T08:25:00.000Z",
+    "excerpt": "Guide complet pour créer un template de projet FastAPI moderne avec les meilleures pratiques 2025 : architecture, sécurité, tests, déploiement et observabilité.",
+    "tags": [
+      "fastapi",
+      "python",
+      "backend",
+      "api",
+      "template",
+      "architecture",
+      "microservices"
+    ],
+    "cover": null,
+    "readingTime": 24,
+    "url": "/articles/tutoriels/fastapi-modern-template",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
     "title": "Utiliser une IA pour challenger son propre code et suggérer des refactorings",
-    "date": "2025-08-02",
+    "date": "2025-06-15T07:25:00.000Z",
     "excerpt": "Guide pratique pour tirer parti de l'intelligence artificielle comme partenaire de code review et mentor en refactoring : techniques, bonnes pratiques et exemples concrets.",
     "tags": [
       "ai",
@@ -56,243 +391,8 @@
     "author": "mooki"
   },
   {
-    "title": "Mon client veut un site carbon-neutral : du cahier des charges à la mise en prod",
-    "date": "2025-08-02",
-    "excerpt": "Retour d'expérience complet sur le développement d'un site web carbon-neutral : choix techniques, hébergement vert, optimisations et mesures d'impact réel.",
-    "tags": [
-      "carbon-neutral",
-      "développement-durable",
-      "performance",
-      "écologie",
-      "web-vert",
-      "sustainability"
-    ],
-    "cover": null,
-    "readingTime": 13,
-    "url": "/articles/guides/client-site-carbon-neutral-cahier-charges-prod",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Auto-hébergement : reprendre le contrôle de ses données",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour débuter l'auto-hébergement en 2025 : alternatives aux services cloud, configuration sécurisée et gestion de votre infrastructure personnelle.",
-    "tags": [
-      "self-hosting",
-      "privacy",
-      "data-sovereignty",
-      "homelab",
-      "server",
-      "security"
-    ],
-    "cover": null,
-    "readingTime": 17,
-    "url": "/articles/guides/self-hosting-data-control",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Comment présenter un problème technique à une audience non-technique",
-    "date": "2025-08-02",
-    "excerpt": "Maîtrisez l'art de la communication technique cross-fonctionnelle : métaphores efficaces, storytelling adapté et stratégies pour transformer la complexité technique en insights business actionables.",
-    "tags": [
-      "communication",
-      "presentation",
-      "soft-skills",
-      "technical-writing",
-      "stakeholder-management",
-      "storytelling"
-    ],
-    "cover": null,
-    "readingTime": 13,
-    "url": "/articles/guides/technical-communication-non-technical-audience",
-    "category": "guides",
-    "author": "mooki"
-  },
-  {
-    "title": "Pipeline CI/CD moderne avec GitHub Actions",
-    "date": "2025-08-02",
-    "excerpt": "Créez des pipelines CI/CD modernes et robustes avec GitHub Actions : tests automatisés, déploiements multi-environnements, sécurité et monitoring",
-    "tags": [
-      "github-actions",
-      "cicd",
-      "devops",
-      "automation",
-      "deployment",
-      "testing"
-    ],
-    "cover": null,
-    "readingTime": 16,
-    "url": "/articles/infrastructure/github-actions-cicd-pipeline",
-    "category": "infrastructure",
-    "author": "mooki"
-  },
-  {
-    "title": "Mettre en place un monitoring avec Prometheus et Grafana",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour déployer une stack de monitoring moderne avec Prometheus et Grafana : collecte de métriques, alerting et dashboards",
-    "tags": [
-      "monitoring",
-      "prometheus",
-      "grafana",
-      "observability",
-      "devops",
-      "metrics"
-    ],
-    "cover": null,
-    "readingTime": 11,
-    "url": "/articles/infrastructure/prometheus-grafana-monitoring",
-    "category": "infrastructure",
-    "author": "mooki"
-  },
-  {
-    "title": "Optimisation des performances Spring Boot",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour optimiser les performances de vos applications Spring Boot : profiling, tuning JVM, cache, base de données et monitoring",
-    "tags": [
-      "spring-boot",
-      "performance",
-      "optimization",
-      "java",
-      "microservices",
-      "monitoring"
-    ],
-    "cover": null,
-    "readingTime": 21,
-    "url": "/articles/infrastructure/spring-boot-performance-optimization",
-    "category": "infrastructure",
-    "author": "mooki"
-  },
-  {
-    "title": "DevContainers vs \"ça marche sur ma machine\" : la fin d'une époque",
-    "date": "2025-08-02",
-    "excerpt": "Comment les DevContainers et les environnements de développement cloud révolutionnent notre quotidien de développeur et mettent fin au célèbre \"ça marche sur ma machine\".",
-    "tags": [
-      "devcontainers",
-      "docker",
-      "developpement",
-      "environnement",
-      "vscode",
-      "productivite"
-    ],
-    "cover": null,
-    "readingTime": 11,
-    "url": "/articles/outils/devcontainers-fin-ca-marche-sur-ma-machine",
-    "category": "outils",
-    "author": "mooki"
-  },
-  {
-    "title": "Introduction aux Model Context Protocol (MCP)",
-    "date": "2025-08-02",
-    "excerpt": "Découvrez MCP, le protocole ouvert qui connecte les LLM aux sources de données et outils externes : architecture, SDKs et mise en pratique",
-    "tags": [
-      "mcp",
-      "ai",
-      "llm",
-      "protocol",
-      "integration",
-      "anthropic",
-      "claude"
-    ],
-    "cover": null,
-    "readingTime": 12,
-    "url": "/articles/outils/mcp-introduction",
-    "category": "outils",
-    "author": "mooki"
-  },
-  {
-    "title": "Sélection d'outils TUI pour développeurs",
-    "date": "2025-08-02",
-    "excerpt": "Découvrez les meilleurs outils TUI (Terminal User Interface) de 2025 pour booster votre productivité en ligne de commande : monitoring, navigation et développement",
-    "tags": [
-      "tui",
-      "terminal",
-      "cli",
-      "productivity",
-      "development",
-      "tools"
-    ],
-    "cover": null,
-    "readingTime": 17,
-    "url": "/articles/outils/tui-tools-selection",
-    "category": "outils",
-    "author": "mooki"
-  },
-  {
-    "title": "La technique Pomodoro adaptée pour les sessions de code en télétravail",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour adapter la technique Pomodoro aux sessions de développement en télétravail : stratégies, outils et bonnes pratiques pour optimiser focus et productivité.",
-    "tags": [
-      "productivity",
-      "pomodoro",
-      "remote-work",
-      "coding",
-      "focus",
-      "time-management"
-    ],
-    "cover": null,
-    "readingTime": 17,
-    "url": "/articles/productivite/pomodoro-technique-remote-coding",
-    "category": "productivite",
-    "author": "mooki"
-  },
-  {
-    "title": "Le site web à 1KB qui fait tout : défi minimaliste",
-    "date": "2025-08-02",
-    "excerpt": "Construire un site web fonctionnel en moins de 1024 octets : mission impossible ou retour aux fondamentaux ? Exploration d'un défi technique fascinant qui repense notre approche du développement web.",
-    "tags": [
-      "minimalisme",
-      "performance",
-      "web",
-      "optimisation",
-      "vanilla-js",
-      "css",
-      "defi"
-    ],
-    "cover": null,
-    "readingTime": 9,
-    "url": "/articles/projets/site-web-1kb-defi-minimaliste",
-    "category": "projets",
-    "author": "mooki"
-  },
-  {
-    "title": "Les design patterns sont-ils encore pertinents en 2025 ?",
-    "date": "2025-08-02",
-    "excerpt": "Entre l'essor des frameworks modernes, la programmation fonctionnelle et l'architecture cloud-native, les design patterns traditionnels gardent-ils leur utilité ? Retour d'expérience sur leur évolution et leur pertinence aujourd'hui.",
-    "tags": [
-      "design-patterns",
-      "architecture",
-      "software-engineering",
-      "gof",
-      "modern-development"
-    ],
-    "cover": null,
-    "readingTime": 7,
-    "url": "/articles/reflexions/design-patterns-pertinents-2025",
-    "category": "reflexions",
-    "author": "mooki"
-  },
-  {
-    "title": "Comprendre et surmonter le syndrome de l'imposteur",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour identifier, comprendre et surmonter le syndrome de l'imposteur en tant que développeur : stratégies pratiques pour retrouver confiance et sérénité.",
-    "tags": [
-      "syndrome-imposteur",
-      "psychologie",
-      "confiance",
-      "developpement-personnel",
-      "carriere",
-      "mindset"
-    ],
-    "cover": null,
-    "readingTime": 23,
-    "url": "/articles/reflexions/impostor-syndrome-overcome",
-    "category": "reflexions",
-    "author": "mooki"
-  },
-  {
     "title": "Apprendre à dire \"je ne sais pas, mais je vais chercher\"",
-    "date": "2025-08-02",
+    "date": "2025-06-13T17:20:00.000Z",
     "excerpt": "L'art de reconnaître ses limites et de transformer l'ignorance en opportunité d'apprentissage : guide pratique pour développeurs et professionnels de la tech.",
     "tags": [
       "soft-skills",
@@ -309,26 +409,8 @@
     "author": "mooki"
   },
   {
-    "title": "Les bases de données vectorielles : pourquoi c'est le futur",
-    "date": "2025-08-02",
-    "excerpt": "Depuis que ChatGPT a prouvé que l'ajout de contexte privé surpasse le fine-tuning pour la plupart des cas d'usage réels, les entreprises se sont ruées vers les pipelines RAG. Découvrez pourquoi les bases de données vectorielles sont devenues indispensables.",
-    "tags": [
-      "bases-de-données",
-      "vectoriel",
-      "IA",
-      "RAG",
-      "machine-learning",
-      "semantic-search"
-    ],
-    "cover": null,
-    "readingTime": 8,
-    "url": "/articles/reflexions/les-bases-de-donnees-vectorielles-pourquoi-cest-le-futur",
-    "category": "reflexions",
-    "author": "mooki"
-  },
-  {
     "title": "Les commentaires dans le code, toujours utiles ?",
-    "date": "2025-08-02",
+    "date": "2025-06-11T09:02:00.000Z",
     "excerpt": "Entre code auto-documenté et commentaires nécessaires, trouvons l'équilibre pragmatique",
     "tags": [
       "clean-code",
@@ -343,26 +425,147 @@
     "author": "mooki"
   },
   {
-    "title": "L'over-engineering : quand le mieux devient l'ennemi du bien",
-    "date": "2025-08-02",
-    "excerpt": "L'over-engineering peut transformer une solution simple en cauchemar de maintenance. Découvrez comment l'éviter grâce à des principes éprouvés et des retours d'expérience concrets.",
+    "title": "Architecture microservices : bonnes pratiques",
+    "date": "2025-06-02T16:10:00.000Z",
+    "excerpt": "Guide complet des bonnes pratiques pour concevoir, développer et maintenir une architecture microservices moderne : patterns, communication, sécurité et observabilité.",
     "tags": [
-      "développement",
-      "over-engineering",
-      "bonnes-pratiques",
-      "YAGNI",
-      "KISS",
-      "architecture"
+      "microservices",
+      "architecture",
+      "distributed-systems",
+      "api-design",
+      "scalability",
+      "devops"
     ],
     "cover": null,
-    "readingTime": 9,
-    "url": "/articles/reflexions/over-engineering-quand-le-mieux-devient-lennemi-du-bien",
-    "category": "reflexions",
+    "readingTime": 27,
+    "url": "/articles/tutoriels/microservices-architecture-best-practices",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Orchestration Kubernetes pour débutants",
+    "date": "2025-05-26T07:59:00.000Z",
+    "excerpt": "Guide complet pour débuter avec Kubernetes : concepts fondamentaux, installation, déploiements et bonnes pratiques d'orchestration 2025",
+    "tags": [
+      "kubernetes",
+      "orchestration",
+      "containers",
+      "devops",
+      "microservices",
+      "k8s"
+    ],
+    "cover": null,
+    "readingTime": 20,
+    "url": "/articles/tutoriels/kubernetes-orchestration-beginners",
+    "category": "tutoriels",
+    "author": "mooki"
+  },
+  {
+    "title": "Auto-hébergement : reprendre le contrôle de ses données",
+    "date": "2025-05-18T16:08:00.000Z",
+    "excerpt": "Guide complet pour débuter l'auto-hébergement en 2025 : alternatives aux services cloud, configuration sécurisée et gestion de votre infrastructure personnelle.",
+    "tags": [
+      "self-hosting",
+      "privacy",
+      "data-sovereignty",
+      "homelab",
+      "server",
+      "security"
+    ],
+    "cover": null,
+    "readingTime": 17,
+    "url": "/articles/guides/self-hosting-data-control",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Créer son propre starter Spring Boot minimal",
+    "date": "2025-05-13T12:46:00.000Z",
+    "excerpt": "Guide pour créer un starter Spring Boot personnalisé avec les dépendances et configurations essentielles",
+    "tags": [
+      "spring",
+      "java",
+      "starter",
+      "template"
+    ],
+    "cover": null,
+    "readingTime": 22,
+    "url": "/articles/projets/spring-starter-minimal",
+    "category": "projets",
+    "author": "mooki"
+  },
+  {
+    "title": "Comment présenter un problème technique à une audience non-technique",
+    "date": "2025-05-07T07:58:00.000Z",
+    "excerpt": "Maîtrisez l'art de la communication technique cross-fonctionnelle : métaphores efficaces, storytelling adapté et stratégies pour transformer la complexité technique en insights business actionables.",
+    "tags": [
+      "communication",
+      "presentation",
+      "soft-skills",
+      "technical-writing",
+      "stakeholder-management",
+      "storytelling"
+    ],
+    "cover": null,
+    "readingTime": 13,
+    "url": "/articles/guides/technical-communication-non-technical-audience",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "Mon client veut un site carbon-neutral : du cahier des charges à la mise en prod",
+    "date": "2025-05-05T12:16:00.000Z",
+    "excerpt": "Retour d'expérience complet sur le développement d'un site web carbon-neutral : choix techniques, hébergement vert, optimisations et mesures d'impact réel.",
+    "tags": [
+      "carbon-neutral",
+      "développement-durable",
+      "performance",
+      "écologie",
+      "web-vert",
+      "sustainability"
+    ],
+    "cover": null,
+    "readingTime": 13,
+    "url": "/articles/guides/client-site-carbon-neutral-cahier-charges-prod",
+    "category": "guides",
+    "author": "mooki"
+  },
+  {
+    "title": "DevContainers vs \"ça marche sur ma machine\" : la fin d'une époque",
+    "date": "2025-04-23T09:14:00.000Z",
+    "excerpt": "Comment les DevContainers et les environnements de développement cloud révolutionnent notre quotidien de développeur et mettent fin au célèbre \"ça marche sur ma machine\".",
+    "tags": [
+      "devcontainers",
+      "docker",
+      "developpement",
+      "environnement",
+      "vscode",
+      "productivite"
+    ],
+    "cover": null,
+    "readingTime": 11,
+    "url": "/articles/outils/devcontainers-fin-ca-marche-sur-ma-machine",
+    "category": "outils",
+    "author": "mooki"
+  },
+  {
+    "title": "Les bases de Spring Boot",
+    "date": "2025-04-07T06:45:00.000Z",
+    "excerpt": "Guide complet pour débuter avec Spring Boot : configuration, annotations et premiers pas",
+    "tags": [
+      "spring",
+      "java",
+      "tutorial"
+    ],
+    "cover": null,
+    "readingTime": 15,
+    "url": "/articles/tutoriels/spring-boot-bases",
+    "category": "tutoriels",
     "author": "mooki"
   },
   {
     "title": "La solution la plus simple est souvent la meilleure",
-    "date": "2025-08-02",
+    "date": "2025-04-03T10:06:00.000Z",
     "excerpt": "Exploration du principe KISS et de la philosophie de la simplicité en développement : pourquoi choisir le simple sur le complexe et comment cultiver cette approche.",
     "tags": [
       "kiss-principle",
@@ -380,7 +583,7 @@
   },
   {
     "title": "Les patterns SOLID expliqués simplement",
-    "date": "2025-08-02",
+    "date": "2025-03-30T15:18:00.000Z",
     "excerpt": "Découvrez les principes SOLID avec des exemples concrets : comment écrire du code maintenable, extensible et robuste en programmation orientée objet",
     "tags": [
       "solid",
@@ -397,152 +600,24 @@
     "author": "mooki"
   },
   {
-    "title": "Penser comme un attaquant : sécurité défensive",
-    "date": "2025-08-02",
-    "excerpt": "Adoptez une mentalité d'attaquant pour renforcer vos défenses : méthodologies, techniques d'analyse et stratégies pour anticiper et contrer les menaces modernes.",
+    "title": "Claude Code dans le workflow de développement",
+    "date": "2025-03-30T10:32:00.000Z",
+    "excerpt": "Comment intégrer Claude Code efficacement dans votre processus de développement quotidien",
     "tags": [
-      "security",
-      "cybersecurity",
-      "defensive-security",
-      "threat-modeling",
-      "pentesting",
-      "vulnerability-assessment"
+      "claude",
+      "ai",
+      "productivity",
+      "workflow"
     ],
     "cover": null,
-    "readingTime": 15,
-    "url": "/articles/securite/defensive-security-mindset",
-    "category": "securite",
-    "author": "mooki"
-  },
-  {
-    "title": "Les bases de Docker",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour comprendre et maîtriser les concepts fondamentaux de Docker : conteneurs, images, volumes et réseaux",
-    "tags": [
-      "docker",
-      "containers",
-      "devops",
-      "infrastructure"
-    ],
-    "cover": null,
-    "readingTime": 8,
-    "url": "/articles/tutoriels/docker-bases",
-    "category": "tutoriels",
-    "author": "mooki"
-  },
-  {
-    "title": "Guide complet Docker Compose moderne",
-    "date": "2025-08-02",
-    "excerpt": "Maîtrisez Docker Compose V2 pour orchestrer vos applications multi-conteneurs : de compose.yaml aux dernières fonctionnalités 2025",
-    "tags": [
-      "docker",
-      "compose",
-      "orchestration",
-      "containers",
-      "devops",
-      "v2"
-    ],
-    "cover": null,
-    "readingTime": 14,
-    "url": "/articles/tutoriels/docker-compose",
-    "category": "tutoriels",
-    "author": "mooki"
-  },
-  {
-    "title": "Construire une image Docker Java minimale avec les builds multi-stages",
-    "date": "2025-08-02",
-    "excerpt": "Optimisez vos images Docker Java avec les builds multi-stages : réduisez la taille, améliorez la sécurité et accélérez vos déploiements",
-    "tags": [
-      "docker",
-      "java",
-      "spring-boot",
-      "optimization",
-      "maven",
-      "gradle"
-    ],
-    "cover": null,
-    "readingTime": 7,
-    "url": "/articles/tutoriels/docker-java-multi-stage",
-    "category": "tutoriels",
-    "author": "mooki"
-  },
-  {
-    "title": "Template de projet FastAPI moderne",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour créer un template de projet FastAPI moderne avec les meilleures pratiques 2025 : architecture, sécurité, tests, déploiement et observabilité.",
-    "tags": [
-      "fastapi",
-      "python",
-      "backend",
-      "api",
-      "template",
-      "architecture",
-      "microservices"
-    ],
-    "cover": null,
-    "readingTime": 24,
-    "url": "/articles/tutoriels/fastapi-modern-template",
-    "category": "tutoriels",
-    "author": "mooki"
-  },
-  {
-    "title": "Tests unitaires efficaces avec JUnit 5",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour maîtriser JUnit 5 : annotations modernes, assertions avancées, tests paramétrés et bonnes pratiques 2025",
-    "tags": [
-      "junit5",
-      "testing",
-      "java",
-      "tdd",
-      "spring-boot",
-      "mockito",
-      "testcontainers"
-    ],
-    "cover": null,
-    "readingTime": 17,
-    "url": "/articles/tutoriels/junit5-testing",
-    "category": "tutoriels",
-    "author": "mooki"
-  },
-  {
-    "title": "Orchestration Kubernetes pour débutants",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet pour débuter avec Kubernetes : concepts fondamentaux, installation, déploiements et bonnes pratiques d'orchestration 2025",
-    "tags": [
-      "kubernetes",
-      "orchestration",
-      "containers",
-      "devops",
-      "microservices",
-      "k8s"
-    ],
-    "cover": null,
-    "readingTime": 20,
-    "url": "/articles/tutoriels/kubernetes-orchestration-beginners",
-    "category": "tutoriels",
-    "author": "mooki"
-  },
-  {
-    "title": "Architecture microservices : bonnes pratiques",
-    "date": "2025-08-02",
-    "excerpt": "Guide complet des bonnes pratiques pour concevoir, développer et maintenir une architecture microservices moderne : patterns, communication, sécurité et observabilité.",
-    "tags": [
-      "microservices",
-      "architecture",
-      "distributed-systems",
-      "api-design",
-      "scalability",
-      "devops"
-    ],
-    "cover": null,
-    "readingTime": 27,
-    "url": "/articles/tutoriels/microservices-architecture-best-practices",
-    "category": "tutoriels",
+    "readingTime": 12,
+    "url": "/articles/outils/claude-code-workflow",
+    "category": "outils",
     "author": "mooki"
   },
   {
     "title": "Gestion d'état moderne : Context vs Redux vs Zustand",
-    "date": "2025-08-02",
+    "date": "2025-03-28T13:48:00.000Z",
     "excerpt": "Comparaison approfondie des solutions de gestion d'état modernes pour React : Context API, Redux Toolkit et Zustand. Guide pratique pour choisir la meilleure approche selon vos besoins.",
     "tags": [
       "react",
@@ -560,119 +635,26 @@
     "author": "mooki"
   },
   {
-    "title": "Claude Code dans le workflow de développement",
-    "date": "2025-01-22",
-    "excerpt": "Comment intégrer Claude Code efficacement dans votre processus de développement quotidien",
+    "title": "Comprendre et surmonter le syndrome de l'imposteur",
+    "date": "2025-03-27T11:08:00.000Z",
+    "excerpt": "Guide complet pour identifier, comprendre et surmonter le syndrome de l'imposteur en tant que développeur : stratégies pratiques pour retrouver confiance et sérénité.",
     "tags": [
-      "claude",
-      "ai",
-      "productivity",
-      "workflow"
+      "syndrome-imposteur",
+      "psychologie",
+      "confiance",
+      "developpement-personnel",
+      "carriere",
+      "mindset"
     ],
     "cover": null,
-    "readingTime": 12,
-    "url": "/articles/outils/claude-code-workflow",
-    "category": "outils",
-    "author": "mooki"
-  },
-  {
-    "title": "Les bases de Spring Boot",
-    "date": "2025-01-20",
-    "excerpt": "Guide complet pour débuter avec Spring Boot : configuration, annotations et premiers pas",
-    "tags": [
-      "spring",
-      "java",
-      "tutorial"
-    ],
-    "cover": null,
-    "readingTime": 15,
-    "url": "/articles/tutoriels/spring-boot-bases",
-    "category": "tutoriels",
-    "author": "mooki"
-  },
-  {
-    "title": "Configuration Neovim complète",
-    "date": "2025-01-18",
-    "excerpt": "Configuration complète de Neovim avec plugins, LSP et interface moderne",
-    "tags": [
-      "neovim",
-      "vim",
-      "editor",
-      "config"
-    ],
-    "cover": null,
-    "readingTime": 25,
-    "url": "/articles/configurations/neovim-setup",
-    "category": "configurations",
-    "author": "mooki"
-  },
-  {
-    "title": "Clean Code en pratique : au-delà des règles",
-    "date": "2025-01-15",
-    "excerpt": "Clean Code ne se résume pas à suivre des règles. Réflexion sur l'application pragmatique des principes",
-    "tags": [
-      "clean-code",
-      "best-practices",
-      "quality"
-    ],
-    "cover": null,
-    "readingTime": 18,
-    "url": "/articles/reflexions/clean-code-pratique",
-    "category": "reflexions",
-    "author": "mooki"
-  },
-  {
-    "title": "Créer son propre starter Spring Boot minimal",
-    "date": "2025-01-12",
-    "excerpt": "Guide pour créer un starter Spring Boot personnalisé avec les dépendances et configurations essentielles",
-    "tags": [
-      "spring",
-      "java",
-      "starter",
-      "template"
-    ],
-    "cover": null,
-    "readingTime": 22,
-    "url": "/articles/projets/spring-starter-minimal",
-    "category": "projets",
-    "author": "mooki"
-  },
-  {
-    "title": "Agile en pratique : au-delà des cérémonies",
-    "date": "2025-01-10",
-    "excerpt": "L'agilité ne se résume pas aux standups et sprints. Focus sur l'état d'esprit et les pratiques qui comptent vraiment",
-    "tags": [
-      "agile",
-      "scrum",
-      "management",
-      "methode"
-    ],
-    "cover": null,
-    "readingTime": 20,
-    "url": "/articles/methodes/agile-pratique",
-    "category": "methodes",
-    "author": "mooki"
-  },
-  {
-    "title": "Dark theme vs Light theme : la guerre des deux mondes",
-    "date": "2025-01-03",
-    "excerpt": "78% des utilisateurs préfèrent le dark mode... mais est-ce vraiment mieux ? Exploration basée sur des données récentes entre productivité, santé visuelle et préférences personnelles",
-    "tags": [
-      "ui-ux",
-      "dark-mode",
-      "accessibility",
-      "developer-experience",
-      "css"
-    ],
-    "cover": null,
-    "readingTime": 9,
-    "url": "/articles/reflexions/dark-theme-vs-light-theme-la-guerre-des-deux-mondes",
+    "readingTime": 23,
+    "url": "/articles/reflexions/impostor-syndrome-overcome",
     "category": "reflexions",
     "author": "mooki"
   },
   {
     "title": "Conventional Commits : des messages qui ont du sens",
-    "date": "2025-01-03",
+    "date": "2025-03-22T19:09:00.000Z",
     "excerpt": "Découvrez comment les Conventional Commits transforment vos messages de commit en véritable documentation et automatisent vos processus de versioning",
     "tags": [
       "git",
@@ -682,9 +664,27 @@
       "méthodologie"
     ],
     "cover": null,
-    "readingTime": 9,
+    "readingTime": 10,
     "url": "/articles/methodes/conventional-commits-des-messages-qui-ont-du-sens",
     "category": "methodes",
+    "author": "mooki"
+  },
+  {
+    "title": "Les bases de données vectorielles : pourquoi c'est le futur",
+    "date": "2025-03-10T09:16:00.000Z",
+    "excerpt": "Depuis que ChatGPT a prouvé que l'ajout de contexte privé surpasse le fine-tuning pour la plupart des cas d'usage réels, les entreprises se sont ruées vers les pipelines RAG. Découvrez pourquoi les bases de données vectorielles sont devenues indispensables.",
+    "tags": [
+      "bases-de-données",
+      "vectoriel",
+      "IA",
+      "RAG",
+      "machine-learning",
+      "semantic-search"
+    ],
+    "cover": null,
+    "readingTime": 8,
+    "url": "/articles/reflexions/les-bases-de-donnees-vectorielles-pourquoi-cest-le-futur",
+    "category": "reflexions",
     "author": "mooki"
   }
 ]
