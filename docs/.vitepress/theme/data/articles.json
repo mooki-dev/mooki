@@ -1,5 +1,26 @@
 [
   {
+    "title": "Les signes astrologiques du développeur : quel framework es-tu ?",
+    "date": "2025-08-03T11:45:00.000Z",
+    "excerpt": "Exploration humoristique des personnalités de développeurs à travers leurs frameworks préférés : quel framework correspond le mieux à votre signe astrologique ?",
+    "tags": [
+      "humour",
+      "frameworks",
+      "développement",
+      "astrologie",
+      "react",
+      "vue",
+      "angular",
+      "spring",
+      "développeur"
+    ],
+    "cover": null,
+    "readingTime": 13,
+    "url": "/articles/reflexions/signes-astrologiques-du-developpeur-quel-framework-es-tu",
+    "category": "reflexions",
+    "author": "mooki"
+  },
+  {
     "title": "L'over-engineering : quand le mieux devient l'ennemi du bien",
     "date": "2025-08-03T14:30:00.000Z",
     "excerpt": "L'over-engineering peut transformer une solution simple en cauchemar de maintenance. Découvrez comment l'éviter grâce à des principes éprouvés et des retours d'expérience concrets.",
