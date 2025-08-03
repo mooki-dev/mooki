@@ -1,6 +1,6 @@
 ---
 title: 'L''over-engineering : quand le mieux devient l''ennemi du bien'
-date: '2025-08-02T08:54:00.000Z'
+date: '2025-08-03T14:30:00.000Z'
 tags:
   - développement
   - over-engineering

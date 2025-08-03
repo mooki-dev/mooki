@@ -1,6 +1,6 @@
 ---
 title: La technique Pomodoro adaptée pour les sessions de code en télétravail
-date: '2025-08-02T07:32:00.000Z'
+date: '2025-08-03T10:15:00.000Z'
 tags:
   - productivity
   - pomodoro
