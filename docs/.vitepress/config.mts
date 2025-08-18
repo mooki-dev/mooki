@@ -1,6 +1,7 @@
-import { defineConfig } from 'vitepress'
-import { generateSidebar } from './theme/utils/sidebar'
-import { mermaidPlugin } from './theme/plugins/mermaid-plugin'
+import { defineConfig } from "vitepress";
+import { generateSidebar } from "./theme/utils/sidebar";
+import { mermaidPlugin } from "./theme/plugins/mermaid-plugin";
+import { getCategoryNavItems } from "./theme/utils/categories";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,60 +12,72 @@ export default defineConfig({
         output: {
           manualChunks: (id) => {
             // Mermaid - chunk séparé car gros et utilisé uniquement sur certaines pages
-            if (id.includes('mermaid')) {
-              return 'mermaid'
+            if (id.includes("mermaid")) {
+              return "mermaid";
             }
-            
+
             // Vue core et VitePress - toujours nécessaire
-            if (id.includes('vue') || id.includes('@vueuse/core') || id.includes('vitepress')) {
-              return 'vue-vendor'
+            if (
+              id.includes("vue") ||
+              id.includes("@vueuse/core") ||
+              id.includes("vitepress")
+            ) {
+              return "vue-vendor";
             }
-            
+
             // Utilitaires markdown et métadonnées
-            if (id.includes('gray-matter') || id.includes('reading-time') || id.includes('fast-glob')) {
-              return 'utils'
+            if (
+              id.includes("gray-matter") ||
+              id.includes("reading-time") ||
+              id.includes("fast-glob")
+            ) {
+              return "utils";
             }
-            
-            // Plugins spécifiques VitePress 
-            if (id.includes('.vitepress/theme')) {
-              return 'theme'
+
+            // Plugins spécifiques VitePress
+            if (id.includes(".vitepress/theme")) {
+              return "theme";
             }
-            
+
             // Node modules restants
-            if (id.includes('node_modules')) {
-              return 'vendor'
+            if (id.includes("node_modules")) {
+              return "vendor";
             }
-          }
-        }
+          },
+        },
       },
       // Optimisations supplémentaires avec esbuild (plus rapide)
-      minify: 'esbuild',
-      target: 'es2020'
+      minify: "esbuild",
+      target: "es2020",
     },
     optimizeDeps: {
-      include: ['mermaid', 'mark.js']
+      include: ["mermaid", "mark.js"],
     },
     resolve: {
       alias: {
         // Fix pour mark.js ESM issue
-        'mark.js/src/lib/mark': 'mark.js/src/lib/mark.js'
-      }
+        "mark.js/src/lib/mark": "mark.js/src/lib/mark.js",
+      },
     },
     ssr: {
-      noExternal: ['mark.js']
-    }
+      noExternal: ["mark.js"],
+    },
   },
   title: "mooki",
-  description: "Base de connaissances technique - Développement, outils, méthodes et réflexions",
-  lang: 'fr-FR',
-  base: '/mooki/',
+  description:
+    "Base de connaissances technique - Développement, outils, méthodes et réflexions",
+  lang: "fr-FR",
+  base: "/mooki/",
 
   head: [
-    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
-    ['meta', { name: 'author', content: 'mooki' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/mooki/logo.svg' }],
-    ['link', { rel: 'icon', type: 'image/png', href: '/mooki/favicon.png' }],
-    ['link', { rel: 'alternate icon', href: '/mooki/favicon.ico' }],
+    [
+      "meta",
+      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+    ],
+    ["meta", { name: "author", content: "mooki" }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: "/mooki/logo.svg" }],
+    ["link", { rel: "icon", type: "image/png", href: "/mooki/favicon.png" }],
+    ["link", { rel: "alternate icon", href: "/mooki/favicon.ico" }],
   ],
 
   lastUpdated: true,
@@ -73,96 +86,81 @@ export default defineConfig({
   markdown: {
     lineNumbers: true,
     container: {
-      tipLabel: 'Conseil',
-      warningLabel: 'Attention',
-      dangerLabel: 'Danger',
-      infoLabel: 'Info',
-      detailsLabel: 'Détails'
+      tipLabel: "Conseil",
+      warningLabel: "Attention",
+      dangerLabel: "Danger",
+      infoLabel: "Info",
+      detailsLabel: "Détails",
     },
     config: (md) => {
       // Configuration du plugin Mermaid
-      md.use(mermaidPlugin)
-    }
+      md.use(mermaidPlugin);
+    },
   },
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/logo.svg',
+    logo: "/logo.svg",
 
     nav: [
-      { text: 'Accueil', link: '/' },
-      { text: 'Articles', link: '/articles/' },
+      { text: "Accueil", link: "/" },
+      { text: "Articles", link: "/articles/" },
       {
-        text: 'Catégories',
-        items: [
-          { text: 'Configurations', link: '/articles/configurations/' },
-          { text: 'Guides', link: '/articles/guides/' },
-          { text: 'Infrastructure', link: '/articles/infrastructure/' },
-          { text: 'Méthodes', link: '/articles/methodes/' },
-          { text: 'Outils', link: '/articles/outils/' },
-          { text: 'Productivité', link: '/articles/productivite/' },
-          { text: 'Projets', link: '/articles/projets/' },
-          { text: 'Réflexions', link: '/articles/reflexions/' },
-          { text: 'Sécurité', link: '/articles/securite/' },
-          { text: 'Tutoriels', link: '/articles/tutoriels/' }
-
-
-
-
-        ]
+        text: "Catégories",
+        items: getCategoryNavItems(),
       },
-      { text: 'Tags', link: '/tags/' },
-      { text: 'À propos', link: '/about' }
+      { text: "Tags", link: "/tags/" },
+      { text: "À propos", link: "/about" },
     ],
 
     sidebar: generateSidebar(),
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/mooki-dev/mooki' }
+      { icon: "github", link: "https://github.com/mooki-dev/mooki" },
     ],
 
     footer: {
-      message: 'Publié sous licence MIT',
-      copyright: `Copyright © ${new Date().getFullYear()} mooki`
+      message: "Publié sous licence MIT",
+      copyright: `Copyright © ${new Date().getFullYear()} mooki`,
     },
 
     search: {
-      provider: 'local'
+      provider: "local",
     },
 
     outline: {
-      label: 'Sur cette page',
-      level: [2, 3]
+      label: "Sur cette page",
+      level: [2, 3],
     },
 
     docFooter: {
-      prev: 'Article précédent',
-      next: 'Article suivant'
+      prev: "Article précédent",
+      next: "Article suivant",
     },
 
-    lastUpdatedText: 'Dernière mise à jour',
+    lastUpdatedText: "Dernière mise à jour",
 
-    returnToTopLabel: 'Retour en haut',
+    returnToTopLabel: "Retour en haut",
 
-    langMenuLabel: 'Changer de langue',
+    langMenuLabel: "Changer de langue",
 
-    sidebarMenuLabel: 'Menu',
+    sidebarMenuLabel: "Menu",
 
-    darkModeSwitchLabel: 'Apparence',
+    darkModeSwitchLabel: "Apparence",
 
-    lightModeSwitchTitle: 'Passer en mode clair',
+    lightModeSwitchTitle: "Passer en mode clair",
 
-    darkModeSwitchTitle: 'Passer en mode sombre'
+    darkModeSwitchTitle: "Passer en mode sombre",
   },
 
   sitemap: {
-    hostname: 'https://mooki-dev.github.io/mooki',
+    hostname: "https://mooki-dev.github.io/mooki",
     transformItems: (items) => {
-      return items.map(item => ({
+      return items.map((item) => ({
         ...item,
-        changefreq: 'weekly',
-        priority: item.url.includes('/articles/') ? 0.8 : 0.6
-      }))
-    }
-  }
-})
+        changefreq: "weekly",
+        priority: item.url.includes("/articles/") ? 0.8 : 0.6,
+      }));
+    },
+  },
+});

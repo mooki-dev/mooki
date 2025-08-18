@@ -17,18 +17,18 @@ hero:
       link: /#categories
 
 features:
-  - title: Guides
-    details: Tutoriels détaillés et pas-à-pas pour maîtriser les technologies
-    link: /articles/guides/
-  - title: Configurations
-    details: Setups, configs et personnalisations d'outils et environnements
-    link: /articles/configurations/
-  - title: Outils
-    details: Sélection d'outils utiles et comparaisons pour optimiser le workflow
-    link: /articles/outils/
-  - title: Méthodes
-    details: Pratiques, méthodologies et processus de développement
-    link: /articles/methodes/
+  - title: DevOps
+    details: CI/CD, conteneurisation, monitoring et déploiement
+    link: /articles/devops/
+  - title: Backend
+    details: APIs, microservices, bases de données et technologies serveur
+    link: /articles/backend/
+  - title: Linux
+    details: Configuration système, outils en ligne de commande et administration Linux
+    link: /articles/linux/
+  - title: Architecture
+    details: Patterns architecturaux, conception logicielle et principes de développement
+    link: /articles/software-design-architecture/
 ---
 
 <script setup>
@@ -65,55 +65,47 @@ const navigateToCategory = (category) => {
 ## Catégories {#categories}
 
 <div class="categories-grid">
-  <div class="category-card" @click="navigateToCategory('guides')">
-    <h3>Guides</h3>
-    <p>Spring Boot, Docker, Kubernetes, Linux et bien plus.</p>
+
+  <!-- <div class="category-card" @click="navigateToCategory('ai')">
+    <h3>IA</h3>
+    <p>Intelligence artificielle, outils d'IA et automatisation pour développeurs</p>
+  </div> -->
+
+<div class="category-card" @click="navigateToCategory('backend')">
+    <h3>Backend</h3>
+    <p>APIs, microservices, bases de données et technologies serveur</p>
   </div>
 
-  <div class="category-card" @click="navigateToCategory('infrastructure')">
-    <h3>Infrastructure</h3>
-    <p>Cloud, Kubernetes, Docker, CI/CD...</p>
-  </div>
-  
-  <div class="category-card" @click="navigateToCategory('configurations')">
-    <h3>Configurations</h3>
-    <p>Hyprland, Neovim, Arch, Docker Compose...</p>
-  </div>
-  
-  <div class="category-card" @click="navigateToCategory('outils')">
-    <h3>Outils</h3>
-    <p>Claude Code, MCP, TUI tools, bookmarks...</p>
-  </div>
-  
-  <div class="category-card" @click="navigateToCategory('methodes')">
-    <h3>Méthodes</h3>
-    <p>Agile, Scrum, estimation, spécifications...</p>
-  </div>
-  
-  <div class="category-card" @click="navigateToCategory('reflexions')">
-    <h3>Réflexions</h3>
-    <p>Clean Code, SOLID, performance vs fonctionnel...</p>
-  </div>
-  
-  <div class="category-card" @click="navigateToCategory('projets')">
-    <h3>Projets</h3>
-    <p>Starters, templates, auto-hébergement...</p>
+  <div class="category-card" @click="navigateToCategory('devops')">
+    <h3>DevOps</h3>
+    <p>CI/CD, conteneurisation, monitoring et déploiement</p>
   </div>
 
-  <div class="category-card" @click="navigateToCategory('productivite')">
-    <h3>Productivité</h3>
-    <p>Focus, gestion du temps, outils de productivité...</p>
+  <!-- <div class="category-card" @click="navigateToCategory('frontend')">
+    <h3>Frontend</h3>
+    <p>Interfaces utilisateur, frameworks frontend et expérience utilisateur</p>
+  </div> -->
+
+  <div class="category-card" @click="navigateToCategory('linux')">
+    <h3>Linux</h3>
+    <p>Configuration système, outils en ligne de commande et administration Linux</p>
   </div>
 
-  <div class="category-card" @click="navigateToCategory('securite')">
+  <!-- <div class="category-card" @click="navigateToCategory('security')">
     <h3>Sécurité</h3>
-    <p>Meilleures pratiques, audits, tests d'intrusion...</p>
+    <p>Sécurité informatique, bonnes pratiques et défense</p>
+  </div> -->
+
+  <div class="category-card" @click="navigateToCategory('software-design-architecture')">
+    <h3>Conception et Architecture Logicielle</h3>
+    <p>Patterns architecturaux, conception logicielle et principes de développement</p>
   </div>
 
-  <div class="category-card" @click="navigateToCategory('tutoriels')">
-    <h3>Tutoriels</h3>
-    <p>Guides pratiques sur des sujets variés.</p>
-  </div>
+  <!-- <div class="category-card" @click="navigateToCategory('ux-design')">
+    <h3>UX/UI Design</h3>
+    <p>Expérience utilisateur, interfaces et design d'interaction</p>
+  </div> -->
+
 </div>
 
 

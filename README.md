@@ -69,8 +69,8 @@ docs/
 Liste paginée des articles avec filtres par catégorie et tri.
 
 ```vue
-<ArticleList 
-  :articles="articles" 
+<ArticleList
+  :articles="articles"
   :items-per-page="10"
   @tag-click="handleTagClick"
   @category-change="handleCategoryChange"
@@ -143,7 +143,7 @@ Les articles utilisent ce format de frontmatter :
 title: "Titre de l'article"
 date: 2025-01-22
 tags: [tag1, tag2, tag3, ...]
-author: mooki
+author: Andrea Larboullet Marin
 excerpt: "Description courte de l'article"
 cover: /images/article-cover.jpg
 category: nom-de-la-categorie
@@ -209,7 +209,7 @@ Personnalisez `docs/.vitepress/theme/` pour :
 Le site se déploie automatiquement sur GitHub Pages à chaque push sur `main` :
 
 1. **Génération articles** → Scan des fichiers .md
-2. **Build VitePress** → Site statique optimisé  
+2. **Build VitePress** → Site statique optimisé
 3. **Génération RSS/Sitemap** → Flux et référencement
 4. **Déploiement** → GitHub Pages
 
@@ -240,4 +240,3 @@ Le site est optimisé pour :
 ## Licence
 
 MIT License - voir [LICENSE](LICENSE) pour les détails.
-

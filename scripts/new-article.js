@@ -4,15 +4,6 @@ import fs from 'fs/promises'
 import path from 'path'
 import readline from 'readline'
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-})
-
-function question(query) {
-  return new Promise(resolve => rl.question(query, resolve))
-}
-
 function slugify(text) {
   return text
     .toLowerCase()
@@ -27,15 +18,27 @@ function formatDate(date) {
 }
 
 const categories = [
-  'guides',
-  'configurations',
-  'outils',
-  'methodes',
-  'reflexions',
-  'projets'
+  'ai',
+  'backend',
+  'devops',
+  'frontend',
+  'linux',
+  'security',
+  'software-design-architecture',
+  'ux-design'
 ]
 
-async function createNewArticle() {
+// Fonction pour mode interactif
+async function createNewArticleInteractive() {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  })
+
+  function question(query) {
+    return new Promise(resolve => rl.question(query, resolve))
+  }
+
   console.log('🚀 Création d\'un nouvel article\n')
 
   // Collecte des informations
@@ -47,25 +50,51 @@ async function createNewArticle() {
   }
 
   const author = await question('Auteur (mooki): ') || 'mooki'
-  const excerpt = await question('Résumé/excerpt: ')
+  const category = await question('Catégorie: ')
   const tags = await question('Tags (séparés par des virgules): ')
+  const description = await question('Description: ')
   
-  // Sélection de la catégorie
-  console.log('\nCatégories disponibles:')
-  categories.forEach((cat, index) => {
-    console.log(`${index + 1}. ${cat}`)
+  rl.close()
+  
+  return await createArticleFile({
+    title,
+    author,
+    category,
+    tags: tags.split(',').map(t => t.trim()).filter(t => t),
+    description
   })
+}
+
+// Fonction pour mode arguments en ligne de commande
+async function createNewArticleFromArgs() {
+  const args = process.argv.slice(2)
   
-  const categoryIndex = await question('\nNuméro de catégorie (1-' + categories.length + '): ')
-  const categoryNum = parseInt(categoryIndex) - 1
+  if (args.length < 5) {
+    console.log('Usage: node scripts/new-article.js "Titre" "Auteur" "Catégorie" "tag1,tag2,tag3" "Description"')
+    console.log('\nCatégories disponibles:')
+    categories.forEach(cat => console.log(`  - ${cat}`))
+    return
+  }
+
+  const [title, author, category, tags, description] = args
   
-  if (categoryNum < 0 || categoryNum >= categories.length) {
-    console.log('❌ Numéro de catégorie invalide')
-    rl.close()
+  if (!categories.includes(category)) {
+    console.log(`❌ Catégorie invalide: ${category}`)
+    console.log('\nCatégories disponibles:')
+    categories.forEach(cat => console.log(`  - ${cat}`))
     return
   }
   
-  const category = categories[categoryNum]
+  return await createArticleFile({
+    title,
+    author,
+    category,
+    tags: tags.split(',').map(t => t.trim()).filter(t => t),
+    description
+  })
+}
+
+async function createArticleFile({ title, author, category, tags, description }) {
   
   // Génération du slug et du chemin
   const slug = slugify(title)
@@ -75,16 +104,15 @@ async function createNewArticle() {
   const frontmatter = `---
 title: "${title}"
 date: ${formatDate(new Date())}
-tags: [${tags.split(',').map(tag => `"${tag.trim()}"`).join(', ')}]
 author: ${author}
-excerpt: "${excerpt}"
-cover: /images/${slug}.jpg
 category: ${category}
+tags: [${tags.map(tag => `"${tag}"`).join(', ')}]
+description: "${description}"
 ---
 
 # ${title}
 
-${excerpt}
+${description}
 
 ## Introduction
 
@@ -109,8 +137,7 @@ ${excerpt}
     try {
       await fs.access(articlePath)
       console.log(`❌ Un article avec ce nom existe déjà: ${articlePath}`)
-      rl.close()
-      return
+      return false
     } catch {
       // Le fichier n'existe pas, on peut continuer
     }
@@ -123,14 +150,28 @@ ${excerpt}
     console.log(`🏷️  Catégorie: ${category}`)
     console.log(`🏃 Pour commencer à écrire: code ${articlePath}`)
     
+    return true
+    
   } catch (error) {
     console.error('❌ Erreur lors de la création de l\'article:', error.message)
+    return false
   }
+}
+
+// Fonction principale qui décide du mode d'exécution
+async function main() {
+  const args = process.argv.slice(2)
   
-  rl.close()
+  if (args.length === 0) {
+    // Mode interactif
+    await createNewArticleInteractive()
+  } else {
+    // Mode arguments
+    await createNewArticleFromArgs()
+  }
 }
 
 // Exécuter le script si appelé directement
 if (import.meta.url === `file://${process.argv[1]}`) {
-  createNewArticle().catch(console.error)
+  main().catch(console.error)
 }

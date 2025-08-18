@@ -2,8 +2,8 @@
 
 /**
  * Script pour ajouter une nouvelle catégorie au site VitePress
- * Usage: node scripts/add-category.js <nom-categorie> <label-francais>
- * Exemple: node scripts/add-category.js "productivite" "Productivité"
+ * Usage: node scripts/add-category.js <nom-categorie> <label-francais> [description]
+ * Exemple: node scripts/add-category.js "productivite" "Productivité" "Techniques pour améliorer la productivité"
  */
 
 import fs from 'fs'
@@ -17,8 +17,7 @@ const __dirname = path.dirname(__filename)
 const ROOT_DIR = path.resolve(__dirname, '..')
 const DOCS_DIR = path.join(ROOT_DIR, 'docs')
 const ARTICLES_DIR = path.join(DOCS_DIR, 'articles')
-const CONFIG_FILE = path.join(DOCS_DIR, '.vitepress', 'config.mts')
-const SIDEBAR_FILE = path.join(DOCS_DIR, '.vitepress', 'theme', 'utils', 'sidebar.ts')
+const CATEGORIES_FILE = path.join(DOCS_DIR, '.vitepress', 'theme', 'data', 'categories.ts')
 
 /**
  * Valide les arguments de ligne de commande
@@ -27,13 +26,14 @@ function validateArgs() {
   const args = process.argv.slice(2)
   
   if (args.length < 2) {
-    console.error('❌ Usage: node scripts/add-category.js <nom-categorie> <label-francais>')
-    console.error('   Exemple: node scripts/add-category.js "productivite" "Productivité"')
+    console.error('❌ Usage: node scripts/add-category.js <nom-categorie> <label-francais> [description]')
+    console.error('   Exemple: node scripts/add-category.js "productivite" "Productivité" "Techniques pour améliorer la productivité"')
     process.exit(1)
   }
   
   const categoryId = args[0]
   const categoryLabel = args[1]
+  const categoryDescription = args[2] || `Articles de la catégorie ${categoryLabel.toLowerCase()}`
   
   // Validation du nom de catégorie
   if (!/^[a-z0-9-]+$/.test(categoryId)) {
@@ -41,7 +41,7 @@ function validateArgs() {
     process.exit(1)
   }
   
-  return { categoryId, categoryLabel }
+  return { categoryId, categoryLabel, categoryDescription }
 }
 
 /**
@@ -53,9 +53,17 @@ function checkCategoryExists(categoryId) {
 }
 
 /**
+ * Vérifie si une catégorie existe déjà dans le fichier de métadonnées
+ */
+function checkCategoryInMetadata(categoryId) {
+  const content = fs.readFileSync(CATEGORIES_FILE, 'utf-8')
+  return content.includes(`id: '${categoryId}'`)
+}
+
+/**
  * Crée le dossier de catégorie et le fichier index.md
  */
-function createCategoryStructure(categoryId, categoryLabel) {
+function createCategoryStructure(categoryId, categoryLabel, categoryDescription) {
   const categoryDir = path.join(ARTICLES_DIR, categoryId)
   const indexFile = path.join(categoryDir, 'index.md')
   
@@ -68,12 +76,12 @@ function createCategoryStructure(categoryId, categoryLabel) {
   // Créer le fichier index.md
   const indexContent = `---
 title: "${categoryLabel}"
-description: "Articles de la catégorie ${categoryLabel}"
+description: "${categoryDescription}"
 ---
 
 # ${categoryLabel}
 
-Cette catégorie contient des articles sur ${categoryLabel.toLowerCase()}.
+${categoryDescription}.
 
 ## Articles dans cette catégorie
 
@@ -127,146 +135,42 @@ const categoryArticles = computed(() => {
 }
 
 /**
- * Ajoute la catégorie dans le fichier de configuration VitePress
+ * Ajoute la catégorie dans le fichier de métadonnées
  */
-function updateVitePressConfig(categoryId, categoryLabel) {
-  let content = fs.readFileSync(CONFIG_FILE, 'utf-8')
-  
-  // Chercher la section des catégories dans la navigation
-  const categoryItemsRegex = /(text: 'Catégories',\s*items: \[)([\s\S]*?)(\s*\])/
-  const match = content.match(categoryItemsRegex)
-  
-  if (!match) {
-    console.error('❌ Impossible de trouver la section des catégories dans le config')
-    return false
-  }
-  
-  const currentItems = match[2]
-  const newItem = `          { text: '${categoryLabel}', link: '/articles/${categoryId}/' },`
+function updateCategoriesMetadata(categoryId, categoryLabel, categoryDescription) {
+  let content = fs.readFileSync(CATEGORIES_FILE, 'utf-8')
   
   // Vérifier si la catégorie existe déjà
-  if (currentItems.includes(`/articles/${categoryId}/`)) {
-    console.log(`⚠️  La catégorie '${categoryId}' existe déjà dans la configuration`)
+  if (checkCategoryInMetadata(categoryId)) {
+    console.log(`⚠️  La catégorie '${categoryId}' existe déjà dans les métadonnées`)
     return true
   }
   
-  // Ajouter la nouvelle catégorie (trié alphabétiquement par label)
-  const items = currentItems.split('\n')
-    .filter(line => line.trim())
-    .map(line => line.trim())
+  // Chercher la fin du tableau categoriesMetadata
+  const endOfArrayRegex = /(\s*\]\s*\/\*\*)/
+  const match = content.match(endOfArrayRegex)
   
-  items.push(newItem.trim())
-  items.sort((a, b) => {
-    const textA = a.match(/text: '([^']+)'/)?.[1] || ''
-    const textB = b.match(/text: '([^']+)'/)?.[1] || ''
-    return textA.localeCompare(textB, 'fr')
-  })
+  if (!match) {
+    console.error('❌ Impossible de trouver la fin du tableau categoriesMetadata')
+    return false
+  }
   
-  // S'assurer que tous les éléments sauf le dernier ont une virgule
-  const formattedItems = items.map((item, index) => {
-    const cleanItem = item.replace(/,$/, '') // Enlever virgule existante
-    return index === items.length - 1 ? `          ${cleanItem}` : `          ${cleanItem},`
-  })
+  // Ajouter la nouvelle catégorie
+  const newCategoryItem = `  {
+    id: '${categoryId}',
+    label: '${categoryLabel}',
+    description: '${categoryDescription}'
+  },`
   
-  const newItemsSection = formattedItems.join('\n')
-  const newContent = content.replace(categoryItemsRegex, `$1\n${newItemsSection}\n$3`)
+  // Insérer avant la fermeture du tableau
+  const newContent = content.replace(
+    endOfArrayRegex, 
+    `${newCategoryItem}\n$1`
+  )
   
-  fs.writeFileSync(CONFIG_FILE, newContent)
-  console.log(`✅ Configuration VitePress mise à jour`)
+  fs.writeFileSync(CATEGORIES_FILE, newContent)
+  console.log(`✅ Métadonnées des catégories mises à jour`)
   return true
-}
-
-/**
- * Ajoute la catégorie dans le fichier sidebar.ts
- */
-function updateSidebarConfig(categoryId, categoryLabel) {
-  let content = fs.readFileSync(SIDEBAR_FILE, 'utf-8')
-  
-  // 1. Ajouter dans la liste des catégories de generateArticlesSidebar
-  const categoriesArrayRegex = /(const categories = \[)([\s\S]*?)(\s*\])/
-  const categoriesMatch = content.match(categoriesArrayRegex)
-  
-  if (categoriesMatch) {
-    const currentCategories = categoriesMatch[2]
-    const newCategoryItem = `    { id: '${categoryId}', label: '${categoryLabel}' },`
-    
-    if (!currentCategories.includes(`id: '${categoryId}'`)) {
-      const categories = currentCategories.split('\n')
-        .filter(line => line.trim())
-        .map(line => line.trim())
-      
-      categories.push(newCategoryItem.trim())
-      categories.sort((a, b) => {
-        const labelA = a.match(/label: '([^']+)'/)?.[1] || ''
-        const labelB = b.match(/label: '([^']+)'/)?.[1] || ''
-        return labelA.localeCompare(labelB, 'fr')
-      })
-      
-      // S'assurer que tous les éléments sauf le dernier ont une virgule
-      const formattedCategories = categories.map((cat, index) => {
-        const cleanCat = cat.replace(/,$/, '') // Enlever virgule existante
-        return index === categories.length - 1 ? `    ${cleanCat}` : `    ${cleanCat},`
-      })
-      
-      const newCategoriesSection = formattedCategories.join('\n')
-      content = content.replace(categoriesArrayRegex, `$1\n${newCategoriesSection}\n$3`)
-      console.log(`✅ Catégorie ajoutée dans generateArticlesSidebar`)
-    }
-  }
-  
-  // 2. Ajouter dans generateTagsSidebar
-  content = addCategoryToSidebarFunction(content, 'generateTagsSidebar', categoryId, categoryLabel)
-  
-  // 3. Ajouter dans generateAboutSidebar
-  content = addCategoryToSidebarFunction(content, 'generateAboutSidebar', categoryId, categoryLabel)
-  
-  fs.writeFileSync(SIDEBAR_FILE, content)
-  console.log(`✅ Configuration sidebar mise à jour`)
-}
-
-/**
- * Aide pour ajouter une catégorie dans une fonction de sidebar spécifique
- */
-function addCategoryToSidebarFunction(content, functionName, categoryId, categoryLabel) {
-  const functionRegex = new RegExp(`(function ${functionName}\\(\\)[\\s\\S]*?text: 'Catégories',\\s*items: \\[)([\\s\\S]*?)(\\s*\\])`, 'g')
-  const match = content.match(functionRegex)
-  
-  if (match) {
-    const fullMatch = match[0]
-    const itemsRegex = /(text: 'Catégories',\s*items: \[)([\s\S]*?)(\s*\])/
-    const itemsMatch = fullMatch.match(itemsRegex)
-    
-    if (itemsMatch) {
-      const currentItems = itemsMatch[2]
-      const newItem = `        { text: '${categoryLabel}', link: '/articles/${categoryId}/' },`
-      
-      if (!currentItems.includes(`/articles/${categoryId}/`)) {
-        const items = currentItems.split('\n')
-          .filter(line => line.trim())
-          .map(line => line.trim())
-        
-        items.push(newItem.trim())
-        items.sort((a, b) => {
-          const textA = a.match(/text: '([^']+)'/)?.[1] || ''
-          const textB = b.match(/text: '([^']+)'/)?.[1] || ''
-          return textA.localeCompare(textB, 'fr')
-        })
-        
-        // S'assurer que tous les éléments sauf le dernier ont une virgule
-        const formattedItems = items.map((item, index) => {
-          const cleanItem = item.replace(/,$/, '') // Enlever virgule existante
-          return index === items.length - 1 ? `        ${cleanItem}` : `        ${cleanItem},`
-        })
-        
-        const newItemsSection = formattedItems.join('\n')
-        const newFullMatch = fullMatch.replace(itemsRegex, `$1\n${newItemsSection}\n$3`)
-        content = content.replace(fullMatch, newFullMatch)
-        console.log(`✅ Catégorie ajoutée dans ${functionName}`)
-      }
-    }
-  }
-  
-  return content
 }
 
 /**
@@ -276,32 +180,38 @@ function main() {
   try {
     console.log('🚀 Ajout d\'une nouvelle catégorie...\n')
     
-    const { categoryId, categoryLabel } = validateArgs()
+    const { categoryId, categoryLabel, categoryDescription } = validateArgs()
     
     console.log(`📁 Catégorie: ${categoryId}`)
-    console.log(`🏷️  Label: ${categoryLabel}\n`)
+    console.log(`🏷️  Label: ${categoryLabel}`)
+    console.log(`📝 Description: ${categoryDescription}\n`)
     
     // Vérifier si la catégorie existe déjà
-    if (checkCategoryExists(categoryId)) {
-      console.log(`⚠️  La catégorie '${categoryId}' existe déjà`)
-    } else {
-      console.log(`✨ Création de la nouvelle catégorie '${categoryId}'`)
+    const existsInDir = checkCategoryExists(categoryId)
+    const existsInMetadata = checkCategoryInMetadata(categoryId)
+    
+    if (existsInDir && existsInMetadata) {
+      console.log(`⚠️  La catégorie '${categoryId}' existe déjà partout`)
+      console.log('\n✨ Rien à faire, la catégorie est déjà configurée!')
+      return
+    }
+    
+    if (!existsInDir || !existsInMetadata) {
+      console.log(`✨ Configuration de la catégorie '${categoryId}'`)
     }
     
     // 1. Créer la structure de dossier
-    createCategoryStructure(categoryId, categoryLabel)
+    createCategoryStructure(categoryId, categoryLabel, categoryDescription)
     
-    // 2. Mettre à jour la configuration VitePress
-    updateVitePressConfig(categoryId, categoryLabel)
-    
-    // 3. Mettre à jour la configuration du sidebar
-    updateSidebarConfig(categoryId, categoryLabel)
+    // 2. Mettre à jour le fichier de métadonnées
+    updateCategoriesMetadata(categoryId, categoryLabel, categoryDescription)
     
     console.log('\n🎉 Catégorie ajoutée avec succès!')
     console.log('\n📝 Prochaines étapes:')
     console.log(`   1. Redémarrer le serveur de développement VitePress`)
     console.log(`   2. Visiter /articles/${categoryId}/ pour vérifier`)
     console.log(`   3. Créer vos premiers articles dans docs/articles/${categoryId}/`)
+    console.log(`   4. Les catégories s'afficheront automatiquement dans la navigation une fois qu'elles contiennent des articles`)
     
   } catch (error) {
     console.error('❌ Erreur lors de l\'ajout de la catégorie:', error.message)
@@ -314,4 +224,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main()
 }
 
-export { main, createCategoryStructure, updateVitePressConfig, updateSidebarConfig }
+export { main, createCategoryStructure, updateCategoriesMetadata }
