@@ -15,7 +15,7 @@ excerpt: >-
 category: linux
 ---
 
-# Configuration Hyprland complète
+# Hyprland : Maîtriser le Gestionnaire de Fenêtres Wayland
 
 Hyprland est un gestionnaire de fenêtres tiling dynamique pour Wayland, offrant des animations fluides, une configuration flexible et des performances exceptionnelles. Ce guide couvre une installation et configuration complète.
 
